@@ -61,6 +61,33 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to are you sure you want to clear?.
+        /// </summary>
+        internal static string ClearConfirmationMessage {
+            get {
+                return ResourceManager.GetString("ClearConfirmationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to are you sure you want to delete?.
+        /// </summary>
+        internal static string DeleteConfirmationMessage {
+            get {
+                return ResourceManager.GetString("DeleteConfirmationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to are you sure you want to edit?.
+        /// </summary>
+        internal static string EditConfirmationMessage {
+            get {
+                return ResourceManager.GetString("EditConfirmationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap eyeoff_removebg_preview {
@@ -201,6 +228,15 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mould Restored Successfully..
+        /// </summary>
+        internal static string MouldRestoredMessage {
+            get {
+                return ResourceManager.GetString("MouldRestoredMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap oswalLogoMain {
@@ -217,6 +253,15 @@ namespace OswalMRA.Properties {
             get {
                 object obj = ResourceManager.GetObject("oswalLogoMain-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to are you sure you want to upload?.
+        /// </summary>
+        internal static string UploadConfirmationMessage {
+            get {
+                return ResourceManager.GetString("UploadConfirmationMessage", resourceCulture);
             }
         }
         

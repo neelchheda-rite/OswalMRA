@@ -8,6 +8,12 @@ namespace OswalMRA
         {
             InitializeComponent();
         }
-       
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("Worker");
+            comboBox1.Items.Add("Supervisor");
+            comboBox1.Items.Add("Admin");
+        }
     }
 }

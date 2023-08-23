@@ -12,25 +12,26 @@ namespace OswalMRA.MessageBox
 {
     public partial class optionMsgBox : Form
     {
-        public optionMsgBox(string Title, string Message)
+        public optionMsgBox(string Title, string ResourceMessageKey)
         {
             InitializeComponent();
             this.Text = Title;
-            messageLabel.Text = Message;
+
+            // Retrieve the message from the resource file using the ResourceMessageKey
+            string message = Properties.Resources.ClearConfirmationMessage;
+            messageLabel.Text = message; // Set the message to the label
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
             this.DialogResult = DialogResult.No;
+            this.Close();
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            this.Close();
             this.DialogResult = DialogResult.Yes;
-            msgBox msgBox = new("Confirmation Message", "Mould Successfully Restored");
-            msgBox.Show();
+            this.Close();
         }
     }
 }

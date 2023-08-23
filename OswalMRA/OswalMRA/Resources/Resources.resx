@@ -129,6 +129,9 @@
   <data name="edtString" xml:space="preserve">
     <value>Are you sure you want to edit?</value>
   </data>
+  <data name="Neel" xml:space="preserve">
+    <value>Neel</value>
+  </data>
   <data name="uploadString" xml:space="preserve">
     <value>Are you sure you want to Upload?</value>
   </data>

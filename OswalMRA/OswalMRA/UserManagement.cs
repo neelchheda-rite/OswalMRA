@@ -1,22 +1,29 @@
-﻿
+﻿using OswalMRA.MessageBox;
+using OswalMRA.Properties;
+using System.Data.Common;
+using System.Numerics;
+using System.Text.RegularExpressions;
+using System;
+using System.Windows.Forms;
+
 
 namespace OswalMRA
 {
-    
+
     public partial class UserManagement : Form
     {
 
-        
+
         public UserManagement()
         {
             InitializeComponent();
-            dataGridView1.ReadOnly = true;
-            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dgvUserManagement.ReadOnly = true;
+            dgvUserManagement.DefaultCellStyle.ForeColor = Color.Black;
             InitializeDataGridView();
         }
         private void InitializeDataGridView()
         {
-            dataGridView1.AutoGenerateColumns = false;
+            dgvUserManagement.AutoGenerateColumns = false;
 
             // Create columns
             DataGridViewTextBoxColumn userIDColumn = new DataGridViewTextBoxColumn();
@@ -35,6 +42,7 @@ namespace OswalMRA
             editButtonColumn.HeaderText = "Edit";
             editButtonColumn.Text = "Edit";
             editButtonColumn.FillWeight = 50;
+            editButtonColumn.Name = "Edit";
             editButtonColumn.UseColumnTextForButtonValue = true;
             editButtonColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Center-align button
             editButtonColumn.UseColumnTextForButtonValue = true;
@@ -44,6 +52,7 @@ namespace OswalMRA
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
             deleteButtonColumn.HeaderText = "Delete";
             deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.Name = "Delete";
             deleteButtonColumn.FillWeight = 50;
             deleteButtonColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Center-align button
             deleteButtonColumn.UseColumnTextForButtonValue = true;
@@ -51,17 +60,17 @@ namespace OswalMRA
             deleteButtonColumn.Width = 50; // Set button width  
 
             // Add columns to DataGridView
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] {
+            dgvUserManagement.Columns.AddRange(new DataGridViewColumn[] {
                 userIDColumn, userNameColumn, roleColumn, editButtonColumn, deleteButtonColumn
             });
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font, FontStyle.Bold); // Make headers bold
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font.FontFamily, 12, FontStyle.Bold); // You can adjust font size
+            dgvUserManagement.ColumnHeadersDefaultCellStyle.Font = new Font(dgvUserManagement.Font, FontStyle.Bold); // Make headers bold
+            dgvUserManagement.ColumnHeadersDefaultCellStyle.Font = new Font(dgvUserManagement.Font.FontFamily, 12, FontStyle.Bold); // You can adjust font size
 
-            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            foreach (DataGridViewColumn column in dgvUserManagement.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.Automatic;
             }
-            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Align text to middle
+            dgvUserManagement.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Align text to middle
 
             // Populate DataGridView with dummy data
             PopulateUserData();
@@ -77,34 +86,36 @@ namespace OswalMRA
           };
 
             // Bind the data to the DataGridView
-            dataGridView1.DataSource = users; 
+            dgvUserManagement.DataSource = users;
         }
-       
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgvUserManagement_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
             {
-                if (e.RowIndex >= 0)
+                if (e.ColumnIndex == dgvUserManagement.Columns["Edit"].Index)
                 {
-                    if (e.ColumnIndex == dataGridView1.Columns["EditButtonColumn"].Index)
+                    // Show confirmation dialog for Edit using optionMsgBox
+                    optionMsgBox confirmationBox = new optionMsgBox("Edit Confirmation", "EditConfirmationMessage");
+                    if (confirmationBox.ShowDialog() == DialogResult.Yes)
                     {
-                        int userID = (int)dataGridView1.Rows[e.RowIndex].Cells["UserID"].Value;
-                        // Perform the edit action here using the userID
-                        //MessageBox.Show($"Edit user with UserID: {userID}");
+                        // Perform the edit action
                     }
-                    else if (e.ColumnIndex == dataGridView1.Columns["DeleteButtonColumn"].Index)
+                }
+                else if (e.ColumnIndex == dgvUserManagement.Columns["Delete"].Index) // Corrected column name here
+                {
+                    // Show confirmation dialog for Delete using optionMsgBox
+                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "DeleteConfirmationMessage");
+                    if (confirmationBox.ShowDialog() == DialogResult.Yes)
                     {
-                        int userID = (int)dataGridView1.Rows[e.RowIndex].Cells["UserID"].Value;
-                        // Perform the delete action here using the userID
-                        //MessageBox.Show($"Delete user with kUserID: {userID}");
+                        // Perform the delete action
                     }
                 }
             }
-
         }
-             
-
-        private void addBtn_Click(object sender, EventArgs e)
+    
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
             addNewUser addMouldForm = new addNewUser();
@@ -114,7 +125,18 @@ namespace OswalMRA
             }
         }
 
-     
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            string clearConfirmationMessage = Properties.Resources.ResourceManager.GetString("ClearMessageConfirmation");
+
+            // Show confirmation dialog for Clear using optionMsgBox
+            optionMsgBox confirmationBox = new optionMsgBox("Clear Confirmation", clearConfirmationMessage);
+            if (confirmationBox.ShowDialog() == DialogResult.Yes)
+            {
+                // Perform the clear action
+                // Your code to clear data goes here
+            }
+        }
     }
     public class User
     {
