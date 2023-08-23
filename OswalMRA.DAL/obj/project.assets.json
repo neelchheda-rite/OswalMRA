@@ -2231,11 +2231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Durgesh Gupta\\Desktop\\Version_Control\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+      "projectUniqueName": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
       "projectName": "OswalMRA.DAL",
-      "projectPath": "C:\\Users\\Durgesh Gupta\\Desktop\\Version_Control\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+      "projectPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
       "packagesPath": "C:\\Users\\Durgesh Gupta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Durgesh Gupta\\Desktop\\Version_Control\\OswalMRA.DAL\\obj\\",
+      "outputPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2258,8 +2258,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Durgesh Gupta\\Desktop\\Version_Control\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
-              "projectPath": "C:\\Users\\Durgesh Gupta\\Desktop\\Version_Control\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj"
+            "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
+              "projectPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj"
             }
           }
         }

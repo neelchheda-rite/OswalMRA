@@ -144,9 +144,10 @@
             // 
             txtMouldCode.Dock = DockStyle.Fill;
             txtMouldCode.Location = new Point(50, 39);
+            txtMouldCode.MaxLength = 25;
             txtMouldCode.Name = "txtMouldCode";
             txtMouldCode.Size = new Size(89, 23);
-            txtMouldCode.TabIndex = 3;
+            txtMouldCode.TabIndex = 0;
             // 
             // txtMouldName
             // 
@@ -154,7 +155,7 @@
             txtMouldName.Location = new Point(145, 39);
             txtMouldName.Name = "txtMouldName";
             txtMouldName.Size = new Size(89, 23);
-            txtMouldName.TabIndex = 4;
+            txtMouldName.TabIndex = 1;
             // 
             // txtMouldDesc
             // 
@@ -162,7 +163,7 @@
             txtMouldDesc.Location = new Point(240, 39);
             txtMouldDesc.Name = "txtMouldDesc";
             txtMouldDesc.Size = new Size(136, 23);
-            txtMouldDesc.TabIndex = 5;
+            txtMouldDesc.TabIndex = 2;
             // 
             // tableLayoutPanel3
             // 

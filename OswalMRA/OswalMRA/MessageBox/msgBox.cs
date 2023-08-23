@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OswalMRA.MessageBox {
-    public partial class msgBox : Form {
+namespace OswalMRA.MessageBox
+{
+    public partial class msgBox : Form
+    {
         public msgBox(string Title, string Message)
         {
             InitializeComponent();
-            this.Text=Title;
-            messageLabel.Text=Message;
+            this.Text = Title;
+            messageLabel.Text = Message;
 
         }
 

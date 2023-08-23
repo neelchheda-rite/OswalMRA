@@ -91,8 +91,8 @@ namespace OswalMRA
         }
         private void addMouldBtn_Click_1(object sender, EventArgs e)
         {
-            addNewMould addMouldForm = new addNewMould();
-            if (addMouldForm.ShowDialog() == DialogResult.OK)
+            frmNewMould frmNewMould = new();
+            if (frmNewMould.ShowDialog() == DialogResult.OK)
             {
 
             }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PvW8Usy54rxIKQ5bXFRbCmm7vvncBvty5AeNH+dHzM7N4nO+6iLcHkXzsrhJn/g2QPk7RcalNUbUmyrSmc+w5g==",
+  "dgSpecHash": "oEqpXXGqHeE+kwpFPRySvGKLc6g11MbvcTCLHzUbLUNpsRTSHcK9BaWRJW7eiAm6RgHckNmqKjT5E6I77tkCnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Durgesh Gupta\\Desktop\\Version_Control\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+  "projectFilePath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Durgesh Gupta\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Durgesh Gupta\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

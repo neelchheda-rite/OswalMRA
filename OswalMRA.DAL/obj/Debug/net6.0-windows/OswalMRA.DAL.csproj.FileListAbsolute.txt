@@ -43,3 +43,18 @@ C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-w
 C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
 C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
 C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.deps.json
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.pdb
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.AssemblyReference.cache
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfoInputs.cache
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfo.cs
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CoreCompileInputs.cache
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CopyComplete
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
+E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll

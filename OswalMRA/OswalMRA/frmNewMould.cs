@@ -32,10 +32,10 @@ namespace OswalMRA
             _dapperManagement = new DBRepository();
         }
 
-        private void addNewMouldBtn_Click(object sender, EventArgs e)
-        {
+        //private void addNewMouldBtn_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private async void btnAddNew_Click(object sender, EventArgs e)
         {
@@ -45,8 +45,8 @@ namespace OswalMRA
 
             try
             {
-                //_logger.Trace("frmNewMould===>InsertMould(): Request Received to create a new mould.");
-                var insertResult = await _dapperManagement.InsertMould(txtMouldCode.Text, txtMouldName.Text, txtMouldDesc.Text, txtMouldRow.Text, txtMouldCol.Text, createdBy, createTime, 0);
+                _logger.Trace("frmNewMould===>InsertMould(): Request Received to create a new mould.");
+                var insertResult = await _dapperManagement.InsertMould(txtMouldCode.Text.ToSafeString(), txtMouldName.Text, txtMouldDesc.Text, txtMouldRow.Text, txtMouldCol.Text, createdBy, createTime, 0);
                 List<MouldResponse> insertResp = insertResult; // Extract the response list from the result
 
                 // Display the contents of the insertResp list

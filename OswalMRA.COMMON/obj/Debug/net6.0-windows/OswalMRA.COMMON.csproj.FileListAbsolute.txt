@@ -34,3 +34,15 @@ C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.
 C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\refint\OswalMRA.COMMON.dll
 C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.pdb
 C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\ref\OswalMRA.COMMON.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.deps.json
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.AssemblyReference.cache
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.GeneratedMSBuildEditorConfig.editorconfig
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfoInputs.cache
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfo.cs
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.CoreCompileInputs.cache
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\refint\OswalMRA.COMMON.dll
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+E:\Neel\Oswal\oswal_git\OswalMRA.COMMON\obj\Debug\net6.0-windows\ref\OswalMRA.COMMON.dll

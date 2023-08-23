@@ -1,5 +1,7 @@
-﻿namespace OswalMRA.MessageBox {
-    partial class msgBox {
+﻿namespace OswalMRA.MessageBox
+{
+    partial class msgBox
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -26,62 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.messageLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            button1 = new Button();
+            panel1 = new Panel();
+            messageLabel = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(459, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.FromArgb(41, 128, 185);
+            button1.Dock = DockStyle.Bottom;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 174);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(402, 32);
+            button1.TabIndex = 0;
+            button1.Text = "OK";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.messageLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 221);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(messageLabel);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(402, 174);
+            panel1.TabIndex = 1;
             // 
             // messageLabel
             // 
-            this.messageLabel.AutoSize = true;
-            this.messageLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.messageLabel.Location = new System.Drawing.Point(215, 25);
-            this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(0, 25);
-            this.messageLabel.TabIndex = 0;
+            messageLabel.AutoSize = true;
+            messageLabel.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            messageLabel.ImageAlign = ContentAlignment.TopRight;
+            messageLabel.Location = new Point(12, 9);
+            messageLabel.Name = "messageLabel";
+            messageLabel.Size = new Size(0, 25);
+            messageLabel.TabIndex = 0;
             // 
             // msgBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 261);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "msgBox";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(402, 206);
+            Controls.Add(panel1);
+            Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "msgBox";
+            StartPosition = FormStartPosition.CenterScreen;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
