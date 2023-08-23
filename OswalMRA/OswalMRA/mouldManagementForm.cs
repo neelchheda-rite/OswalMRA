@@ -39,11 +39,13 @@ namespace OswalMRA
             DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
             editButtonColumn.HeaderText = "Edit";
             editButtonColumn.Text = "Edit";
+            editButtonColumn.Name = "Edit";
             editButtonColumn.UseColumnTextForButtonValue = true;
 
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
             deleteButtonColumn.HeaderText = "Delete";
             deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.Name = "Delete";
             deleteButtonColumn.UseColumnTextForButtonValue = true;
 
             // Add columns to DataGridView
@@ -71,7 +73,7 @@ namespace OswalMRA
         {
             if (e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == dataGridView1.Columns["EditButtonColumn"].Index)
+                if (e.ColumnIndex == dataGridView1.Columns["Edit"].Index)
                 {
                     int mouldID = (int)dataGridView1.Rows[e.RowIndex].Cells["MouldID"].Value;
                     // Perform the edit action here using the mouldID
@@ -79,7 +81,7 @@ namespace OswalMRA
                     msgBox msgBox = new("","");
                     msgBox.Show();
                 }
-                else if (e.ColumnIndex == dataGridView1.Columns["DeleteButtonColumn"].Index)
+                else if (e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
                 {
                     int mouldID = (int)dataGridView1.Rows[e.RowIndex].Cells["MouldID"].Value;
                     // Perform the delete action here using the mouldID
@@ -92,6 +94,8 @@ namespace OswalMRA
         private void addMouldBtn_Click_1(object sender, EventArgs e)
         {
             frmNewMould frmNewMould = new();
+
+            frmNewMould.StartPosition = FormStartPosition.CenterParent;
             if (frmNewMould.ShowDialog() == DialogResult.OK)
             {
 

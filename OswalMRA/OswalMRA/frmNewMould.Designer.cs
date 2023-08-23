@@ -42,8 +42,8 @@
             label3 = new Label();
             label4 = new Label();
             tableLayoutPanel7 = new TableLayoutPanel();
-            txtMouldRow = new TextBox();
-            txtMouldCol = new TextBox();
+            ddlRow = new ComboBox();
+            ddlCol = new ComboBox();
             tableLayoutPanel8 = new TableLayoutPanel();
             btnAddNew = new Button();
             button2 = new Button();
@@ -153,6 +153,7 @@
             // 
             txtMouldName.Dock = DockStyle.Fill;
             txtMouldName.Location = new Point(145, 39);
+            txtMouldName.MaxLength = 75;
             txtMouldName.Name = "txtMouldName";
             txtMouldName.Size = new Size(89, 23);
             txtMouldName.TabIndex = 1;
@@ -161,6 +162,7 @@
             // 
             txtMouldDesc.Dock = DockStyle.Fill;
             txtMouldDesc.Location = new Point(240, 39);
+            txtMouldDesc.MaxLength = 500;
             txtMouldDesc.Name = "txtMouldDesc";
             txtMouldDesc.Size = new Size(136, 23);
             txtMouldDesc.TabIndex = 2;
@@ -224,8 +226,8 @@
             tableLayoutPanel7.ColumnCount = 2;
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel7.Controls.Add(txtMouldRow, 0, 0);
-            tableLayoutPanel7.Controls.Add(txtMouldCol, 1, 0);
+            tableLayoutPanel7.Controls.Add(ddlRow, 0, 0);
+            tableLayoutPanel7.Controls.Add(ddlCol, 1, 0);
             tableLayoutPanel7.Dock = DockStyle.Fill;
             tableLayoutPanel7.Location = new Point(86, 38);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -234,21 +236,23 @@
             tableLayoutPanel7.Size = new Size(255, 29);
             tableLayoutPanel7.TabIndex = 1;
             // 
-            // txtMouldRow
+            // ddlRow
             // 
-            txtMouldRow.Dock = DockStyle.Fill;
-            txtMouldRow.Location = new Point(3, 3);
-            txtMouldRow.Name = "txtMouldRow";
-            txtMouldRow.Size = new Size(121, 23);
-            txtMouldRow.TabIndex = 0;
+            ddlRow.Dock = DockStyle.Fill;
+            ddlRow.FormattingEnabled = true;
+            ddlRow.Location = new Point(3, 3);
+            ddlRow.Name = "ddlRow";
+            ddlRow.Size = new Size(121, 23);
+            ddlRow.TabIndex = 2;
             // 
-            // txtMouldCol
+            // ddlCol
             // 
-            txtMouldCol.Dock = DockStyle.Fill;
-            txtMouldCol.Location = new Point(130, 3);
-            txtMouldCol.Name = "txtMouldCol";
-            txtMouldCol.Size = new Size(122, 23);
-            txtMouldCol.TabIndex = 1;
+            ddlCol.Dock = DockStyle.Fill;
+            ddlCol.FormattingEnabled = true;
+            ddlCol.Location = new Point(130, 3);
+            ddlCol.Name = "ddlCol";
+            ddlCol.Size = new Size(122, 23);
+            ddlCol.TabIndex = 3;
             // 
             // tableLayoutPanel8
             // 
@@ -311,7 +315,6 @@
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
             tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
             tableLayoutPanel8.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -326,8 +329,6 @@
         private Label label3;
         private Label label4;
         private TableLayoutPanel tableLayoutPanel7;
-        private TextBox txtMouldRow;
-        private TextBox txtMouldCol;
         private TableLayoutPanel tableLayoutPanel8;
         private Button btnAddNew;
         private Button button2;
@@ -337,5 +338,7 @@
         private TextBox txtMouldCode;
         private TextBox txtMouldName;
         private TextBox txtMouldDesc;
+        private ComboBox ddlRow;
+        private ComboBox ddlCol;
     }
 }

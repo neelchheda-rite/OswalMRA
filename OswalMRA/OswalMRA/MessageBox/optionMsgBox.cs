@@ -29,8 +29,6 @@ namespace OswalMRA.MessageBox
         {
             this.Close();
             this.DialogResult = DialogResult.Yes;
-            msgBox msgBox = new("Confirmation Message", "Mould Successfully Restored");
-            msgBox.Show();
         }
     }
 }
