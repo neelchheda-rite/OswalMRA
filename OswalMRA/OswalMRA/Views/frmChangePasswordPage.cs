@@ -1,4 +1,10 @@
-﻿using System;
+﻿using NLog;
+using NLog.Config;
+using NLog.Targets;
+using OswalMRA.COMMON.Models;
+using OswalMRA.DAL;
+using OswalMRA.MessageBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,17 +16,63 @@ using System.Windows.Forms;
 
 namespace OswalMRA.Views {
     public partial class frmChangePasswordPage : Form {
+        private readonly IDBRepository _dapperManagement;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public frmChangePasswordPage()
         {
             InitializeComponent();
+            _dapperManagement = new DBRepository();
+            currentPasswordTextBox.Focus();
+            newPasswordTextBox.Focus();
         }
 
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        private async void btnChangePassword_Click(object sender, EventArgs e)
         {
-            if(newPasswordTextBox.Text != currentPasswordTextBox.Text && newPasswordTextBox.Text == confirmPasswordTextBox.Text)
-                DialogResult = DialogResult.OK; 
+            if (newPasswordTextBox.Text == currentPasswordTextBox.Text)
+            {
+                newPasswordWarning.Text = "Password already used";
+                newPasswordTextBox.Focus();
+                return; 
+            }
+
+            if (newPasswordTextBox.Text != confirmPasswordTextBox.Text)
+            {
+                confirmPasswordWarning.Text = "Passwords don't match";
+                return; 
+            }
+
+            try
+            {
+                List<UpdatePasswordResponse> updatePasswordResp = await _dapperManagement.UpdatePassword(
+                    UserID: 2,
+                    currentPasswordTextBox.Text, newPasswordTextBox.Text);
+
+                if (updatePasswordResp[0].UpdatePasswordStatus == "Password updated successfully.")
+                {
+                    logger.Info("Password changed successfully.");
+                    msgBox msgBox = new msgBox("Password Change Successfull", "Your password has been changed successfully.");
+                    msgBox.ShowDialog();
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    logger.Error("Password change error.");
+                    msgBox msgBox = new msgBox("Password Change Error", "An error occurred while changing the password.");
+                    msgBox.ShowDialog();
+                    DialogResult = DialogResult.Cancel;
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "An error occurred while changing the password.");
+                // Handle the exception appropriately, e.g., display an error message
+                msgBox msgBox = new msgBox("Password Change Error", "An error occurred while changing the password.");
+                msgBox.ShowDialog();
+                DialogResult = DialogResult.Cancel;
+            }
         }
+
 
         private void newPasswordTextBox_Leave(object sender, EventArgs e)
         {

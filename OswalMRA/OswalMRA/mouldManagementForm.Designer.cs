@@ -28,186 +28,187 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            dataGridView1 = new DataGridView();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            addMouldBtn = new Button();
-            tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            tableLayoutPanel3.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel5.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.addMouldBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(41, 128, 185);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.MaximumSize = new Size(1920, 45);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1370, 45);
-            panel1.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(1920, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1370, 45);
+            this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.ColumnCount = 1;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Controls.Add(dataGridView1, 0, 0);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(0, 85);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 1;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(1370, 664);
-            tableLayoutPanel2.TabIndex = 6;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 85);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1370, 664);
+            this.tableLayoutPanel2.TabIndex = 6;
             // 
             // dataGridView1
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1364, 658);
-            dataGridView1.TabIndex = 0;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(1364, 658);
+            this.dataGridView1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.ColumnCount = 3;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.5F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.5F));
-            tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 1, 0);
-            tableLayoutPanel3.Dock = DockStyle.Bottom;
-            tableLayoutPanel3.Location = new Point(0, 693);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(1370, 56);
-            tableLayoutPanel3.TabIndex = 7;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 693);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1370, 56);
+            this.tableLayoutPanel3.TabIndex = 7;
             // 
             // tableLayoutPanel4
             // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Controls.Add(button1, 0, 0);
-            tableLayoutPanel4.Controls.Add(button2, 1, 0);
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(962, 3);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(329, 50);
-            tableLayoutPanel4.TabIndex = 0;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(962, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(329, 50);
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(41, 128, 185);
-            button1.Dock = DockStyle.Fill;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 3);
-            button1.MaximumSize = new Size(89, 30);
-            button1.MinimumSize = new Size(89, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(89, 30);
-            button1.TabIndex = 0;
-            button1.Text = "Upload";
-            button1.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.MaximumSize = new System.Drawing.Size(89, 30);
+            this.button1.MinimumSize = new System.Drawing.Size(89, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 30);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Upload";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(41, 128, 185);
-            button2.Dock = DockStyle.Fill;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(167, 3);
-            button2.MaximumSize = new Size(89, 30);
-            button2.MinimumSize = new Size(89, 30);
-            button2.Name = "button2";
-            button2.Size = new Size(89, 30);
-            button2.TabIndex = 1;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(167, 3);
+            this.button2.MaximumSize = new System.Drawing.Size(89, 30);
+            this.button2.MinimumSize = new System.Drawing.Size(89, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 30);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Top;
-            tableLayoutPanel1.Location = new Point(0, 45);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1370, 40);
-            tableLayoutPanel1.TabIndex = 5;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 45);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 40);
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // tableLayoutPanel5
             // 
-            tableLayoutPanel5.ColumnCount = 1;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Controls.Add(addMouldBtn, 0, 0);
-            tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(962, 3);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 1;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(199, 34);
-            tableLayoutPanel5.TabIndex = 0;
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.addMouldBtn, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(962, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(199, 34);
+            this.tableLayoutPanel5.TabIndex = 0;
             // 
             // addMouldBtn
             // 
-            addMouldBtn.BackColor = Color.FromArgb(41, 128, 185);
-            addMouldBtn.Dock = DockStyle.Fill;
-            addMouldBtn.FlatStyle = FlatStyle.Flat;
-            addMouldBtn.ForeColor = Color.White;
-            addMouldBtn.Location = new Point(3, 3);
-            addMouldBtn.MaximumSize = new Size(89, 30);
-            addMouldBtn.MinimumSize = new Size(89, 30);
-            addMouldBtn.Name = "addMouldBtn";
-            addMouldBtn.Size = new Size(89, 30);
-            addMouldBtn.TabIndex = 1;
-            addMouldBtn.Text = "Add +";
-            addMouldBtn.UseVisualStyleBackColor = false;
-            addMouldBtn.Click += addMouldBtn_Click_1;
+            this.addMouldBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.addMouldBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addMouldBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMouldBtn.ForeColor = System.Drawing.Color.White;
+            this.addMouldBtn.Location = new System.Drawing.Point(3, 3);
+            this.addMouldBtn.MaximumSize = new System.Drawing.Size(89, 30);
+            this.addMouldBtn.MinimumSize = new System.Drawing.Size(89, 30);
+            this.addMouldBtn.Name = "addMouldBtn";
+            this.addMouldBtn.Size = new System.Drawing.Size(89, 30);
+            this.addMouldBtn.TabIndex = 1;
+            this.addMouldBtn.Text = "Add +";
+            this.addMouldBtn.UseVisualStyleBackColor = false;
+            this.addMouldBtn.Click += new System.EventHandler(this.addMouldBtn_Click_1);
             // 
             // mouldManagementForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
-            Controls.Add(tableLayoutPanel3);
-            Controls.Add(tableLayoutPanel2);
-            Controls.Add(tableLayoutPanel1);
-            Controls.Add(panel1);
-            Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(1364, 726);
-            Name = "mouldManagementForm";
-            ShowIcon = false;
-            Text = "Mould Management";
-            tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel5.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1364, 726);
+            this.Name = "mouldManagementForm";
+            this.ShowIcon = false;
+            this.Text = "Mould Management";
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

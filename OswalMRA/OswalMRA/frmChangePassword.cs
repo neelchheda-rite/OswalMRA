@@ -1,4 +1,5 @@
-﻿using OswalMRA.MessageBox;
+﻿using OswalMRA.DAL;
+using OswalMRA.MessageBox;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,21 +9,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace OswalMRA {
     public partial class frmChangePassword : Form {
-        public frmChangePassword()
+        private readonly DBRepository _dapperManagement;
+        private readonly string _loggedUserName;
+        public frmChangePassword(DBRepository dapperManagement)
         {
             InitializeComponent();
+            _dapperManagement = dapperManagement;
+            //_loggedUserName = loggedUserName;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
-            if(currentPasswordtxtBox.Text!=null && newPasswordtxtBox.Text==confirmPasswordtxtBox.Text && passwordWarningLabel.Text == "")
-            {
-                msgBox msgBox = new("Password Changed","");
-                msgBox.Show();
-            }
+            //try
+            //{
+            //    bool isPasswordValid = await _dapperManagement.VerifyPassword(_loggedUserName, currentPasswordtxtBox.Text);
+
+            //    if (!isPasswordValid)
+            //    {
+            //        msgBox msgBox = new("current password is incorrect", "");
+            //        msgBox.Show();
+            //    }
+
+            //    if (newPasswordtxtBox.Text != confirmPasswordtxtBox.Text)
+            //    {
+            //        msgBox msgBox = new("passwords don't match", "");
+            //        msgBox.Show();
+            //    }
+
+            //    // Update the password in the database
+            //    bool success = await _dapperManagement.UpdatePassword(_loggedUserName, newPasswordtxtBox.Text);
+            //    if (success)
+            //    {
+            //        msgBox msgBox = new("password changed successfully", "");
+            //        msgBox.Show();
+            //        this.Close();
+            //    }
+            //    else
+            //    {
+            //        msgBox msgBox = new("password updatefailed", "");
+            //        msgBox.Show();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Handle exceptions
+            //    msgBox msgBox = new("An error occured", "");
+            //    msgBox.Show();
+            //}
         }
 
         private void button2_Click(object sender, EventArgs e)

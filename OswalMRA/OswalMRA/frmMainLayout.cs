@@ -140,12 +140,12 @@ namespace OswalMRA {
 
         private void btnPassword_Click(object sender, EventArgs e)
         {
-            frmChangePassword frmChangePassword = new();
-            DialogResult result = frmChangePassword.ShowDialog();
-            if (result == DialogResult.OK || result == DialogResult.Cancel)
-            {
-                openChildForm(new frmHome());
-            }
+            //frmChangePassword frmChangePassword = new();
+            //DialogResult result = frmChangePassword.ShowDialog();
+            //if (result == DialogResult.OK || result == DialogResult.Cancel)
+            //{
+            //    openChildForm(new frmHome());
+            //}
         }
 
         private void btnWorkLog_Click(object sender, EventArgs e)

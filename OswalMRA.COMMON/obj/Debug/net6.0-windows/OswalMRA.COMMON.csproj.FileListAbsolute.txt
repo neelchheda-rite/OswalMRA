@@ -10,14 +10,27 @@ E:\Neel\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.dll
 E:\Neel\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\refint\OswalMRA.COMMON.dll
 E:\Neel\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.pdb
 E:\Neel\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\ref\OswalMRA.COMMON.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.deps.json
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfoInputs.cache
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfo.cs
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.CoreCompileInputs.cache
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\refint\OswalMRA.COMMON.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.pdb
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\ref\OswalMRA.COMMON.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.deps.json
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.AssemblyReference.cache
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.GeneratedMSBuildEditorConfig.editorconfig
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfoInputs.cache
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfo.cs
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.CoreCompileInputs.cache
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\refint\OswalMRA.COMMON.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\ref\OswalMRA.COMMON.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.deps.json
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.AssemblyReference.cache
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfoInputs.cache
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.AssemblyInfo.cs
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.csproj.CoreCompileInputs.cache
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\refint\OswalMRA.COMMON.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.COMMON\obj\Debug\net6.0-windows\ref\OswalMRA.COMMON.dll

@@ -13,18 +13,33 @@ E:\Neel\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
 E:\Neel\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
 E:\Neel\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
 E:\Neel\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.deps.json
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.pdb
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.AssemblyReference.cache
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfoInputs.cache
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfo.cs
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CoreCompileInputs.cache
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CopyComplete
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
-C:\Users\Gajanan\Desktop\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.deps.json
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.pdb
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.AssemblyReference.cache
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfoInputs.cache
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfo.cs
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CoreCompileInputs.cache
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CopyComplete
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
+D:\Armanjeet\oswalmra (4)\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.deps.json
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.pdb
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.AssemblyReference.cache
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfoInputs.cache
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfo.cs
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CopyComplete
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
+C:\Users\Durgesh Gupta\Desktop\oswalmra\oswalmra\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
