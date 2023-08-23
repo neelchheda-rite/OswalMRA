@@ -23,21 +23,29 @@ namespace OswalMRA
 
             try
             {
-                ApplicationConfiguration.Initialize();
+
+                //ApplicationConfiguration.Initialize();
+                //Application.EnableVisualStyles();
+                //Application.SetCompatibleTextRenderingDefault(false);
+                ////frmSplashScreen frmHomeScreen = new frmSplashScreen();
+                ////Application.Run(frmHomeScreen);
+
+                ////if (frmHomeScreen.IsDisposed)
+                ////{
+                ////    frmFullLayout frmFullLayout = new frmFullLayout();
+                ////    Application.Run(frmFullLayout);
+                ////}
+                //frmFullLayout frmFullLayout = new frmFullLayout();
+                //mouldManagementForm mouldManagementForm = new();
+
+                //Application.Run(frmFullLayout);
+
+                //cod eto execute single page 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                //frmSplashScreen frmHomeScreen = new frmSplashScreen();
-                //Application.Run(frmHomeScreen);
 
-                //if (frmHomeScreen.IsDisposed)
-                //{
-                //    frmFullLayout frmFullLayout = new frmFullLayout();
-                //    Application.Run(frmFullLayout);
-                //}
-                frmFullLayout frmFullLayout = new frmFullLayout();
-                mouldManagementForm mouldManagementForm = new();
-
-                Application.Run(frmFullLayout);
+                // Create and show your main form
+                Application.Run(new Form1());
             }
             catch (Exception ex)
             {
