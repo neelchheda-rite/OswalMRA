@@ -31,15 +31,15 @@ namespace OswalMRA.Views {
         {
             if (newPasswordTextBox.Text == currentPasswordTextBox.Text)
             {
-                newPasswordWarning.Text = "Password already used";
+                newPasswordWarning.Text = Properties.Resources.passwordAlreadyUsedMessage;
                 newPasswordTextBox.Focus();
-                return; 
+                return;
             }
 
             if (newPasswordTextBox.Text != confirmPasswordTextBox.Text)
             {
-                confirmPasswordWarning.Text = "Passwords don't match";
-                return; 
+                confirmPasswordWarning.Text = Properties.Resources.passwordsDoNotMatchMessage;
+                return;
             }
 
             try
@@ -51,14 +51,14 @@ namespace OswalMRA.Views {
                 if (updatePasswordResp[0].UpdatePasswordStatus == "Password updated successfully.")
                 {
                     logger.Info("Password changed successfully.");
-                    msgBox msgBox = new msgBox("Password Change Successfull", "Your password has been changed successfully.");
+                    msgBox msgBox = new msgBox("Password Change Successfull", "passwordConfirmationMessage");
                     msgBox.ShowDialog();
                     DialogResult = DialogResult.OK;
                 }
                 else
                 {
                     logger.Error("Password change error.");
-                    msgBox msgBox = new msgBox("Password Change Error", "An error occurred while changing the password.");
+                    msgBox msgBox = new msgBox("Password Change Error", "errorConfirmationMessage");
                     msgBox.ShowDialog();
                     DialogResult = DialogResult.Cancel;
                 }
@@ -67,7 +67,7 @@ namespace OswalMRA.Views {
             {
                 logger.Error(ex, "An error occurred while changing the password.");
                 // Handle the exception appropriately, e.g., display an error message
-                msgBox msgBox = new msgBox("Password Change Error", "An error occurred while changing the password.");
+                msgBox msgBox = new msgBox("Password Change Error", "errorConfirmationMessage.");
                 msgBox.ShowDialog();
                 DialogResult = DialogResult.Cancel;
             }

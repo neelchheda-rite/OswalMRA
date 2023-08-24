@@ -88,6 +88,15 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while changing the password.
+        /// </summary>
+        internal static string errorConfirmationMessage {
+            get {
+                return ResourceManager.GetString("errorConfirmationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap eyeoff_removebg_preview {
@@ -289,6 +298,33 @@ namespace OswalMRA.Properties {
             get {
                 object obj = ResourceManager.GetObject("oswalLogoMain-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password already used..
+        /// </summary>
+        internal static string passwordAlreadyUsedMessage {
+            get {
+                return ResourceManager.GetString("passwordAlreadyUsedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password has been changed successfully.
+        /// </summary>
+        internal static string passwordConfirmationMessage {
+            get {
+                return ResourceManager.GetString("passwordConfirmationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passwords don&apos;t match..
+        /// </summary>
+        internal static string passwordsDoNotMatchMessage {
+            get {
+                return ResourceManager.GetString("passwordsDoNotMatchMessage", resourceCulture);
             }
         }
         
