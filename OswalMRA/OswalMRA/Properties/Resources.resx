@@ -169,19 +169,19 @@
   <data name="eyeoff-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eyeoff-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ClearConfirmationMessage" xml:space="preserve">
-    <value>are you sure you want to clear?</value>
+  <data name="clearConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Clear?</value>
   </data>
-  <data name="DeleteConfirmationMessage" xml:space="preserve">
-    <value>are you sure you want to delete?</value>
+  <data name="deleteConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Delete?</value>
   </data>
-  <data name="EditConfirmationMessage" xml:space="preserve">
-    <value>are you sure you want to edit?</value>
+  <data name="editConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Edit?</value>
   </data>
-  <data name="MouldRestoredMessage" xml:space="preserve">
+  <data name="mouldRestoredMessage" xml:space="preserve">
     <value>Mould Restored Successfully.</value>
   </data>
-  <data name="UploadConfirmationMessage" xml:space="preserve">
-    <value>are you sure you want to upload?</value>
+  <data name="uploadConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Upload?</value>
   </data>
 </root>

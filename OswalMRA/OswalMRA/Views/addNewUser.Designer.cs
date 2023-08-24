@@ -100,6 +100,7 @@
             button2.TabIndex = 1;
             button2.Text = "Clear";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -117,6 +118,7 @@
             button1.TabIndex = 0;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -228,7 +230,7 @@
             label3.Name = "label3";
             label3.Size = new Size(61, 45);
             label3.TabIndex = 2;
-            label3.Text = "Roll";
+            label3.Text = "Role";
             // 
             // label4
             // 
@@ -277,9 +279,9 @@
             checkBox1.MaximumSize = new Size(0, 21);
             checkBox1.MinimumSize = new Size(0, 21);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(63, 21);
+            checkBox1.Size = new Size(65, 21);
             checkBox1.TabIndex = 7;
-            checkBox1.Text = "Check";
+            checkBox1.Text = "Active";
             checkBox1.UseVisualStyleBackColor = true;
             // 
             // addNewUser

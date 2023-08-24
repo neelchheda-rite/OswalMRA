@@ -31,19 +31,8 @@ namespace OswalMRA
         private void InitializeComponent()
         {
             CheckBoxProperties checkBoxProperties1 = new CheckBoxProperties();
-            checkBox1 = new CheckBox();
             cmbIListDataSource = new CheckBoxComboBox();
             SuspendLayout();
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(362, 42);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(101, 24);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
             // 
             // cmbIListDataSource
             // 
@@ -51,28 +40,26 @@ namespace OswalMRA
             cmbIListDataSource.CheckBoxProperties = checkBoxProperties1;
             cmbIListDataSource.DisplayMemberSingleItem = "";
             cmbIListDataSource.FormattingEnabled = true;
-            cmbIListDataSource.Location = new Point(248, 96);
+            cmbIListDataSource.Location = new Point(217, 72);
+            cmbIListDataSource.Margin = new Padding(3, 2, 3, 2);
             cmbIListDataSource.Name = "cmbIListDataSource";
-            cmbIListDataSource.Size = new Size(152, 28);
+            cmbIListDataSource.Size = new Size(134, 23);
             cmbIListDataSource.TabIndex = 3;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(checkBox1);
+            ClientSize = new Size(700, 338);
             Controls.Add(cmbIListDataSource);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private CheckBox checkBox1;
         private CheckBoxComboBox cmbIListDataSource;
     }
 }

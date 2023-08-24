@@ -1,20 +1,21 @@
 ﻿using NLog;
+using OswalMRA.MessageBox;
 
 namespace OswalMRA
 {
-    public partial class mouldManagementForm : Form
+    public partial class frmMouldManagementPage : Form
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        public mouldManagementForm()
+        public frmMouldManagementPage()
         {
             InitializeComponent();
             InitializeDataGridView();
-            dataGridView1.ReadOnly = true;
+            dgvMouldManagement.ReadOnly = true;
         }
 
         private void InitializeDataGridView()
         {
-            dataGridView1.AutoGenerateColumns = false;
+            dgvMouldManagement.AutoGenerateColumns = false;
 
             // Create columns
             DataGridViewTextBoxColumn mouldIDColumn = new DataGridViewTextBoxColumn();
@@ -42,21 +43,22 @@ namespace OswalMRA
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
             deleteButtonColumn.HeaderText = "Delete";
             deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.Name = "Delete";
             deleteButtonColumn.FillWeight = 70;
             deleteButtonColumn.UseColumnTextForButtonValue = true;
 
             // Add columns to DataGridView
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] {
+            dgvMouldManagement.Columns.AddRange(new DataGridViewColumn[] {
                 mouldIDColumn, descriptionColumn, rowColumn, colColumn, editButtonColumn, deleteButtonColumn
             });
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font, FontStyle.Bold); // Make headers bold
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font.FontFamily, 12, FontStyle.Bold); // You can adjust font size
+            dgvMouldManagement.ColumnHeadersDefaultCellStyle.Font = new Font(dgvMouldManagement.Font, FontStyle.Bold); // Make headers bold
+            dgvMouldManagement.ColumnHeadersDefaultCellStyle.Font = new Font(dgvMouldManagement.Font.FontFamily, 12, FontStyle.Bold); // You can adjust font size
 
-            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            foreach (DataGridViewColumn column in dgvMouldManagement.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.Automatic;
             }
-            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Align text to middle
+            dgvMouldManagement.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Align text to middle
 
             // Populate DataGridView with dummy data
             PopulateMouldData();
@@ -72,26 +74,9 @@ namespace OswalMRA
             };
 
             // Bind the data to the DataGridView
-            dataGridView1.DataSource = moulds;
+            dgvMouldManagement.DataSource = moulds;
         }
-   private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if (e.RowIndex >= 0)
-            //{
-            //    if (e.ColumnIndex == dataGridView1.Columns["EditButtonColumn"].Index)
-            //    {
-            //        int mouldID = (int)dataGridView1.Rows[e.RowIndex].Cells["MouldID"].Value;
-            //        // Perform the edit action here using the mouldID
-            //        MessageBox.Show($"Edit mould with MouldID: {mouldID}");
-            //    }
-            //    else if (e.ColumnIndex == dataGridView1.Columns["DeleteButtonColumn"].Index)
-            //    {
-            //        int mouldID = (int)dataGridView1.Rows[e.RowIndex].Cells["MouldID"].Value;
-            //        // Perform the delete action here using the mouldID
-            //        MessageBox.Show($"Delete mould with MouldID: {mouldID}");
-            //    }
-            //}
-        }    
+        
 
         private void addBtn_Click(object sender, EventArgs e)
         {
@@ -101,6 +86,36 @@ namespace OswalMRA
 
             }
 
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            // Retrieve the clear confirmation message from the resource file
+            string clearConfirmationMessage = Properties.Resources.ResourceManager.GetString("ClearMessageConfirmation");
+
+            // Show confirmation dialog for Clear using optionMsgBox
+            optionMsgBox confirmationBox = new optionMsgBox("Clear Confirmation", "clearConfirmationMessage");
+            if (confirmationBox.ShowDialog() == DialogResult.Yes)
+            {
+                // Perform the clear action
+                // Your code to clear data goes here
+            }
+        }
+
+        private void dgvMouldManagement_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dgvMouldManagement.Columns["Delete"].Index)
+                {
+                    // Show confirmation dialog for Delete using optionMsgBox
+                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "deleteConfirmationMessage");
+                    if (confirmationBox.ShowDialog() == DialogResult.Yes)
+                    {
+                        // Perform the delete action
+                    }
+                }
+            }
         }
     }
     public class Mould
