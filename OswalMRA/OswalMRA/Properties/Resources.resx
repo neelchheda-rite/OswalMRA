@@ -172,7 +172,13 @@
   <data name="mouldDeleteConfirmation" xml:space="preserve">
     <value>Are you sure you want to delete this mould?</value>
   </data>
+  <data name="mouldDuplicateCode" xml:space="preserve">
+    <value>A Mould With this code already exists. \nTry with a different code.</value>
+  </data>
   <data name="mouldInsertSuccess" xml:space="preserve">
     <value>Mould Inserted Successfully</value>
+  </data>
+  <data name="mouldSameRowColConfirmation" xml:space="preserve">
+    <value>A mould already exists on Row: {selectedRow}, Column: {selectedCol}. Do you still want to proceed?</value>
   </data>
 </root>

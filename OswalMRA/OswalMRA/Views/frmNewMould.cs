@@ -78,7 +78,7 @@ namespace OswalMRA
                 {
                     errorMessage += "- " + error + "\n";
                 }
-                msgBox fieldValError = new("Error",errorMessage);
+                msgBox fieldValError = new("Error", errorMessage);
                 fieldValError.Show();
             }
             else
@@ -99,13 +99,13 @@ namespace OswalMRA
 
                     if (validateCode == 1)
                     {
-                        msgBox dupeCodeMsg = new("Duplicate Mould Code", "A Mould With this code already exists. Try with a different code");
+                        msgBox dupeCodeMsg = new("Duplicate Mould Code", "mouldDuplicateCode");
                         dupeCodeMsg.Show();
                     }
 
                     if (validationFlag == 1 && validateCode == 0)
                     {
-                        using (var optionBox = new optionMsgBox("Confirmation for inserting in the same grid", $"A mould already exists on Row: {selectedRow}, Column: {selectedCol}. Do you still want to proceed?"))
+                        using (var optionBox = new optionMsgBox("Confirmation for inserting in the same grid", $"mouldSameRowColConfirmation"))
                         {
                             var result1 = optionBox.ShowDialog();
 
@@ -176,5 +176,13 @@ namespace OswalMRA
             return isValid;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtMouldCode.Clear();
+            txtMouldName.Clear();
+            txtMouldDesc.Clear();
+            ddlRow.Items.Clear();
+            ddlCol.Items.Clear();
+        }
     }
 }
