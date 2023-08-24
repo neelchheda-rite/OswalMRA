@@ -61,29 +61,29 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to are you sure you want to clear?.
+        ///   Looks up a localized string similar to Are You Sure You Want To Clear?.
         /// </summary>
-        internal static string ClearConfirmationMessage {
+        internal static string clearConfirmationMessage {
             get {
-                return ResourceManager.GetString("ClearConfirmationMessage", resourceCulture);
+                return ResourceManager.GetString("clearConfirmationMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to are you sure you want to delete?.
+        ///   Looks up a localized string similar to Are You Sure You Want To Delete?.
         /// </summary>
-        internal static string DeleteConfirmationMessage {
+        internal static string deleteConfirmationMessage {
             get {
-                return ResourceManager.GetString("DeleteConfirmationMessage", resourceCulture);
+                return ResourceManager.GetString("deleteConfirmationMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to are you sure you want to edit?.
+        ///   Looks up a localized string similar to Are You Sure You Want To Edit?.
         /// </summary>
-        internal static string EditConfirmationMessage {
+        internal static string editConfirmationMessage {
             get {
-                return ResourceManager.GetString("EditConfirmationMessage", resourceCulture);
+                return ResourceManager.GetString("editConfirmationMessage", resourceCulture);
             }
         }
         
@@ -230,9 +230,9 @@ namespace OswalMRA.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Mould Restored Successfully..
         /// </summary>
-        internal static string MouldRestoredMessage {
+        internal static string mouldRestoredMessage {
             get {
-                return ResourceManager.GetString("MouldRestoredMessage", resourceCulture);
+                return ResourceManager.GetString("mouldRestoredMessage", resourceCulture);
             }
         }
         
@@ -257,11 +257,11 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to are you sure you want to upload?.
+        ///   Looks up a localized string similar to Are You Sure You Want To Upload?.
         /// </summary>
-        internal static string UploadConfirmationMessage {
+        internal static string uploadConfirmationMessage {
             get {
-                return ResourceManager.GetString("UploadConfirmationMessage", resourceCulture);
+                return ResourceManager.GetString("uploadConfirmationMessage", resourceCulture);
             }
         }
         

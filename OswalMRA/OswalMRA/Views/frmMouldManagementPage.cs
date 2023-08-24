@@ -94,7 +94,7 @@ namespace OswalMRA
             string clearConfirmationMessage = Properties.Resources.ResourceManager.GetString("ClearMessageConfirmation");
 
             // Show confirmation dialog for Clear using optionMsgBox
-            optionMsgBox confirmationBox = new optionMsgBox("Clear Confirmation", "ClearConfirmationMessage");
+            optionMsgBox confirmationBox = new optionMsgBox("Clear Confirmation", "clearConfirmationMessage");
             if (confirmationBox.ShowDialog() == DialogResult.Yes)
             {
                 // Perform the clear action
@@ -109,7 +109,7 @@ namespace OswalMRA
                 if (e.ColumnIndex == dgvMouldManagement.Columns["Delete"].Index)
                 {
                     // Show confirmation dialog for Delete using optionMsgBox
-                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "DeleteConfirmationMessage");
+                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "deleteConfirmationMessage");
                     if (confirmationBox.ShowDialog() == DialogResult.Yes)
                     {
                         // Perform the delete action

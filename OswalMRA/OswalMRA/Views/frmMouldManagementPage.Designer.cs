@@ -58,7 +58,7 @@ namespace OswalMRA
             dgvMouldManagement.TabIndex = 1;
             dgvMouldManagement.CellContentClick += dgvMouldManagement_CellContentClick;
             // 
-            // tableLayoutPanel1
+            // tlpHeader
             // 
             tlpHeader.ColumnCount = 1;
             tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -69,7 +69,7 @@ namespace OswalMRA
             tlpHeader.Dock = DockStyle.Fill;
             tlpHeader.Location = new Point(0, 0);
             tlpHeader.Margin = new Padding(0);
-            tlpHeader.Name = "tableLayoutPanel1";
+            tlpHeader.Name = "tlpHeader";
             tlpHeader.RowCount = 4;
             tlpHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
             tlpHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
@@ -78,7 +78,7 @@ namespace OswalMRA
             tlpHeader.Size = new Size(800, 510);
             tlpHeader.TabIndex = 1;
             // 
-            // tableLayoutPanel2
+            // tlpBtn
             // 
             tlpBtn.BackColor = Color.White;
             tlpBtn.ColumnCount = 2;
@@ -88,7 +88,7 @@ namespace OswalMRA
             tlpBtn.Dock = DockStyle.Fill;
             tlpBtn.Location = new Point(0, 35);
             tlpBtn.Margin = new Padding(0);
-            tlpBtn.Name = "tableLayoutPanel2";
+            tlpBtn.Name = "tlpBtn";
             tlpBtn.RowCount = 1;
             tlpBtn.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tlpBtn.Size = new Size(800, 35);
@@ -111,7 +111,7 @@ namespace OswalMRA
             addBtn.UseVisualStyleBackColor = false;
             addBtn.Click += addBtn_Click;
             // 
-            // tableLayoutPanel3
+            // tlpGrid
             // 
             tlpGrid.BackColor = Color.White;
             tlpGrid.ColumnCount = 3;
@@ -123,7 +123,7 @@ namespace OswalMRA
             tlpGrid.Dock = DockStyle.Fill;
             tlpGrid.Location = new Point(0, 472);
             tlpGrid.Margin = new Padding(0);
-            tlpGrid.Name = "tableLayoutPanel3";
+            tlpGrid.Name = "tlpGrid";
             tlpGrid.RowCount = 1;
             tlpGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tlpGrid.Size = new Size(800, 38);
@@ -162,7 +162,7 @@ namespace OswalMRA
             clearBtn.UseVisualStyleBackColor = false;
             clearBtn.Click += clearBtn_Click;
             // 
-            // tableLayoutPanel4
+            // tlpFooter
             // 
             tlpFooter.BackColor = Color.FromArgb(41, 128, 185);
             tlpFooter.ColumnCount = 1;
@@ -172,20 +172,20 @@ namespace OswalMRA
             tlpFooter.Margin = new Padding(0);
             tlpFooter.MaximumSize = new Size(0, 47);
             tlpFooter.MinimumSize = new Size(0, 47);
-            tlpFooter.Name = "tableLayoutPanel4";
+            tlpFooter.Name = "tlpFooter";
             tlpFooter.RowCount = 1;
             tlpFooter.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tlpFooter.Size = new Size(800, 47);
             tlpFooter.TabIndex = 4;
             // 
-            // frmMouldManagementForm
+            // frmMouldManagementPage
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 510);
             Controls.Add(tlpHeader);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Name = "frmMouldManagementForm";
+            Name = "frmMouldManagementPage";
             ShowIcon = false;
             Text = "Mould Management";
             ((System.ComponentModel.ISupportInitialize)dgvMouldManagement).EndInit();

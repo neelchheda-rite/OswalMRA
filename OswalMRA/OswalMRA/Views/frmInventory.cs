@@ -1,42 +1,43 @@
 ﻿
+using OswalMRA.MessageBox;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OswalMRA
 {
-    public partial class Inventory : Form
+    public partial class frmInventory : Form
     {
-        public Inventory()
+        public frmInventory()
         {
             InitializeComponent();
             // Set the form to maximize
             WindowState = FormWindowState.Maximized;
             // Create and populate DataGridView with dummy data
-           
-            PopulateDummyData();
-            dataGridView1.ReadOnly = true;
-            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
 
-        }     
+            PopulateDummyData();
+            dgvInventory.ReadOnly = true;
+            dgvInventory.DefaultCellStyle.ForeColor = Color.Black;
+
+        }
 
         private void PopulateDummyData()
         {
             // Create a DataTable to hold the data
-            var dataTable = new System.Data.DataTable();           
+            var dataTable = new System.Data.DataTable();
             dataTable.Columns.Add("Date", typeof(DateTime));
             dataTable.Columns.Add("Mould", typeof(string));
             dataTable.Columns.Add("Slot", typeof(string));
             dataTable.Columns.Add("Person", typeof(string));
 
             // Add some dummy data
-            
-            dataTable.Rows.Add( DateTime.Now, "Mould A", "Slot 1", "Person 1");
-            dataTable.Rows.Add( DateTime.Now.AddDays(1), "Mould B", "Slot 2", "Person 2");
-            dataTable.Rows.Add( DateTime.Now.AddDays(2), "Mould C", "Slot 3", "Person 3");
+
+            dataTable.Rows.Add(DateTime.Now, "Mould A", "Slot 1", "Person 1");
+            dataTable.Rows.Add(DateTime.Now.AddDays(1), "Mould B", "Slot 2", "Person 2");
+            dataTable.Rows.Add(DateTime.Now.AddDays(2), "Mould C", "Slot 3", "Person 3");
 
             // Bind the DataTable to the DataGridView
-            dataGridView1.DataSource = dataTable;
-            dataGridView1.AllowUserToAddRows = false;
+            dgvInventory.DataSource = dataTable;
+            dgvInventory.AllowUserToAddRows = false;
 
             // Add Edit and Delete buttons as columns
             var editButtonColumn = new DataGridViewButtonColumn
@@ -48,7 +49,7 @@ namespace OswalMRA
                 FillWeight = 50
 
             };
-            dataGridView1.Columns.Add(editButtonColumn);
+            dgvInventory.Columns.Add(editButtonColumn);
 
             var deleteButtonColumn = new DataGridViewButtonColumn
             {
@@ -57,12 +58,12 @@ namespace OswalMRA
                 Text = "Delete",
                 UseColumnTextForButtonValue = true,
                 FillWeight = 50
-  };
-            dataGridView1.Columns.Add(deleteButtonColumn);
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font, FontStyle.Bold);
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font(dataGridView1.Font.FontFamily, 12, FontStyle.Bold);
-            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
+            };
+            dgvInventory.Columns.Add(deleteButtonColumn);
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font(dgvInventory .Font, FontStyle.Bold);
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font(dgvInventory.Font.FontFamily, 12, FontStyle.Bold);
+            dgvInventory.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -85,8 +86,25 @@ namespace OswalMRA
                 this.Padding = Padding.Empty;
                 this.Items.Add(host);
             }
-            
+
         }
-      
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (e.RowIndex >= 0)
+                {
+                    if (e.ColumnIndex == dgvInventory.Columns["DeleteButtonColumn"].Index)
+                    {
+                        // Show confirmation dialog for Delete using optionMsgBox
+                        optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "deleteConfirmationMessage");
+                        if (confirmationBox.ShowDialog() == DialogResult.Yes)
+                        {
+                            // Perform the delete action
+                        }
+                    }
+                }
+            }
+        }
     }
 }

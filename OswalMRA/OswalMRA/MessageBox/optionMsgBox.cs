@@ -16,10 +16,8 @@ namespace OswalMRA.MessageBox
         {
             InitializeComponent();
             this.Text = Title;
-
-            // Retrieve the message from the resource file using the ResourceMessageKey
-            string message = Properties.Resources.ClearConfirmationMessage;
-            messageLabel.Text = message; // Set the message to the label
+            string message = Properties.Resources.ResourceManager.GetString(ResourceMessageKey);
+            messageLabel.Text = message; 
         }
 
         private void button2_Click(object sender, EventArgs e)
