@@ -31,4 +31,14 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CheckBoxComboBox">
+      <HintPath>DLL\CheckBoxComboBox.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

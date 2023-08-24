@@ -89,7 +89,7 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.OK)
             {
-                openChildForm(new UserManagement());
+                openChildForm(new frmUserPage());
                 this.Text = "Oswal MRA - User Management";
             }
             else if (loginDialogResult == DialogResult.Cancel)
@@ -122,7 +122,7 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmWorkLogPage());
+                openChildForm(new frmWorklog());
                 this.Text = "Oswal MRA - Work Log";
             }
             else if (loginDialogResult == DialogResult.Cancel)
@@ -138,7 +138,7 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmInventoryPage());
+                openChildForm(new frmInventory());
                 this.Text = "Oswal MRA - Inventory";
             }
             else if (loginDialogResult == DialogResult.Cancel)
@@ -154,7 +154,7 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmMouldPage());
+                openChildForm(new frmMouldManagementPage());
                 this.Text = "Oswal MRA - Mould Management";
             }
             else if (loginDialogResult == DialogResult.Cancel)

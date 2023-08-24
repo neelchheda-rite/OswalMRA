@@ -1,4 +1,4 @@
-﻿
+﻿using OswalMRA.Properties; 
 namespace OswalMRA
 {
     public partial class mouldDetailsfORM : Form

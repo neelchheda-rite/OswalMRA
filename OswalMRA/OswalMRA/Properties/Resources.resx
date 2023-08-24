@@ -169,6 +169,7 @@
   <data name="eyeoff-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eyeoff-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+
   <data name="mouldDeleteConfirmation" xml:space="preserve">
     <value>Are you sure you want to delete this mould?</value>
   </data>
@@ -180,5 +181,21 @@
   </data>
   <data name="mouldSameRowColConfirmation" xml:space="preserve">
     <value>A mould already exists on Row: {selectedRow}, Column: {selectedCol}. Do you still want to proceed?</value>
+
+  <data name="clearConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Clear?</value>
+  </data>
+  <data name="deleteConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Delete?</value>
+  </data>
+  <data name="editConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Edit?</value>
+  </data>
+  <data name="mouldRestoredMessage" xml:space="preserve">
+    <value>Mould Restored Successfully.</value>
+  </data>
+  <data name="uploadConfirmationMessage" xml:space="preserve">
+    <value>Are You Sure You Want To Upload?</value>
+
   </data>
 </root>

@@ -94,7 +94,10 @@ namespace OswalMRA {
             DialogResult result = frmLogin.ShowDialog();
             if (result == DialogResult.OK)
             {
+
                 openChildForm(new frmMouldPage());
+
+
             }
             else
             {
@@ -130,7 +133,7 @@ namespace OswalMRA {
             DialogResult result = frmLogin.ShowDialog();
             if (result == DialogResult.OK)
             {
-                openChildForm(new UserManagement());
+                openChildForm(new frmUserPage());
             } else if (result == DialogResult.Cancel)
             {
                 //MessageBox.Show("Access Denied");
