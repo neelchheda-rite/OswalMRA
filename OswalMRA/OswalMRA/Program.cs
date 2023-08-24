@@ -2,6 +2,7 @@ using NLog;
 using NLog.Config;
 using NLog.Targets;
 using OswalMRA.Layout;
+using OswalMRA.Views;
 
 namespace OswalMRA
 {
@@ -36,7 +37,7 @@ namespace OswalMRA
                 //    Application.Run(frmFullLayout);
                 //}
                 frmFullLayout frmFullLayout = new frmFullLayout();
-
+                frmMouldPage mouldTest = new();
                 Application.Run(frmFullLayout);
 
             }

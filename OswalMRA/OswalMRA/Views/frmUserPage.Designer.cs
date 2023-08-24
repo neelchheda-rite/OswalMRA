@@ -28,165 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
-            dgvUserManagement = new DataGridView();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            btnAdd = new Button();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            uploadBtn = new Button();
-            clearBtn = new Button();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvUserManagement).BeginInit();
-            tableLayoutPanel2.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
-            SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvUserManagement = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.uploadBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagement)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(dgvUserManagement, 0, 2);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 3);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 79F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
-            tableLayoutPanel1.Size = new Size(762, 478);
-            tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvUserManagement, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(871, 605);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvUserManagement
             // 
-            dgvUserManagement.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUserManagement.BackgroundColor = Color.White;
-            dgvUserManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUserManagement.Dock = DockStyle.Fill;
-            dgvUserManagement.Location = new Point(0, 66);
-            dgvUserManagement.Margin = new Padding(0);
-            dgvUserManagement.Name = "dgvUserManagement";
-            dgvUserManagement.RowTemplate.Height = 25;
-            dgvUserManagement.Size = new Size(762, 377);
-            dgvUserManagement.TabIndex = 1;
-            dgvUserManagement.CellContentClick += dgvUserManagement_CellContentClick;
+            this.dgvUserManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUserManagement.BackgroundColor = System.Drawing.Color.White;
+            this.dgvUserManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUserManagement.Location = new System.Drawing.Point(0, 84);
+            this.dgvUserManagement.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvUserManagement.Name = "dgvUserManagement";
+            this.dgvUserManagement.RowTemplate.Height = 25;
+            this.dgvUserManagement.Size = new System.Drawing.Size(871, 477);
+            this.dgvUserManagement.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = Color.White;
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel2.Controls.Add(btnAdd, 1, 0);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(0, 33);
-            tableLayoutPanel2.Margin = new Padding(0);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 1;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(762, 33);
-            tableLayoutPanel2.TabIndex = 2;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.Controls.Add(this.btnAdd, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 42);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(871, 42);
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.FromArgb(41, 128, 185);
-            btnAdd.Dock = DockStyle.Fill;
-            btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(647, 0);
-            btnAdd.Margin = new Padding(0);
-            btnAdd.MaximumSize = new Size(0, 33);
-            btnAdd.MinimumSize = new Size(0, 33);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(115, 33);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = false;
-            btnAdd.Click += btnAdd_Click;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(740, 0);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd.MaximumSize = new System.Drawing.Size(0, 42);
+            this.btnAdd.MinimumSize = new System.Drawing.Size(0, 42);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(131, 42);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.BackColor = Color.White;
-            tableLayoutPanel3.ColumnCount = 3;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel3.Controls.Add(uploadBtn, 1, 0);
-            tableLayoutPanel3.Controls.Add(clearBtn, 2, 0);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(0, 443);
-            tableLayoutPanel3.Margin = new Padding(0);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(762, 35);
-            tableLayoutPanel3.TabIndex = 3;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.Controls.Add(this.uploadBtn, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.clearBtn, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 561);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(871, 44);
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
             // uploadBtn
             // 
-            uploadBtn.BackColor = Color.FromArgb(41, 128, 185);
-            uploadBtn.Dock = DockStyle.Fill;
-            uploadBtn.ForeColor = Color.White;
-            uploadBtn.Location = new Point(533, 0);
-            uploadBtn.Margin = new Padding(0);
-            uploadBtn.MaximumSize = new Size(0, 33);
-            uploadBtn.MinimumSize = new Size(0, 33);
-            uploadBtn.Name = "uploadBtn";
-            uploadBtn.Size = new Size(114, 33);
-            uploadBtn.TabIndex = 0;
-            uploadBtn.Text = "Upload";
-            uploadBtn.UseVisualStyleBackColor = false;
+            this.uploadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.uploadBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uploadBtn.ForeColor = System.Drawing.Color.White;
+            this.uploadBtn.Location = new System.Drawing.Point(609, 0);
+            this.uploadBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.uploadBtn.MaximumSize = new System.Drawing.Size(0, 42);
+            this.uploadBtn.MinimumSize = new System.Drawing.Size(0, 42);
+            this.uploadBtn.Name = "uploadBtn";
+            this.uploadBtn.Size = new System.Drawing.Size(130, 42);
+            this.uploadBtn.TabIndex = 0;
+            this.uploadBtn.Text = "Upload";
+            this.uploadBtn.UseVisualStyleBackColor = false;
             // 
             // clearBtn
             // 
-            clearBtn.BackColor = Color.FromArgb(41, 128, 185);
-            clearBtn.Dock = DockStyle.Fill;
-            clearBtn.ForeColor = Color.White;
-            clearBtn.Location = new Point(647, 0);
-            clearBtn.Margin = new Padding(0);
-            clearBtn.MaximumSize = new Size(0, 33);
-            clearBtn.MinimumSize = new Size(0, 33);
-            clearBtn.Name = "clearBtn";
-            clearBtn.Size = new Size(115, 33);
-            clearBtn.TabIndex = 1;
-            clearBtn.Text = "Clear";
-            clearBtn.UseVisualStyleBackColor = false;
-            clearBtn.Click += clearBtn_Click;
+            this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.clearBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(739, 0);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.clearBtn.MaximumSize = new System.Drawing.Size(0, 42);
+            this.clearBtn.MinimumSize = new System.Drawing.Size(0, 42);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(132, 42);
+            this.clearBtn.TabIndex = 1;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel4
             // 
-            tableLayoutPanel4.BackColor = Color.FromArgb(41, 128, 185);
-            tableLayoutPanel4.ColumnCount = 1;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(0, 0);
-            tableLayoutPanel4.Margin = new Padding(0);
-            tableLayoutPanel4.MaximumSize = new Size(0, 47);
-            tableLayoutPanel4.MinimumSize = new Size(0, 47);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(762, 47);
-            tableLayoutPanel4.TabIndex = 4;
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.MaximumSize = new System.Drawing.Size(0, 60);
+            this.tableLayoutPanel4.MinimumSize = new System.Drawing.Size(0, 60);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(871, 60);
+            this.tableLayoutPanel4.TabIndex = 4;
             // 
             // frmUserPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(762, 478);
-            Controls.Add(tableLayoutPanel1);
-            Name = "frmUserPage";
-            ShowIcon = false;
-            Text = "User Management";
-            tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvUserManagement).EndInit();
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(871, 605);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "frmUserPage";
+            this.ShowIcon = false;
+            this.Text = "User Management";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagement)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

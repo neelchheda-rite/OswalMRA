@@ -29,245 +29,245 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventory));
-            pnlHeader = new Panel();
-            tlpHeader = new TableLayoutPanel();
-            lblFrom = new Label();
-            lblTo = new Label();
-            dtpFrom = new DateTimePicker();
-            dtpTo = new DateTimePicker();
-            toolstripMoulId = new ToolStrip();
-            tspDropDownBtn = new ToolStripDropDownButton();
-            CmbPerson = new ComboBox();
-            lblPerson = new Label();
-            cmbTo = new ComboBox();
-            btnSearch = new Button();
-            dgvInventory = new DataGridView();
-            tlpBtn = new TableLayoutPanel();
-            tlpHeader.SuspendLayout();
-            toolstripMoulId.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
-            tlpBtn.SuspendLayout();
-            SuspendLayout();
-            // 
-            // pnlHeader
-            // 
-            pnlHeader.BackColor = Color.FromArgb(41, 128, 185);
-            pnlHeader.Dock = DockStyle.Top;
-            pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Margin = new Padding(0);
-            pnlHeader.MaximumSize = new Size(0, 35);
-            pnlHeader.MinimumSize = new Size(0, 35);
-            pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(1370, 35);
-            pnlHeader.TabIndex = 0;
+            this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.toolstripMoulId = new System.Windows.Forms.ToolStrip();
+            this.tspDropDownBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.CmbPerson = new System.Windows.Forms.ComboBox();
+            this.lblPerson = new System.Windows.Forms.Label();
+            this.cmbTo = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.dgvInventory = new System.Windows.Forms.DataGridView();
+            this.tlpBtn = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.tlpHeader.SuspendLayout();
+            this.toolstripMoulId.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
+            this.tlpBtn.SuspendLayout();
+            this.SuspendLayout();
             // 
             // tlpHeader
             // 
-            tlpHeader.BackColor = Color.White;
-            tlpHeader.ColumnCount = 8;
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 6.666667F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.30864F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.185185F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.18005F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.24817F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.777778F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.80247F));
-            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.81481F));
-            tlpHeader.Controls.Add(lblFrom, 0, 0);
-            tlpHeader.Controls.Add(lblTo, 2, 0);
-            tlpHeader.Controls.Add(dtpFrom, 1, 0);
-            tlpHeader.Controls.Add(dtpTo, 3, 0);
-            tlpHeader.Controls.Add(toolstripMoulId, 4, 0);
-            tlpHeader.Controls.Add(CmbPerson, 4, 0);
-            tlpHeader.Controls.Add(lblPerson, 5, 0);
-            tlpHeader.Controls.Add(cmbTo, 6, 0);
-            tlpHeader.Controls.Add(btnSearch, 7, 0);
-            tlpHeader.Dock = DockStyle.Top;
-            tlpHeader.Location = new Point(0, 35);
-            tlpHeader.Margin = new Padding(1);
-            tlpHeader.Name = "tlpHeader";
-            tlpHeader.RowCount = 1;
-            tlpHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpHeader.Size = new Size(1370, 28);
-            tlpHeader.TabIndex = 1;
+            this.tlpHeader.BackColor = System.Drawing.Color.White;
+            this.tlpHeader.ColumnCount = 8;
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.30864F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.185185F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.18005F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.24817F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.777778F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.80247F));
+            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.81481F));
+            this.tlpHeader.Controls.Add(this.lblFrom, 0, 0);
+            this.tlpHeader.Controls.Add(this.lblTo, 2, 0);
+            this.tlpHeader.Controls.Add(this.dtpFrom, 1, 0);
+            this.tlpHeader.Controls.Add(this.dtpTo, 3, 0);
+            this.tlpHeader.Controls.Add(this.toolstripMoulId, 4, 0);
+            this.tlpHeader.Controls.Add(this.CmbPerson, 4, 0);
+            this.tlpHeader.Controls.Add(this.lblPerson, 5, 0);
+            this.tlpHeader.Controls.Add(this.cmbTo, 6, 0);
+            this.tlpHeader.Controls.Add(this.btnSearch, 7, 0);
+            this.tlpHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpHeader.Location = new System.Drawing.Point(0, 44);
+            this.tlpHeader.Margin = new System.Windows.Forms.Padding(1);
+            this.tlpHeader.Name = "tlpHeader";
+            this.tlpHeader.RowCount = 1;
+            this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpHeader.Size = new System.Drawing.Size(998, 35);
+            this.tlpHeader.TabIndex = 1;
             // 
             // lblFrom
             // 
-            lblFrom.AutoSize = true;
-            lblFrom.Dock = DockStyle.Fill;
-            lblFrom.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFrom.ForeColor = Color.Black;
-            lblFrom.Location = new Point(0, 0);
-            lblFrom.Margin = new Padding(0);
-            lblFrom.MaximumSize = new Size(0, 23);
-            lblFrom.MinimumSize = new Size(0, 23);
-            lblFrom.Name = "lblFrom";
-            lblFrom.Size = new Size(91, 23);
-            lblFrom.TabIndex = 0;
-            lblFrom.Text = "From";
-            lblFrom.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFrom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFrom.ForeColor = System.Drawing.Color.Black;
+            this.lblFrom.Location = new System.Drawing.Point(0, 0);
+            this.lblFrom.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFrom.MaximumSize = new System.Drawing.Size(0, 29);
+            this.lblFrom.MinimumSize = new System.Drawing.Size(0, 29);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(66, 29);
+            this.lblFrom.TabIndex = 0;
+            this.lblFrom.Text = "From";
+            this.lblFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTo
             // 
-            lblTo.AutoSize = true;
-            lblTo.Dock = DockStyle.Fill;
-            lblTo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTo.ForeColor = Color.Black;
-            lblTo.Location = new Point(300, 0);
-            lblTo.Margin = new Padding(0);
-            lblTo.MaximumSize = new Size(0, 23);
-            lblTo.MinimumSize = new Size(0, 23);
-            lblTo.Name = "lblTo";
-            lblTo.Size = new Size(71, 23);
-            lblTo.TabIndex = 1;
-            lblTo.Text = "To";
-            lblTo.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblTo.AutoSize = true;
+            this.lblTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTo.ForeColor = System.Drawing.Color.Black;
+            this.lblTo.Location = new System.Drawing.Point(218, 0);
+            this.lblTo.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTo.MaximumSize = new System.Drawing.Size(0, 29);
+            this.lblTo.MinimumSize = new System.Drawing.Size(0, 29);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(51, 29);
+            this.lblTo.TabIndex = 1;
+            this.lblTo.Text = "To";
+            this.lblTo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtpFrom
             // 
-            dtpFrom.Dock = DockStyle.Fill;
-            dtpFrom.Location = new Point(91, 0);
-            dtpFrom.Margin = new Padding(0);
-            dtpFrom.MaximumSize = new Size(100, 23);
-            dtpFrom.MinimumSize = new Size(120, 23);
-            dtpFrom.Name = "dtpFrom";
-            dtpFrom.Size = new Size(120, 23);
-            dtpFrom.TabIndex = 5;
+            this.dtpFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpFrom.Location = new System.Drawing.Point(66, 0);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(0);
+            this.dtpFrom.MaximumSize = new System.Drawing.Size(114, 23);
+            this.dtpFrom.MinimumSize = new System.Drawing.Size(137, 23);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(137, 23);
+            this.dtpFrom.TabIndex = 5;
             // 
             // dtpTo
             // 
-            dtpTo.Dock = DockStyle.Fill;
-            dtpTo.Location = new Point(371, 0);
-            dtpTo.Margin = new Padding(0);
-            dtpTo.MaximumSize = new Size(120, 23);
-            dtpTo.Name = "dtpTo";
-            dtpTo.Size = new Size(120, 23);
-            dtpTo.TabIndex = 6;
+            this.dtpTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpTo.Location = new System.Drawing.Point(269, 0);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(0);
+            this.dtpTo.MaximumSize = new System.Drawing.Size(137, 23);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(137, 23);
+            this.dtpTo.TabIndex = 6;
             // 
             // toolstripMoulId
             // 
-            toolstripMoulId.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            toolstripMoulId.Items.AddRange(new ToolStripItem[] { tspDropDownBtn });
-            toolstripMoulId.Location = new Point(392, 0);
-            toolstripMoulId.Name = "toolstripMoulId";
-            toolstripMoulId.Size = new Size(152, 25);
-            toolstripMoulId.TabIndex = 9;
-            toolstripMoulId.Text = "Mould Id";
-            toolstripMoulId.Visible = false;
+            this.toolstripMoulId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.toolstripMoulId.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspDropDownBtn});
+            this.toolstripMoulId.Location = new System.Drawing.Point(448, 0);
+            this.toolstripMoulId.Name = "toolstripMoulId";
+            this.toolstripMoulId.Size = new System.Drawing.Size(174, 32);
+            this.toolstripMoulId.TabIndex = 9;
+            this.toolstripMoulId.Text = "Mould Id";
+            this.toolstripMoulId.Visible = false;
             // 
             // tspDropDownBtn
             // 
-            tspDropDownBtn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tspDropDownBtn.Image = (Image)resources.GetObject("tspDropDownBtn.Image");
-            tspDropDownBtn.ImageTransparentColor = Color.Magenta;
-            tspDropDownBtn.Name = "tspDropDownBtn";
-            tspDropDownBtn.Size = new Size(29, 22);
-            tspDropDownBtn.Text = "Mould Id";
+            this.tspDropDownBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspDropDownBtn.Image = ((System.Drawing.Image)(resources.GetObject("tspDropDownBtn.Image")));
+            this.tspDropDownBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspDropDownBtn.Name = "tspDropDownBtn";
+            this.tspDropDownBtn.Size = new System.Drawing.Size(29, 29);
+            this.tspDropDownBtn.Text = "Mould Id";
             // 
             // CmbPerson
             // 
-            CmbPerson.Dock = DockStyle.Fill;
-            CmbPerson.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbPerson.FormattingEnabled = true;
-            CmbPerson.Location = new Point(595, 3);
-            CmbPerson.Name = "CmbPerson";
-            CmbPerson.Size = new Size(244, 25);
-            CmbPerson.TabIndex = 10;
-            CmbPerson.Text = "Mould ID";
+            this.CmbPerson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CmbPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CmbPerson.FormattingEnabled = true;
+            this.CmbPerson.Location = new System.Drawing.Point(433, 4);
+            this.CmbPerson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CmbPerson.Name = "CmbPerson";
+            this.CmbPerson.Size = new System.Drawing.Size(176, 25);
+            this.CmbPerson.TabIndex = 10;
+            this.CmbPerson.Text = "Mould ID";
             // 
             // lblPerson
             // 
-            lblPerson.AutoSize = true;
-            lblPerson.Dock = DockStyle.Fill;
-            lblPerson.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPerson.ForeColor = Color.Black;
-            lblPerson.Location = new Point(842, 0);
-            lblPerson.Margin = new Padding(0);
-            lblPerson.MaximumSize = new Size(0, 23);
-            lblPerson.MinimumSize = new Size(0, 23);
-            lblPerson.Name = "lblPerson";
-            lblPerson.Size = new Size(106, 23);
-            lblPerson.TabIndex = 2;
-            lblPerson.Text = "Person";
-            lblPerson.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblPerson.AutoSize = true;
+            this.lblPerson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPerson.ForeColor = System.Drawing.Color.Black;
+            this.lblPerson.Location = new System.Drawing.Point(612, 0);
+            this.lblPerson.Margin = new System.Windows.Forms.Padding(0);
+            this.lblPerson.MaximumSize = new System.Drawing.Size(0, 29);
+            this.lblPerson.MinimumSize = new System.Drawing.Size(0, 29);
+            this.lblPerson.Name = "lblPerson";
+            this.lblPerson.Size = new System.Drawing.Size(77, 29);
+            this.lblPerson.TabIndex = 2;
+            this.lblPerson.Text = "Person";
+            this.lblPerson.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmbTo
             // 
-            cmbTo.Dock = DockStyle.Fill;
-            cmbTo.FormattingEnabled = true;
-            cmbTo.Location = new Point(948, 0);
-            cmbTo.Margin = new Padding(0);
-            cmbTo.Name = "cmbTo";
-            cmbTo.Size = new Size(216, 23);
-            cmbTo.TabIndex = 8;
+            this.cmbTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbTo.FormattingEnabled = true;
+            this.cmbTo.Location = new System.Drawing.Point(689, 0);
+            this.cmbTo.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbTo.Name = "cmbTo";
+            this.cmbTo.Size = new System.Drawing.Size(157, 27);
+            this.cmbTo.TabIndex = 8;
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.FromArgb(41, 128, 185);
-            btnSearch.Dock = DockStyle.Fill;
-            btnSearch.FlatStyle = FlatStyle.Flat;
-            btnSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.Location = new Point(1164, 0);
-            btnSearch.Margin = new Padding(0);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(206, 28);
-            btnSearch.TabIndex = 3;
-            btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(846, 0);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(152, 35);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // dgvInventory
             // 
-            dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInventory.BackgroundColor = Color.White;
-            dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Dock = DockStyle.Fill;
-            dgvInventory.Location = new Point(0, 0);
-            dgvInventory.Margin = new Padding(0);
-            dgvInventory.Name = "dgvInventory";
-            dgvInventory.RowTemplate.Height = 25;
-            dgvInventory.Size = new Size(1370, 686);
-            dgvInventory.TabIndex = 0;
-            dgvInventory.CellContentClick += dataGridView1_CellContentClick;
+            this.dgvInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInventory.BackgroundColor = System.Drawing.Color.White;
+            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInventory.Location = new System.Drawing.Point(0, 0);
+            this.dgvInventory.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.RowTemplate.Height = 25;
+            this.dgvInventory.Size = new System.Drawing.Size(998, 524);
+            this.dgvInventory.TabIndex = 0;
             // 
             // tlpBtn
             // 
-            tlpBtn.ColumnCount = 1;
-            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlpBtn.Controls.Add(dgvInventory, 0, 0);
-            tlpBtn.Dock = DockStyle.Fill;
-            tlpBtn.Location = new Point(0, 63);
-            tlpBtn.Name = "tlpBtn";
-            tlpBtn.RowCount = 1;
-            tlpBtn.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpBtn.Size = new Size(1370, 686);
-            tlpBtn.TabIndex = 2;
-            tlpBtn.Paint += tableLayoutPanel2_Paint;
+            this.tlpBtn.ColumnCount = 1;
+            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBtn.Controls.Add(this.dgvInventory, 0, 0);
+            this.tlpBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBtn.Location = new System.Drawing.Point(0, 79);
+            this.tlpBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tlpBtn.Name = "tlpBtn";
+            this.tlpBtn.RowCount = 1;
+            this.tlpBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBtn.Size = new System.Drawing.Size(998, 524);
+            this.tlpBtn.TabIndex = 2;
             // 
-            // Inventory
+            // pnlHeader
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
-            Controls.Add(tlpBtn);
-            Controls.Add(tlpHeader);
-            Controls.Add(pnlHeader);
-            ForeColor = Color.White;
-            MinimumSize = new Size(903, 487);
-            Name = "Inventory";
-            ShowIcon = false;
-            Text = "Mould Details";
-            tlpHeader.ResumeLayout(false);
-            tlpHeader.PerformLayout();
-            toolstripMoulId.ResumeLayout(false);
-            toolstripMoulId.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
-            tlpBtn.ResumeLayout(false);
-            ResumeLayout(false);
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeader.MaximumSize = new System.Drawing.Size(0, 44);
+            this.pnlHeader.MinimumSize = new System.Drawing.Size(0, 44);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(998, 44);
+            this.pnlHeader.TabIndex = 0;
+            // 
+            // frmInventory
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(998, 603);
+            this.Controls.Add(this.tlpBtn);
+            this.Controls.Add(this.tlpHeader);
+            this.Controls.Add(this.pnlHeader);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "frmInventory";
+            this.ShowIcon = false;
+            this.Text = "Mould Details";
+            this.tlpHeader.ResumeLayout(false);
+            this.tlpHeader.PerformLayout();
+            this.toolstripMoulId.ResumeLayout(false);
+            this.toolstripMoulId.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
+            this.tlpBtn.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
-
-        private Panel pnlHeader;
         private TableLayoutPanel tlpHeader;
         private Label lblFrom;
         private Label lblTo;
@@ -281,5 +281,6 @@
         private ToolStrip toolstripMoulId;
         private ToolStripDropDownButton tspDropDownBtn;
         private ComboBox CmbPerson;
+        private Panel pnlHeader;
     }
 }
