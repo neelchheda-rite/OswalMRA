@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using OswalMRA.MessageBox;
+using OswalMRA.Properties;
 
 namespace OswalMRA
 {
@@ -94,7 +95,7 @@ namespace OswalMRA
                     int validateCode = insertResult.validateCode;
                     int validationFlag = insertResult.validationFlag;
 
-                    msgBox insertSuccessBox = new("Confirmation Message", "Mould Successfully Inserted");
+                    msgBox insertSuccessBox = new("Confirmation Message", "mouldInsertSuccess");
 
                     if (validateCode == 1)
                     {

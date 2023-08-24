@@ -12,11 +12,12 @@ namespace OswalMRA.MessageBox
 {
     public partial class optionMsgBox : Form
     {
-        public optionMsgBox(string Title, string Message)
+        public optionMsgBox(string Title, string ResourceMessageKey)
         {
             InitializeComponent();
             this.Text = Title;
-            messageLabel.Text = Message;
+            string message = Properties.Resources.ResourceManager.GetString(ResourceMessageKey);
+            messageLabel.Text = message;
         }
 
         private void button2_Click(object sender, EventArgs e)

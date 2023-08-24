@@ -1,5 +1,7 @@
-﻿namespace OswalMRA.Layout {
-    partial class frmFullLayout {
+﻿namespace OswalMRA.Layout
+{
+    partial class frmFullLayout
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -27,319 +29,319 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFullLayout));
-            this.outerBaseGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.baseGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.sidebarPanel = new System.Windows.Forms.Panel();
-            this.sidebarGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnMould = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnPassword = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnWorkLog = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.childformPanel = new System.Windows.Forms.Panel();
-            this.statusGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.statusDate = new System.Windows.Forms.Label();
-            this.outerBaseGrid.SuspendLayout();
-            this.baseGrid.SuspendLayout();
-            this.sidebarPanel.SuspendLayout();
-            this.sidebarGrid.SuspendLayout();
-            this.statusGrid.SuspendLayout();
-            this.SuspendLayout();
+            outerBaseGrid = new TableLayoutPanel();
+            baseGrid = new TableLayoutPanel();
+            sidebarPanel = new Panel();
+            sidebarGrid = new TableLayoutPanel();
+            btnHome = new Button();
+            btnMould = new Button();
+            btnUser = new Button();
+            btnPassword = new Button();
+            btnReset = new Button();
+            btnWorkLog = new Button();
+            btnInventory = new Button();
+            childformPanel = new Panel();
+            statusGrid = new TableLayoutPanel();
+            statusDate = new Label();
+            outerBaseGrid.SuspendLayout();
+            baseGrid.SuspendLayout();
+            sidebarPanel.SuspendLayout();
+            sidebarGrid.SuspendLayout();
+            statusGrid.SuspendLayout();
+            SuspendLayout();
             // 
             // outerBaseGrid
             // 
-            this.outerBaseGrid.ColumnCount = 1;
-            this.outerBaseGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.outerBaseGrid.Controls.Add(this.baseGrid, 0, 0);
-            this.outerBaseGrid.Controls.Add(this.statusGrid, 0, 1);
-            this.outerBaseGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.outerBaseGrid.Location = new System.Drawing.Point(0, 0);
-            this.outerBaseGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.outerBaseGrid.Name = "outerBaseGrid";
-            this.outerBaseGrid.RowCount = 2;
-            this.outerBaseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 97.93814F));
-            this.outerBaseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.061856F));
-            this.outerBaseGrid.Size = new System.Drawing.Size(1370, 749);
-            this.outerBaseGrid.TabIndex = 0;
+            outerBaseGrid.ColumnCount = 1;
+            outerBaseGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            outerBaseGrid.Controls.Add(baseGrid, 0, 0);
+            outerBaseGrid.Controls.Add(statusGrid, 0, 1);
+            outerBaseGrid.Dock = DockStyle.Fill;
+            outerBaseGrid.Location = new Point(0, 0);
+            outerBaseGrid.Margin = new Padding(0);
+            outerBaseGrid.Name = "outerBaseGrid";
+            outerBaseGrid.RowCount = 2;
+            outerBaseGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 97.93814F));
+            outerBaseGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 2.061856F));
+            outerBaseGrid.Size = new Size(1199, 591);
+            outerBaseGrid.TabIndex = 0;
             // 
             // baseGrid
             // 
-            this.baseGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.baseGrid.ColumnCount = 2;
-            this.baseGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.baseGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.baseGrid.Controls.Add(this.sidebarPanel, 0, 0);
-            this.baseGrid.Controls.Add(this.childformPanel, 1, 0);
-            this.baseGrid.Location = new System.Drawing.Point(0, 0);
-            this.baseGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.baseGrid.Name = "baseGrid";
-            this.baseGrid.RowCount = 1;
-            this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 732F));
-            this.baseGrid.Size = new System.Drawing.Size(1370, 733);
-            this.baseGrid.TabIndex = 0;
+            baseGrid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            baseGrid.ColumnCount = 2;
+            baseGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            baseGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
+            baseGrid.Controls.Add(sidebarPanel, 0, 0);
+            baseGrid.Controls.Add(childformPanel, 1, 0);
+            baseGrid.Location = new Point(0, 0);
+            baseGrid.Margin = new Padding(0);
+            baseGrid.Name = "baseGrid";
+            baseGrid.RowCount = 1;
+            baseGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            baseGrid.RowStyles.Add(new RowStyle(SizeType.Absolute, 579F));
+            baseGrid.Size = new Size(1199, 578);
+            baseGrid.TabIndex = 0;
             // 
             // sidebarPanel
             // 
-            this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.sidebarPanel.Controls.Add(this.sidebarGrid);
-            this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidebarPanel.Location = new System.Drawing.Point(0, 0);
-            this.sidebarPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.sidebarPanel.Name = "sidebarPanel";
-            this.sidebarPanel.Size = new System.Drawing.Size(205, 733);
-            this.sidebarPanel.TabIndex = 0;
+            sidebarPanel.BackColor = Color.FromArgb(41, 128, 185);
+            sidebarPanel.Controls.Add(sidebarGrid);
+            sidebarPanel.Dock = DockStyle.Fill;
+            sidebarPanel.Location = new Point(0, 0);
+            sidebarPanel.Margin = new Padding(0);
+            sidebarPanel.Name = "sidebarPanel";
+            sidebarPanel.Size = new Size(179, 578);
+            sidebarPanel.TabIndex = 0;
             // 
             // sidebarGrid
             // 
-            this.sidebarGrid.ColumnCount = 1;
-            this.sidebarGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sidebarGrid.Controls.Add(this.btnHome, 0, 1);
-            this.sidebarGrid.Controls.Add(this.btnMould, 0, 2);
-            this.sidebarGrid.Controls.Add(this.btnUser, 0, 3);
-            this.sidebarGrid.Controls.Add(this.btnPassword, 0, 4);
-            this.sidebarGrid.Controls.Add(this.btnReset, 0, 5);
-            this.sidebarGrid.Controls.Add(this.btnWorkLog, 0, 6);
-            this.sidebarGrid.Controls.Add(this.btnInventory, 0, 7);
-            this.sidebarGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidebarGrid.Location = new System.Drawing.Point(0, 0);
-            this.sidebarGrid.Name = "sidebarGrid";
-            this.sidebarGrid.RowCount = 9;
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.sidebarGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.sidebarGrid.Size = new System.Drawing.Size(205, 733);
-            this.sidebarGrid.TabIndex = 0;
+            sidebarGrid.ColumnCount = 1;
+            sidebarGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            sidebarGrid.Controls.Add(btnHome, 0, 1);
+            sidebarGrid.Controls.Add(btnMould, 0, 2);
+            sidebarGrid.Controls.Add(btnUser, 0, 3);
+            sidebarGrid.Controls.Add(btnPassword, 0, 4);
+            sidebarGrid.Controls.Add(btnReset, 0, 5);
+            sidebarGrid.Controls.Add(btnWorkLog, 0, 6);
+            sidebarGrid.Controls.Add(btnInventory, 0, 7);
+            sidebarGrid.Dock = DockStyle.Fill;
+            sidebarGrid.Location = new Point(0, 0);
+            sidebarGrid.Margin = new Padding(3, 2, 3, 2);
+            sidebarGrid.Name = "sidebarGrid";
+            sidebarGrid.RowCount = 9;
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 22F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
+            sidebarGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 22F));
+            sidebarGrid.Size = new Size(179, 578);
+            sidebarGrid.TabIndex = 0;
             // 
             // btnHome
             // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::OswalMRA.Properties.Resources.icons8_home_30;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(6, 167);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
-            this.btnHome.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnHome.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(193, 49);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "   &Home";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            btnHome.Dock = DockStyle.Fill;
+            btnHome.FlatAppearance.BorderSize = 0;
+            btnHome.FlatStyle = FlatStyle.Flat;
+            btnHome.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHome.ForeColor = Color.White;
+            btnHome.Image = Properties.Resources.icons8_home_30;
+            btnHome.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHome.Location = new Point(5, 132);
+            btnHome.Margin = new Padding(5);
+            btnHome.MaximumSize = new Size(239, 56);
+            btnHome.MinimumSize = new Size(166, 39);
+            btnHome.Name = "btnHome";
+            btnHome.Padding = new Padding(13, 0, 0, 0);
+            btnHome.Size = new Size(169, 39);
+            btnHome.TabIndex = 0;
+            btnHome.Text = "   &Home";
+            btnHome.TextAlign = ContentAlignment.MiddleLeft;
+            btnHome.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // btnMould
             // 
-            this.btnMould.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMould.FlatAppearance.BorderSize = 0;
-            this.btnMould.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMould.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMould.ForeColor = System.Drawing.Color.White;
-            this.btnMould.Image = global::OswalMRA.Properties.Resources.icons8_machine_30;
-            this.btnMould.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMould.Location = new System.Drawing.Point(6, 225);
-            this.btnMould.Margin = new System.Windows.Forms.Padding(6);
-            this.btnMould.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnMould.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnMould.Name = "btnMould";
-            this.btnMould.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnMould.Size = new System.Drawing.Size(193, 49);
-            this.btnMould.TabIndex = 1;
-            this.btnMould.Text = "   &Mould";
-            this.btnMould.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMould.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMould.UseVisualStyleBackColor = false;
-            this.btnMould.Click += new System.EventHandler(this.btnMould_Click);
+            btnMould.Dock = DockStyle.Fill;
+            btnMould.FlatAppearance.BorderSize = 0;
+            btnMould.FlatStyle = FlatStyle.Flat;
+            btnMould.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMould.ForeColor = Color.White;
+            btnMould.Image = Properties.Resources.icons8_machine_30;
+            btnMould.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMould.Location = new Point(5, 178);
+            btnMould.Margin = new Padding(5);
+            btnMould.MaximumSize = new Size(239, 56);
+            btnMould.MinimumSize = new Size(166, 39);
+            btnMould.Name = "btnMould";
+            btnMould.Padding = new Padding(13, 0, 0, 0);
+            btnMould.Size = new Size(169, 39);
+            btnMould.TabIndex = 1;
+            btnMould.Text = "   &Mould";
+            btnMould.TextAlign = ContentAlignment.MiddleLeft;
+            btnMould.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnMould.UseVisualStyleBackColor = false;
+            btnMould.Click += btnMould_Click;
             // 
             // btnUser
             // 
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Image = global::OswalMRA.Properties.Resources.icons8_admin_30;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.Location = new System.Drawing.Point(6, 283);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(6);
-            this.btnUser.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnUser.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnUser.Size = new System.Drawing.Size(193, 49);
-            this.btnUser.TabIndex = 2;
-            this.btnUser.Text = "   &User";
-            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUser.UseVisualStyleBackColor = false;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            btnUser.Dock = DockStyle.Fill;
+            btnUser.FlatAppearance.BorderSize = 0;
+            btnUser.FlatStyle = FlatStyle.Flat;
+            btnUser.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUser.ForeColor = Color.White;
+            btnUser.Image = Properties.Resources.icons8_admin_30;
+            btnUser.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUser.Location = new Point(5, 224);
+            btnUser.Margin = new Padding(5);
+            btnUser.MaximumSize = new Size(239, 56);
+            btnUser.MinimumSize = new Size(166, 39);
+            btnUser.Name = "btnUser";
+            btnUser.Padding = new Padding(13, 0, 0, 0);
+            btnUser.Size = new Size(169, 39);
+            btnUser.TabIndex = 2;
+            btnUser.Text = "   &User";
+            btnUser.TextAlign = ContentAlignment.MiddleLeft;
+            btnUser.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUser.UseVisualStyleBackColor = false;
+            btnUser.Click += btnUser_Click;
             // 
             // btnPassword
             // 
-            this.btnPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPassword.FlatAppearance.BorderSize = 0;
-            this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPassword.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPassword.ForeColor = System.Drawing.Color.White;
-            this.btnPassword.Image = global::OswalMRA.Properties.Resources.icons8_password_30;
-            this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPassword.Location = new System.Drawing.Point(6, 341);
-            this.btnPassword.Margin = new System.Windows.Forms.Padding(6);
-            this.btnPassword.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnPassword.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnPassword.Size = new System.Drawing.Size(193, 49);
-            this.btnPassword.TabIndex = 3;
-            this.btnPassword.Text = "   &Password";
-            this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPassword.UseVisualStyleBackColor = false;
-            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            btnPassword.Dock = DockStyle.Fill;
+            btnPassword.FlatAppearance.BorderSize = 0;
+            btnPassword.FlatStyle = FlatStyle.Flat;
+            btnPassword.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPassword.ForeColor = Color.White;
+            btnPassword.Image = Properties.Resources.icons8_password_30;
+            btnPassword.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPassword.Location = new Point(5, 270);
+            btnPassword.Margin = new Padding(5);
+            btnPassword.MaximumSize = new Size(239, 56);
+            btnPassword.MinimumSize = new Size(166, 39);
+            btnPassword.Name = "btnPassword";
+            btnPassword.Padding = new Padding(13, 0, 0, 0);
+            btnPassword.Size = new Size(169, 39);
+            btnPassword.TabIndex = 3;
+            btnPassword.Text = "   &Password";
+            btnPassword.TextAlign = ContentAlignment.MiddleLeft;
+            btnPassword.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPassword.UseVisualStyleBackColor = false;
+            btnPassword.Click += btnPassword_Click;
             // 
             // btnReset
             // 
-            this.btnReset.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Image = global::OswalMRA.Properties.Resources.icons8_reset_30;
-            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(6, 399);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(6);
-            this.btnReset.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnReset.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReset.Size = new System.Drawing.Size(193, 49);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Text = "   &Reset ";
-            this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            btnReset.Dock = DockStyle.Fill;
+            btnReset.FlatAppearance.BorderSize = 0;
+            btnReset.FlatStyle = FlatStyle.Flat;
+            btnReset.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReset.ForeColor = Color.White;
+            btnReset.Image = Properties.Resources.icons8_reset_30;
+            btnReset.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReset.Location = new Point(5, 316);
+            btnReset.Margin = new Padding(5);
+            btnReset.MaximumSize = new Size(239, 56);
+            btnReset.MinimumSize = new Size(166, 39);
+            btnReset.Name = "btnReset";
+            btnReset.Padding = new Padding(13, 0, 0, 0);
+            btnReset.Size = new Size(169, 39);
+            btnReset.TabIndex = 4;
+            btnReset.Text = "   &Reset ";
+            btnReset.TextAlign = ContentAlignment.MiddleLeft;
+            btnReset.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
             // 
             // btnWorkLog
             // 
-            this.btnWorkLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnWorkLog.FlatAppearance.BorderSize = 0;
-            this.btnWorkLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorkLog.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnWorkLog.ForeColor = System.Drawing.Color.White;
-            this.btnWorkLog.Image = global::OswalMRA.Properties.Resources.icons8_log_30;
-            this.btnWorkLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorkLog.Location = new System.Drawing.Point(6, 457);
-            this.btnWorkLog.Margin = new System.Windows.Forms.Padding(6);
-            this.btnWorkLog.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnWorkLog.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnWorkLog.Name = "btnWorkLog";
-            this.btnWorkLog.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnWorkLog.Size = new System.Drawing.Size(193, 49);
-            this.btnWorkLog.TabIndex = 5;
-            this.btnWorkLog.Text = "   &Work Log";
-            this.btnWorkLog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorkLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnWorkLog.UseVisualStyleBackColor = false;
-            this.btnWorkLog.Click += new System.EventHandler(this.btnWorkLog_Click);
+            btnWorkLog.Dock = DockStyle.Fill;
+            btnWorkLog.FlatAppearance.BorderSize = 0;
+            btnWorkLog.FlatStyle = FlatStyle.Flat;
+            btnWorkLog.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnWorkLog.ForeColor = Color.White;
+            btnWorkLog.Image = Properties.Resources.icons8_log_30;
+            btnWorkLog.ImageAlign = ContentAlignment.MiddleLeft;
+            btnWorkLog.Location = new Point(5, 362);
+            btnWorkLog.Margin = new Padding(5);
+            btnWorkLog.MaximumSize = new Size(239, 56);
+            btnWorkLog.MinimumSize = new Size(166, 39);
+            btnWorkLog.Name = "btnWorkLog";
+            btnWorkLog.Padding = new Padding(13, 0, 0, 0);
+            btnWorkLog.Size = new Size(169, 39);
+            btnWorkLog.TabIndex = 5;
+            btnWorkLog.Text = "   &Work Log";
+            btnWorkLog.TextAlign = ContentAlignment.MiddleLeft;
+            btnWorkLog.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnWorkLog.UseVisualStyleBackColor = false;
+            btnWorkLog.Click += btnWorkLog_Click;
             // 
             // btnInventory
             // 
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInventory.ForeColor = System.Drawing.Color.White;
-            this.btnInventory.Image = global::OswalMRA.Properties.Resources.icons8_inventory_30;
-            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(6, 515);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(6);
-            this.btnInventory.MaximumSize = new System.Drawing.Size(273, 71);
-            this.btnInventory.MinimumSize = new System.Drawing.Size(190, 49);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnInventory.Size = new System.Drawing.Size(193, 49);
-            this.btnInventory.TabIndex = 6;
-            this.btnInventory.Text = "   &Inventory";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventory.UseVisualStyleBackColor = false;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            btnInventory.Dock = DockStyle.Fill;
+            btnInventory.FlatAppearance.BorderSize = 0;
+            btnInventory.FlatStyle = FlatStyle.Flat;
+            btnInventory.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnInventory.ForeColor = Color.White;
+            btnInventory.Image = Properties.Resources.icons8_inventory_30;
+            btnInventory.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInventory.Location = new Point(5, 408);
+            btnInventory.Margin = new Padding(5);
+            btnInventory.MaximumSize = new Size(239, 56);
+            btnInventory.MinimumSize = new Size(166, 39);
+            btnInventory.Name = "btnInventory";
+            btnInventory.Padding = new Padding(13, 0, 0, 0);
+            btnInventory.Size = new Size(169, 39);
+            btnInventory.TabIndex = 6;
+            btnInventory.Text = "   &Inventory";
+            btnInventory.TextAlign = ContentAlignment.MiddleLeft;
+            btnInventory.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnInventory.UseVisualStyleBackColor = false;
+            btnInventory.Click += btnInventory_Click;
             // 
             // childformPanel
             // 
-            this.childformPanel.BackColor = System.Drawing.Color.White;
-            this.childformPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childformPanel.Location = new System.Drawing.Point(205, 0);
-            this.childformPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.childformPanel.Name = "childformPanel";
-            this.childformPanel.Size = new System.Drawing.Size(1165, 733);
-            this.childformPanel.TabIndex = 0;
+            childformPanel.BackColor = Color.White;
+            childformPanel.Dock = DockStyle.Fill;
+            childformPanel.Location = new Point(179, 0);
+            childformPanel.Margin = new Padding(0);
+            childformPanel.Name = "childformPanel";
+            childformPanel.Size = new Size(1020, 578);
+            childformPanel.TabIndex = 0;
             // 
             // statusGrid
             // 
-            this.statusGrid.ColumnCount = 2;
-            this.statusGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.statusGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.statusGrid.Controls.Add(this.statusDate, 1, 0);
-            this.statusGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusGrid.Location = new System.Drawing.Point(3, 736);
-            this.statusGrid.Name = "statusGrid";
-            this.statusGrid.RowCount = 1;
-            this.statusGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.statusGrid.Size = new System.Drawing.Size(1364, 10);
-            this.statusGrid.TabIndex = 1;
+            statusGrid.ColumnCount = 2;
+            statusGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            statusGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            statusGrid.Controls.Add(statusDate, 1, 0);
+            statusGrid.Dock = DockStyle.Fill;
+            statusGrid.Location = new Point(3, 580);
+            statusGrid.Margin = new Padding(3, 2, 3, 2);
+            statusGrid.Name = "statusGrid";
+            statusGrid.RowCount = 1;
+            statusGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            statusGrid.Size = new Size(1193, 9);
+            statusGrid.TabIndex = 1;
             // 
             // statusDate
             // 
-            this.statusDate.AutoSize = true;
-            this.statusDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusDate.Location = new System.Drawing.Point(1094, 0);
-            this.statusDate.Name = "statusDate";
-            this.statusDate.Size = new System.Drawing.Size(267, 10);
-            this.statusDate.TabIndex = 0;
-            this.statusDate.Text = "Indian Standard Time";
-            this.statusDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            statusDate.AutoSize = true;
+            statusDate.Dock = DockStyle.Fill;
+            statusDate.Location = new Point(957, 0);
+            statusDate.Name = "statusDate";
+            statusDate.Size = new Size(233, 9);
+            statusDate.TabIndex = 0;
+            statusDate.Text = "Indian Standard Time";
+            statusDate.TextAlign = ContentAlignment.MiddleRight;
             // 
             // frmFullLayout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.outerBaseGrid);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(320, 480);
-            this.Name = "frmFullLayout";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Oswal MRA";
-            this.Load += new System.EventHandler(this.frmFullLayout_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmFullLayout_KeyDown);
-            this.outerBaseGrid.ResumeLayout(false);
-            this.baseGrid.ResumeLayout(false);
-            this.sidebarPanel.ResumeLayout(false);
-            this.sidebarGrid.ResumeLayout(false);
-            this.statusGrid.ResumeLayout(false);
-            this.statusGrid.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1199, 591);
+            Controls.Add(outerBaseGrid);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximumSize = new Size(1682, 861);
+            MinimumSize = new Size(282, 387);
+            Name = "frmFullLayout";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Oswal MRA";
+            Load += frmFullLayout_Load;
+            KeyDown += frmFullLayout_KeyDown;
+            outerBaseGrid.ResumeLayout(false);
+            baseGrid.ResumeLayout(false);
+            sidebarPanel.ResumeLayout(false);
+            sidebarGrid.ResumeLayout(false);
+            statusGrid.ResumeLayout(false);
+            statusGrid.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

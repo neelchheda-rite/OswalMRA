@@ -201,6 +201,24 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this mould?.
+        /// </summary>
+        internal static string mouldDeleteConfirmation {
+            get {
+                return ResourceManager.GetString("mouldDeleteConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mould Inserted Successfully.
+        /// </summary>
+        internal static string mouldInsertSuccess {
+            get {
+                return ResourceManager.GetString("mouldInsertSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap oswalLogoMain {

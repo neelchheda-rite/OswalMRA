@@ -1,5 +1,6 @@
 ﻿using OswalMRA.COMMON.Models;
 using OswalMRA.DAL;
+using OswalMRA.MessageBox;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,11 +29,19 @@ namespace OswalMRA.Views {
                 List<LoginResponse> loginResp = await _dapperManagement.Login(usernameTextBox.Text, passwordTextBox.Text);
                 if (loginResp[0].ValidationStatus == "Validation successful.")
                 {
-                    DialogResult = DialogResult.OK;
+                    msgBox msgBox = new("successfully logged in", "");
+                    DialogResult dialogResult = msgBox.ShowDialog();
+
+                    if(msgBox.DialogResult == DialogResult.OK)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    DialogResult = DialogResult.Cancel;
+                    msgBox msgBox = new("error occured", "");
+                    msgBox.Show();
                 }
             }
             catch (Exception ex)

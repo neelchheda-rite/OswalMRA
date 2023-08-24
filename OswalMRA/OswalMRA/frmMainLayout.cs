@@ -94,7 +94,7 @@ namespace OswalMRA {
             DialogResult result = frmLogin.ShowDialog();
             if (result == DialogResult.OK)
             {
-                openChildForm(new mouldManagementForm());
+                openChildForm(new frmMouldPage());
             }
             else
             {
