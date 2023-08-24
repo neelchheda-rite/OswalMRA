@@ -28,310 +28,308 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
+            PresentationControls.CheckBoxProperties checkBoxProperties6 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties1 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties2 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties3 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties4 = new PresentationControls.CheckBoxProperties();
-            PresentationControls.CheckBoxProperties checkBoxProperties5 = new PresentationControls.CheckBoxProperties();
-            this.tlpHeader = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.tlpBtn = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblPerson = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.checkBoxComboBox5 = new PresentationControls.CheckBoxComboBox();
-            this.checkBoxComboBox2 = new PresentationControls.CheckBoxComboBox();
-            this.checkBoxComboBox3 = new PresentationControls.CheckBoxComboBox();
-            this.checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
-            this.checkBoxComboBox4 = new PresentationControls.CheckBoxComboBox();
-            this.tlpGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvWorklog = new System.Windows.Forms.DataGridView();
-            this.cmsPerson = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tlpHeader.SuspendLayout();
-            this.tlpBtn.SuspendLayout();
-            this.tlpGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWorklog)).BeginInit();
-            this.SuspendLayout();
+            tlpHeader = new TableLayoutPanel();
+            pnlHeader = new Panel();
+            tlpBtn = new TableLayoutPanel();
+            btnSearch = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            lblPerson = new Label();
+            lbl = new Label();
+            lblStatus = new Label();
+            checkBoxComboBox5 = new PresentationControls.CheckBoxComboBox();
+            checkBoxComboBox2 = new PresentationControls.CheckBoxComboBox();
+            checkBoxComboBox3 = new PresentationControls.CheckBoxComboBox();
+            checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
+            checkBoxComboBox4 = new PresentationControls.CheckBoxComboBox();
+            tlpGrid = new TableLayoutPanel();
+            dgvWorklog = new DataGridView();
+            cmsPerson = new ContextMenuStrip(components);
+            cms = new ContextMenuStrip(components);
+            tlpHeader.SuspendLayout();
+            tlpBtn.SuspendLayout();
+            tlpGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvWorklog).BeginInit();
+            SuspendLayout();
             // 
             // tlpHeader
             // 
-            this.tlpHeader.ColumnCount = 1;
-            this.tlpHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpHeader.Controls.Add(this.pnlHeader, 0, 0);
-            this.tlpHeader.Controls.Add(this.tlpBtn, 0, 1);
-            this.tlpHeader.Controls.Add(this.tlpGrid, 0, 2);
-            this.tlpHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpHeader.Location = new System.Drawing.Point(0, 0);
-            this.tlpHeader.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpHeader.Name = "tlpHeader";
-            this.tlpHeader.RowCount = 3;
-            this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tlpHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81F));
-            this.tlpHeader.Size = new System.Drawing.Size(998, 603);
-            this.tlpHeader.TabIndex = 0;
+            tlpHeader.ColumnCount = 1;
+            tlpHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tlpHeader.Controls.Add(pnlHeader, 0, 0);
+            tlpHeader.Controls.Add(tlpBtn, 0, 1);
+            tlpHeader.Controls.Add(tlpGrid, 0, 2);
+            tlpHeader.Dock = DockStyle.Fill;
+            tlpHeader.Location = new Point(0, 0);
+            tlpHeader.Margin = new Padding(0);
+            tlpHeader.Name = "tlpHeader";
+            tlpHeader.RowCount = 3;
+            tlpHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            tlpHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 12F));
+            tlpHeader.RowStyles.Add(new RowStyle(SizeType.Percent, 81F));
+            tlpHeader.Size = new Size(873, 476);
+            tlpHeader.TabIndex = 0;
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlHeader.MaximumSize = new System.Drawing.Size(0, 60);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(998, 42);
-            this.pnlHeader.TabIndex = 0;
+            pnlHeader.BackColor = Color.FromArgb(41, 128, 185);
+            pnlHeader.Dock = DockStyle.Fill;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Margin = new Padding(0);
+            pnlHeader.MaximumSize = new Size(0, 47);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(873, 33);
+            pnlHeader.TabIndex = 0;
             // 
             // tlpBtn
             // 
-            this.tlpBtn.BackColor = System.Drawing.Color.White;
-            this.tlpBtn.ColumnCount = 8;
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.182909F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.476792F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.21323F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.517705F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.3698F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.864676F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.19198F));
-            this.tlpBtn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.182908F));
-            this.tlpBtn.Controls.Add(this.btnSearch, 6, 2);
-            this.tlpBtn.Controls.Add(this.label3, 5, 1);
-            this.tlpBtn.Controls.Add(this.label2, 3, 1);
-            this.tlpBtn.Controls.Add(this.lblPerson, 3, 2);
-            this.tlpBtn.Controls.Add(this.lbl, 1, 1);
-            this.tlpBtn.Controls.Add(this.lblStatus, 1, 2);
-            this.tlpBtn.Controls.Add(this.checkBoxComboBox5, 2, 1);
-            this.tlpBtn.Controls.Add(this.checkBoxComboBox2, 4, 1);
-            this.tlpBtn.Controls.Add(this.checkBoxComboBox3, 6, 1);
-            this.tlpBtn.Controls.Add(this.checkBoxComboBox1, 2, 2);
-            this.tlpBtn.Controls.Add(this.checkBoxComboBox4, 4, 2);
-            this.tlpBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpBtn.Location = new System.Drawing.Point(0, 42);
-            this.tlpBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpBtn.Name = "tlpBtn";
-            this.tlpBtn.RowCount = 3;
-            this.tlpBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.161804F));
-            this.tlpBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.26109F));
-            this.tlpBtn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.57711F));
-            this.tlpBtn.Size = new System.Drawing.Size(998, 72);
-            this.tlpBtn.TabIndex = 1;
+            tlpBtn.BackColor = Color.White;
+            tlpBtn.ColumnCount = 8;
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.182909F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 6.476792F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.21323F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.517705F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 26.3698F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 7.864676F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.19198F));
+            tlpBtn.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.182908F));
+            tlpBtn.Controls.Add(btnSearch, 6, 2);
+            tlpBtn.Controls.Add(label3, 5, 1);
+            tlpBtn.Controls.Add(label2, 3, 1);
+            tlpBtn.Controls.Add(lblPerson, 3, 2);
+            tlpBtn.Controls.Add(lbl, 1, 1);
+            tlpBtn.Controls.Add(lblStatus, 1, 2);
+            tlpBtn.Controls.Add(checkBoxComboBox5, 2, 1);
+            tlpBtn.Controls.Add(checkBoxComboBox2, 4, 1);
+            tlpBtn.Controls.Add(checkBoxComboBox3, 6, 1);
+            tlpBtn.Controls.Add(checkBoxComboBox1, 2, 2);
+            tlpBtn.Controls.Add(checkBoxComboBox4, 4, 2);
+            tlpBtn.Dock = DockStyle.Fill;
+            tlpBtn.Location = new Point(0, 33);
+            tlpBtn.Margin = new Padding(0);
+            tlpBtn.Name = "tlpBtn";
+            tlpBtn.RowCount = 3;
+            tlpBtn.RowStyles.Add(new RowStyle(SizeType.Percent, 7.161804F));
+            tlpBtn.RowStyles.Add(new RowStyle(SizeType.Percent, 49.26109F));
+            tlpBtn.RowStyles.Add(new RowStyle(SizeType.Percent, 43.57711F));
+            tlpBtn.Size = new Size(873, 57);
+            tlpBtn.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(782, 40);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(161, 32);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.BackColor = Color.FromArgb(41, 128, 185);
+            btnSearch.Dock = DockStyle.Fill;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(684, 32);
+            btnSearch.Margin = new Padding(0);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(141, 25);
+            btnSearch.TabIndex = 3;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(704, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.MaximumSize = new System.Drawing.Size(0, 29);
-            this.label3.MinimumSize = new System.Drawing.Size(0, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "User";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(616, 4);
+            label3.Margin = new Padding(0);
+            label3.MaximumSize = new Size(0, 23);
+            label3.MinimumSize = new Size(0, 23);
+            label3.Name = "label3";
+            label3.Size = new Size(68, 23);
+            label3.TabIndex = 2;
+            label3.Text = "User";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(366, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.MaximumSize = new System.Drawing.Size(0, 29);
-            this.label2.MinimumSize = new System.Drawing.Size(0, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Status";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(321, 4);
+            label2.Margin = new Padding(0);
+            label2.MaximumSize = new Size(0, 23);
+            label2.MinimumSize = new Size(0, 23);
+            label2.Name = "label2";
+            label2.Size = new Size(65, 23);
+            label2.TabIndex = 1;
+            label2.Text = "Status";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblPerson
             // 
-            this.lblPerson.AutoSize = true;
-            this.lblPerson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPerson.Location = new System.Drawing.Point(366, 40);
-            this.lblPerson.Margin = new System.Windows.Forms.Padding(0);
-            this.lblPerson.MaximumSize = new System.Drawing.Size(0, 29);
-            this.lblPerson.MinimumSize = new System.Drawing.Size(0, 29);
-            this.lblPerson.Name = "lblPerson";
-            this.lblPerson.Size = new System.Drawing.Size(75, 29);
-            this.lblPerson.TabIndex = 15;
-            this.lblPerson.Text = "Column";
-            this.lblPerson.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblPerson.AutoSize = true;
+            lblPerson.Dock = DockStyle.Fill;
+            lblPerson.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPerson.Location = new Point(321, 32);
+            lblPerson.Margin = new Padding(0);
+            lblPerson.MaximumSize = new Size(0, 23);
+            lblPerson.MinimumSize = new Size(0, 23);
+            lblPerson.Name = "lblPerson";
+            lblPerson.Size = new Size(65, 23);
+            lblPerson.TabIndex = 15;
+            lblPerson.Text = "Column";
+            lblPerson.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbl
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl.Location = new System.Drawing.Point(51, 5);
-            this.lbl.Margin = new System.Windows.Forms.Padding(0);
-            this.lbl.MaximumSize = new System.Drawing.Size(0, 29);
-            this.lbl.MinimumSize = new System.Drawing.Size(0, 29);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(64, 29);
-            this.lbl.TabIndex = 0;
-            this.lbl.Text = "Mould";
-            this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbl.AutoSize = true;
+            lbl.Dock = DockStyle.Fill;
+            lbl.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl.Location = new Point(45, 4);
+            lbl.Margin = new Padding(0);
+            lbl.MaximumSize = new Size(0, 23);
+            lbl.MinimumSize = new Size(0, 23);
+            lbl.Name = "lbl";
+            lbl.Size = new Size(56, 23);
+            lbl.TabIndex = 0;
+            lbl.Text = "Mould";
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblStatus
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(51, 40);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(0);
-            this.lblStatus.MaximumSize = new System.Drawing.Size(0, 29);
-            this.lblStatus.MinimumSize = new System.Drawing.Size(0, 29);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(64, 29);
-            this.lblStatus.TabIndex = 14;
-            this.lblStatus.Text = "Row";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblStatus.AutoSize = true;
+            lblStatus.Dock = DockStyle.Fill;
+            lblStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblStatus.Location = new Point(45, 32);
+            lblStatus.Margin = new Padding(0);
+            lblStatus.MaximumSize = new Size(0, 23);
+            lblStatus.MinimumSize = new Size(0, 23);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(56, 23);
+            lblStatus.TabIndex = 14;
+            lblStatus.Text = "Row";
+            lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // checkBoxComboBox5
             // 
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox5.CheckBoxProperties = checkBoxProperties1;
-            this.checkBoxComboBox5.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBoxComboBox5.FormattingEnabled = true;
-            this.checkBoxComboBox5.Location = new System.Drawing.Point(115, 5);
-            this.checkBoxComboBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxComboBox5.Name = "checkBoxComboBox5";
-            this.checkBoxComboBox5.Size = new System.Drawing.Size(251, 27);
-            this.checkBoxComboBox5.TabIndex = 20;
+            checkBoxProperties6.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox5.CheckBoxProperties = checkBoxProperties6;
+            checkBoxComboBox5.DisplayMemberSingleItem = "";
+            checkBoxComboBox5.Dock = DockStyle.Fill;
+            checkBoxComboBox5.FormattingEnabled = true;
+            checkBoxComboBox5.Location = new Point(101, 4);
+            checkBoxComboBox5.Margin = new Padding(0);
+            checkBoxComboBox5.Name = "checkBoxComboBox5";
+            checkBoxComboBox5.Size = new Size(220, 23);
+            checkBoxComboBox5.TabIndex = 20;
             // 
             // checkBoxComboBox2
             // 
-            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox2.CheckBoxProperties = checkBoxProperties2;
-            this.checkBoxComboBox2.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBoxComboBox2.FormattingEnabled = true;
-            this.checkBoxComboBox2.Location = new System.Drawing.Point(441, 5);
-            this.checkBoxComboBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxComboBox2.Name = "checkBoxComboBox2";
-            this.checkBoxComboBox2.Size = new System.Drawing.Size(263, 27);
-            this.checkBoxComboBox2.TabIndex = 17;
+            checkBoxProperties1.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox2.CheckBoxProperties = checkBoxProperties1;
+            checkBoxComboBox2.DisplayMemberSingleItem = "";
+            checkBoxComboBox2.Dock = DockStyle.Fill;
+            checkBoxComboBox2.FormattingEnabled = true;
+            checkBoxComboBox2.Location = new Point(386, 4);
+            checkBoxComboBox2.Margin = new Padding(0);
+            checkBoxComboBox2.Name = "checkBoxComboBox2";
+            checkBoxComboBox2.Size = new Size(230, 23);
+            checkBoxComboBox2.TabIndex = 17;
             // 
             // checkBoxComboBox3
             // 
-            checkBoxProperties3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox3.CheckBoxProperties = checkBoxProperties3;
-            this.checkBoxComboBox3.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBoxComboBox3.FormattingEnabled = true;
-            this.checkBoxComboBox3.Location = new System.Drawing.Point(782, 5);
-            this.checkBoxComboBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxComboBox3.Name = "checkBoxComboBox3";
-            this.checkBoxComboBox3.Size = new System.Drawing.Size(161, 27);
-            this.checkBoxComboBox3.TabIndex = 18;
+            checkBoxProperties2.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox3.CheckBoxProperties = checkBoxProperties2;
+            checkBoxComboBox3.DisplayMemberSingleItem = "";
+            checkBoxComboBox3.Dock = DockStyle.Fill;
+            checkBoxComboBox3.FormattingEnabled = true;
+            checkBoxComboBox3.Location = new Point(684, 4);
+            checkBoxComboBox3.Margin = new Padding(0);
+            checkBoxComboBox3.Name = "checkBoxComboBox3";
+            checkBoxComboBox3.Size = new Size(141, 23);
+            checkBoxComboBox3.TabIndex = 18;
             // 
             // checkBoxComboBox1
             // 
-            checkBoxProperties4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties4;
-            this.checkBoxComboBox1.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBoxComboBox1.FormattingEnabled = true;
-            this.checkBoxComboBox1.Location = new System.Drawing.Point(115, 40);
-            this.checkBoxComboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxComboBox1.Name = "checkBoxComboBox1";
-            this.checkBoxComboBox1.Size = new System.Drawing.Size(251, 27);
-            this.checkBoxComboBox1.TabIndex = 16;
+            checkBoxProperties3.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox1.CheckBoxProperties = checkBoxProperties3;
+            checkBoxComboBox1.DisplayMemberSingleItem = "";
+            checkBoxComboBox1.Dock = DockStyle.Fill;
+            checkBoxComboBox1.FormattingEnabled = true;
+            checkBoxComboBox1.Location = new Point(101, 32);
+            checkBoxComboBox1.Margin = new Padding(0);
+            checkBoxComboBox1.Name = "checkBoxComboBox1";
+            checkBoxComboBox1.Size = new Size(220, 23);
+            checkBoxComboBox1.TabIndex = 16;
             // 
             // checkBoxComboBox4
             // 
-            checkBoxProperties5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox4.CheckBoxProperties = checkBoxProperties5;
-            this.checkBoxComboBox4.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBoxComboBox4.FormattingEnabled = true;
-            this.checkBoxComboBox4.Location = new System.Drawing.Point(441, 40);
-            this.checkBoxComboBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxComboBox4.Name = "checkBoxComboBox4";
-            this.checkBoxComboBox4.Size = new System.Drawing.Size(263, 27);
-            this.checkBoxComboBox4.TabIndex = 19;
+            checkBoxProperties4.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox4.CheckBoxProperties = checkBoxProperties4;
+            checkBoxComboBox4.DisplayMemberSingleItem = "";
+            checkBoxComboBox4.Dock = DockStyle.Fill;
+            checkBoxComboBox4.FormattingEnabled = true;
+            checkBoxComboBox4.Location = new Point(386, 32);
+            checkBoxComboBox4.Margin = new Padding(0);
+            checkBoxComboBox4.Name = "checkBoxComboBox4";
+            checkBoxComboBox4.Size = new Size(230, 23);
+            checkBoxComboBox4.TabIndex = 19;
             // 
             // tlpGrid
             // 
-            this.tlpGrid.BackColor = System.Drawing.Color.White;
-            this.tlpGrid.ColumnCount = 1;
-            this.tlpGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpGrid.Controls.Add(this.dgvWorklog, 0, 0);
-            this.tlpGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpGrid.Location = new System.Drawing.Point(0, 114);
-            this.tlpGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpGrid.Name = "tlpGrid";
-            this.tlpGrid.RowCount = 2;
-            this.tlpGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tlpGrid.Size = new System.Drawing.Size(998, 489);
-            this.tlpGrid.TabIndex = 2;
+            tlpGrid.BackColor = Color.White;
+            tlpGrid.ColumnCount = 1;
+            tlpGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpGrid.Controls.Add(dgvWorklog, 0, 0);
+            tlpGrid.Dock = DockStyle.Fill;
+            tlpGrid.Location = new Point(0, 90);
+            tlpGrid.Margin = new Padding(0);
+            tlpGrid.Name = "tlpGrid";
+            tlpGrid.RowCount = 2;
+            tlpGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpGrid.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tlpGrid.Size = new Size(873, 386);
+            tlpGrid.TabIndex = 2;
             // 
             // dgvWorklog
             // 
-            this.dgvWorklog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvWorklog.BackgroundColor = System.Drawing.Color.White;
-            this.dgvWorklog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWorklog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvWorklog.Location = new System.Drawing.Point(0, 0);
-            this.dgvWorklog.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvWorklog.Name = "dgvWorklog";
-            this.dgvWorklog.RowTemplate.Height = 25;
-            this.dgvWorklog.Size = new System.Drawing.Size(998, 464);
-            this.dgvWorklog.TabIndex = 0;
+            dgvWorklog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvWorklog.BackgroundColor = Color.White;
+            dgvWorklog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvWorklog.Dock = DockStyle.Fill;
+            dgvWorklog.Location = new Point(0, 0);
+            dgvWorklog.Margin = new Padding(0);
+            dgvWorklog.Name = "dgvWorklog";
+            dgvWorklog.RowTemplate.Height = 25;
+            dgvWorklog.Size = new Size(873, 366);
+            dgvWorklog.TabIndex = 0;
             // 
             // cmsPerson
             // 
-            this.cmsPerson.Name = "contextMenuStrip1";
-            this.cmsPerson.Size = new System.Drawing.Size(61, 4);
+            cmsPerson.Name = "contextMenuStrip1";
+            cmsPerson.Size = new Size(61, 4);
             // 
             // cms
             // 
-            this.cms.Name = "contextMenuStrip2";
-            this.cms.Size = new System.Drawing.Size(61, 4);
+            cms.Name = "contextMenuStrip2";
+            cms.Size = new Size(61, 4);
             // 
             // frmWorklog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 603);
-            this.Controls.Add(this.tlpHeader);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmWorklog";
-            this.ShowIcon = false;
-            this.Text = "Current Status";
-            this.tlpHeader.ResumeLayout(false);
-            this.tlpBtn.ResumeLayout(false);
-            this.tlpBtn.PerformLayout();
-            this.tlpGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWorklog)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(873, 476);
+            Controls.Add(tlpHeader);
+            Name = "frmWorklog";
+            ShowIcon = false;
+            Text = "Current Status";
+            tlpHeader.ResumeLayout(false);
+            tlpBtn.ResumeLayout(false);
+            tlpBtn.PerformLayout();
+            tlpGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvWorklog).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

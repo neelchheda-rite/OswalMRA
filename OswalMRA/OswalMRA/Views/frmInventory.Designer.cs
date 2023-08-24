@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventory));
+            PresentationControls.CheckBoxProperties checkBoxProperties1 = new PresentationControls.CheckBoxProperties();
             pnlHeader = new Panel();
             tlpHeader = new TableLayoutPanel();
             lblFrom = new Label();
@@ -37,10 +38,10 @@
             dtpTo = new DateTimePicker();
             toolstripMoulId = new ToolStrip();
             tspDropDownBtn = new ToolStripDropDownButton();
-            CmbPerson = new ComboBox();
             lblPerson = new Label();
             cmbTo = new ComboBox();
             btnSearch = new Button();
+            checkBoxComboBox5 = new PresentationControls.CheckBoxComboBox();
             dgvInventory = new DataGridView();
             tlpBtn = new TableLayoutPanel();
             tlpHeader.SuspendLayout();
@@ -78,10 +79,10 @@
             tlpHeader.Controls.Add(dtpFrom, 1, 0);
             tlpHeader.Controls.Add(dtpTo, 3, 0);
             tlpHeader.Controls.Add(toolstripMoulId, 4, 0);
-            tlpHeader.Controls.Add(CmbPerson, 4, 0);
             tlpHeader.Controls.Add(lblPerson, 5, 0);
             tlpHeader.Controls.Add(cmbTo, 6, 0);
             tlpHeader.Controls.Add(btnSearch, 7, 0);
+            tlpHeader.Controls.Add(checkBoxComboBox5, 4, 0);
             tlpHeader.Dock = DockStyle.Top;
             tlpHeader.Location = new Point(0, 35);
             tlpHeader.Margin = new Padding(1);
@@ -164,17 +165,6 @@
             tspDropDownBtn.Size = new Size(29, 22);
             tspDropDownBtn.Text = "Mould Id";
             // 
-            // CmbPerson
-            // 
-            CmbPerson.Dock = DockStyle.Fill;
-            CmbPerson.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbPerson.FormattingEnabled = true;
-            CmbPerson.Location = new Point(595, 3);
-            CmbPerson.Name = "CmbPerson";
-            CmbPerson.Size = new Size(244, 25);
-            CmbPerson.TabIndex = 10;
-            CmbPerson.Text = "Mould ID";
-            // 
             // lblPerson
             // 
             lblPerson.AutoSize = true;
@@ -215,6 +205,21 @@
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             // 
+            // checkBoxComboBox5
+            // 
+            checkBoxProperties1.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox5.CheckBoxProperties = checkBoxProperties1;
+            checkBoxComboBox5.DisplayMemberSingleItem = "";
+            checkBoxComboBox5.Dock = DockStyle.Fill;
+            checkBoxComboBox5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBoxComboBox5.FormattingEnabled = true;
+            checkBoxComboBox5.Location = new Point(592, 0);
+            checkBoxComboBox5.Margin = new Padding(0);
+            checkBoxComboBox5.Name = "checkBoxComboBox5";
+            checkBoxComboBox5.Size = new Size(250, 25);
+            checkBoxComboBox5.TabIndex = 21;
+            checkBoxComboBox5.Text = "Mould ID";
+            // 
             // dgvInventory
             // 
             dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -243,7 +248,7 @@
             tlpBtn.TabIndex = 2;
             tlpBtn.Paint += tableLayoutPanel2_Paint;
             // 
-            // Inventory
+            // frmInventory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -253,9 +258,10 @@
             Controls.Add(pnlHeader);
             ForeColor = Color.White;
             MinimumSize = new Size(903, 487);
-            Name = "Inventory";
+            Name = "frmInventory";
             ShowIcon = false;
             Text = "Mould Details";
+            Load += frmInventory_Load;
             tlpHeader.ResumeLayout(false);
             tlpHeader.PerformLayout();
             toolstripMoulId.ResumeLayout(false);
@@ -280,6 +286,6 @@
         private TableLayoutPanel tlpBtn;
         private ToolStrip toolstripMoulId;
         private ToolStripDropDownButton tspDropDownBtn;
-        private ComboBox CmbPerson;
+        private PresentationControls.CheckBoxComboBox checkBoxComboBox5;
     }
 }

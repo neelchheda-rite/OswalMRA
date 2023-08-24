@@ -1,12 +1,18 @@
 ﻿
+using OswalMRA.COMMON.Models;
 using OswalMRA.MessageBox;
+using PresentationControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Status = OswalMRA.COMMON.Models.Status;
 
 namespace OswalMRA
 {
     public partial class frmInventory : Form
     {
+        private StatusList _StatusList;
+
+        private ListSelectionWrapper<Status> StatusSelections;
         public frmInventory()
         {
             InitializeComponent();
@@ -60,7 +66,7 @@ namespace OswalMRA
                 FillWeight = 50
             };
             dgvInventory.Columns.Add(deleteButtonColumn);
-            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font(dgvInventory .Font, FontStyle.Bold);
+            dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font(dgvInventory.Font, FontStyle.Bold);
             dgvInventory.ColumnHeadersDefaultCellStyle.Font = new Font(dgvInventory.Font.FontFamily, 12, FontStyle.Bold);
             dgvInventory.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
@@ -106,5 +112,30 @@ namespace OswalMRA
                 }
             }
         }
+
+        private void frmInventory_Load(object sender, EventArgs e)
+        {
+            _StatusList = new StatusList();
+
+            _StatusList.Add(new Status(1, "New"));
+            _StatusList.Add(new Status(2, "Loaded"));
+            _StatusList.Add(new Status(3, "Inserted"));
+            Status UpdatedStatus = new Status(4, "Updated");
+            _StatusList.Add(UpdatedStatus);
+            _StatusList.Add(new Status(5, "Deleted"));
+
+            StatusSelections = new ListSelectionWrapper<Status>(_StatusList, "Name");
+
+            checkBoxComboBox5.DataSource = StatusSelections;
+            checkBoxComboBox5.DisplayMemberSingleItem = "Name";
+            checkBoxComboBox5.DisplayMember = "NameConcatenated";
+            checkBoxComboBox5.ValueMember = "Selected";
+
+            checkBoxComboBox5.CheckBoxItems[3].DataBindings.DefaultDataSourceUpdateMode
+                    = DataSourceUpdateMode.OnPropertyChanged;
+            checkBoxComboBox5.DataBindings.DefaultDataSourceUpdateMode
+                    = DataSourceUpdateMode.OnPropertyChanged;
+        }
+        
     }
 }
