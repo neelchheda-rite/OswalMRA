@@ -43,7 +43,7 @@ namespace OswalMRA
             rowColumn.HeaderText = "Row";
 
             DataGridViewTextBoxColumn colColumn = new DataGridViewTextBoxColumn();
-            colColumn.DataPropertyName = "Column";
+            colColumn.DataPropertyName = "col";
             colColumn.Name = "column";
             colColumn.HeaderText = "Coloumn";
 
@@ -70,11 +70,11 @@ namespace OswalMRA
         private void PopulateMouldData()
         {
             // Dummy data
-            var moulds = new List<Mould>
+            var moulds = new List<mouldDetails>
             {
-                new Mould { mouldCode = "M00001", mouldName = "Mould 1", description = "Desc Mould 1", row = 1, column = 1 },
-                new Mould { mouldCode = "M00002", mouldName = "Mould 2", description = "Desc Mould 2", row = 2, column = 2 },
-                new Mould { mouldCode = "M00003", mouldName = "Mould 3", description = "Desc Mould 3", row = 3, column = 3 }
+                new mouldDetails { mouldCode = "M00001", mouldName = "Mould 1", description = "Desc Mould 1", row = 1, col = 1 },
+                new mouldDetails { mouldCode = "M00002", mouldName = "Mould 2", description = "Desc Mould 2", row = 2, col = 2 },
+                new mouldDetails { mouldCode = "M00003", mouldName = "Mould 3", description = "Desc Mould 3", row = 3, col = 3 }
             };
 
             // Bind the data to the DataGridView

@@ -179,8 +179,9 @@
   <data name="mouldInsertSuccess" xml:space="preserve">
     <value>Mould Inserted Successfully</value>
   </data>
-  <data name="mouldSameRowColConfirmation" xml:space="preserve">
+	<data name="mouldSameRowColConfirmation" xml:space="preserve">
     <value>A mould already exists on Row: {selectedRow}, Column: {selectedCol}. Do you still want to proceed?</value>
+	  </data>
 
   <data name="clearConfirmationMessage" xml:space="preserve">
     <value>Are You Sure You Want To Clear?</value>

@@ -154,7 +154,7 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmMouldManagementPage());
+                openChildForm(new frmMouldPage());
                 this.Text = "Oswal MRA - Mould Management";
             }
             else if (loginDialogResult == DialogResult.Cancel)
