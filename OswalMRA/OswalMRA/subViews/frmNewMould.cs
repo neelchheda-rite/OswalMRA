@@ -35,6 +35,9 @@ namespace OswalMRA
             MaximizeBox = false;
             PopulateRowComboBoxAsync();
             PopulateColComboBoxAsync();
+            txtMouldCode.Focus();
+            txtMouldName.Focus();
+            txtMouldDesc.Focus();
         }
 
         private async Task PopulateRowComboBoxAsync()
@@ -69,68 +72,76 @@ namespace OswalMRA
 
         private async void btnAddNew_Click(object sender, EventArgs e)
         {
-            List<string> errorMessages = new List<string>();
-
-            if (!ValidateFields(errorMessages))
+            if (txtMouldCode.Text == string.Empty)
             {
-                string errorMessage = "Please correct the following errors:\n";
-                foreach (string error in errorMessages)
-                {
-                    errorMessage += "- " + error + "\n";
-                }
-                msgBox fieldValError = new("Error", errorMessage);
-                fieldValError.Show();
+                codeWarning.Text = "Code Required";
+                return;
             }
-            else
+
+            if (txtMouldName.Text == string.Empty)
             {
-                int selectedRow = (int)ddlRow.SelectedItem;
-                int selectedCol = (int)ddlCol.SelectedItem;
-                int createdBy = 1;
+                nameWarning.Text = "Name Required";
+                return;
+            }
 
-                try
+            if (txtMouldDesc.Text == string.Empty)
+            {
+                descWarning.Text = "Description Required";
+                return;
+            }
+
+            if (ddlRow.SelectedIndex == -1)
+            {
+
+            }
+
+            int selectedRow = (int)ddlRow.SelectedItem;
+            int selectedCol = (int)ddlCol.SelectedItem;
+            int createdBy = 1;
+
+            try
+            {
+                _logger.Trace("frmNewMould===>InsertMould(): Request Received to create a new mould.");
+                var insertResult = await _dapperManagement.InsertMould(txtMouldCode.Text.ToSafeString(), txtMouldName.Text.ToSafeString(), txtMouldDesc.Text.ToSafeString(), selectedRow, selectedCol, createdBy, 0);
+
+                int validateCode = insertResult.validateCode;
+                int validationFlag = insertResult.validationFlag;
+
+                msgBox insertSuccessBox = new("Confirmation Message", "mouldInsertSuccess");
+
+                if (validateCode == 1)
                 {
-                    _logger.Trace("frmNewMould===>InsertMould(): Request Received to create a new mould.");
-                    var insertResult = await _dapperManagement.InsertMould(txtMouldCode.Text.ToSafeString(), txtMouldName.Text.ToSafeString(), txtMouldDesc.Text.ToSafeString(), selectedRow, selectedCol, createdBy, 0);
+                    msgBox dupeCodeMsg = new("Duplicate Mould Code", "mouldDuplicateCode");
+                    dupeCodeMsg.Show();
+                }
 
-                    int validateCode = insertResult.validateCode;
-                    int validationFlag = insertResult.validationFlag;
-
-                    msgBox insertSuccessBox = new("Confirmation Message", "mouldInsertSuccess");
-
-                    if (validateCode == 1)
+                if (validationFlag == 1 && validateCode == 0)
+                {
+                    using (var optionBox = new optionMsgBox("Confirmation for inserting in the same grid", $"mouldSameRowColConfirmation"))
                     {
-                        msgBox dupeCodeMsg = new("Duplicate Mould Code", "mouldDuplicateCode");
-                        dupeCodeMsg.Show();
-                    }
+                        var result1 = optionBox.ShowDialog();
 
-                    if (validationFlag == 1 && validateCode == 0)
-                    {
-                        using (var optionBox = new optionMsgBox("Confirmation for inserting in the same grid", $"mouldSameRowColConfirmation"))
+                        if (result1 == DialogResult.Yes)
                         {
-                            var result1 = optionBox.ShowDialog();
+                            var insertResult1 = await _dapperManagement.InsertMould(txtMouldCode.Text, txtMouldName.Text, txtMouldDesc.Text, selectedRow, selectedCol, createdBy, 1);
 
-                            if (result1 == DialogResult.Yes)
-                            {
-                                var insertResult1 = await _dapperManagement.InsertMould(txtMouldCode.Text, txtMouldName.Text, txtMouldDesc.Text, selectedRow, selectedCol, createdBy, 1);
-
-                                insertSuccessBox.Show();
-                            }
-                            else
-                            {
-                                Console.WriteLine("Operation cancelled.");
-                            }
+                            insertSuccessBox.Show();
                         }
+                        else
+                        {
+                            Console.WriteLine("Operation cancelled.");
+                        }
+                    }
 
-                    }
-                    else if (validateCode == 0)
-                    {
-                        insertSuccessBox.Show();
-                    }
                 }
-                catch (Exception ex)
+                else if (validateCode == 0)
                 {
-                    // Handle exceptions here
+                    insertSuccessBox.Show();
                 }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions here
             }
         }
 
@@ -176,7 +187,7 @@ namespace OswalMRA
             return isValid;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void clear_Click(object sender, EventArgs e)
         {
             txtMouldCode.Clear();
             txtMouldName.Clear();

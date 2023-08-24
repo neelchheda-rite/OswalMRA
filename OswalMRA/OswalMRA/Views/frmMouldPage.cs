@@ -1,4 +1,6 @@
-﻿using OswalMRA.COMMON.Models;
+﻿using NLog;
+using OswalMRA.COMMON.Models;
+using OswalMRA.DAL;
 using OswalMRA.MessageBox;
 using System;
 using System.Collections.Generic;
@@ -11,9 +13,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OswalMRA.Views {
-    public partial class frmMouldPage : Form {
+    public partial class frmMouldPage : Form
+    {
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly IDBRepository _dapperManagement;
         public frmMouldPage()
         {
+            _dapperManagement = new DBRepository();
             InitializeComponent();
             InitializeDataGridView();
             dgvMould.ReadOnly = true;
@@ -109,7 +115,7 @@ namespace OswalMRA.Views {
             }
         }
 
-        private void dgvMould_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvMould_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -122,8 +128,23 @@ namespace OswalMRA.Views {
                 {
                     string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
 
-                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "mouldDeleteConfirmation");
-                    confirmationBox.Show();
+                    using (var optionBox = new optionMsgBox("Confirmation for delete", "mouldDeleteConfirmation"))
+                    {
+                        var result1 = optionBox.ShowDialog();
+
+                        if (result1 == DialogResult.Yes)
+                        {
+                            var deleteResult1 = await _dapperManagement.DeleteMould(mouldCode);
+
+                            msgBox deleteSuccessBox = new("Confirmation Message", "moulddeleteSuccess");
+                            deleteSuccessBox.Show();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Operation cancelled.");
+                        }
+                    }
+
                 }
             }
         }

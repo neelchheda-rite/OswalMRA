@@ -237,6 +237,15 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mould Deleted Successfully.
+        /// </summary>
+        internal static string moulddeleteSuccess {
+            get {
+                return ResourceManager.GetString("moulddeleteSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A Mould With this code already exists. \nTry with a different code..
         /// </summary>
         internal static string mouldDuplicateCode {

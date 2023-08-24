@@ -153,7 +153,7 @@ namespace OswalMRA.DAL
             return (validateCode, validationFlag);
         }
 
-        public async Task<int> DeleteMould(int mouldID)//get details based on usernaem then compare//validations        {
+        public async Task<int> DeleteMould(string mouldCode)//get details based on usernaem then compare//validations        {
         {
 
             int affectedRows = 0;
@@ -162,7 +162,7 @@ namespace OswalMRA.DAL
             {
                 var query = "usp_DeleteMould";
                 var parameters = new DynamicParameters();
-                parameters.Add("@MouldID", mouldID);
+                parameters.Add("@MouldCode", mouldCode);
 
                 using (var connection = _context.CreateConnection())
                 {
@@ -177,6 +177,26 @@ namespace OswalMRA.DAL
             }
 
             return affectedRows;
+        }
+
+        public async Task<List<mouldDetails>> FetchMouldMaster()
+        {
+            try
+            {
+                List<mouldDetails> list;
+                var query = "usp_FetchMouldMaster";
+                using (var connection = _context.CreateConnection())
+                {
+                    var reader = await connection.QueryMultipleAsync(query, null, null, null, CommandType.StoredProcedure);
+                    list = reader.Read<mouldDetails>().ToList();
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
         #endregion
 
