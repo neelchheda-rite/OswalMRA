@@ -36,6 +36,7 @@ namespace OswalMRA
                 //    Application.Run(frmFullLayout);
                 //}
                 frmFullLayout frmFullLayout = new frmFullLayout();
+
                 frmMouldManagementPage mouldManagementForm = new();
 
                 Application.Run(frmFullLayout);

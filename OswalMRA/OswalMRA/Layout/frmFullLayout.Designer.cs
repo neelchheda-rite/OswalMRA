@@ -1,5 +1,7 @@
-﻿namespace OswalMRA.Layout {
-    partial class frmFullLayout {
+﻿namespace OswalMRA.Layout
+{
+    partial class frmFullLayout
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>

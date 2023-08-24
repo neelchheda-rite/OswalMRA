@@ -11,8 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
-namespace OswalMRA.Layout {
-    public partial class frmFullLayout : Form {
+namespace OswalMRA.Layout
+{
+    public partial class frmFullLayout : Form
+    {
 
         private bool isSidebarExpanded = true;
         private Form? activeForm = null;
@@ -57,7 +59,8 @@ namespace OswalMRA.Layout {
             {
                 baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 15); ;
                 baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 85); ;
-            } else
+            }
+            else
             {
                 baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 4); ;
                 baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 96); ;
@@ -88,7 +91,8 @@ namespace OswalMRA.Layout {
             {
                 openChildForm(new frmUserPage());
                 this.Text = "Oswal MRA - User Management";
-            } else if (loginDialogResult == DialogResult.Cancel)
+            }
+            else if (loginDialogResult == DialogResult.Cancel)
             {
                 openChildForm(new frmHomePage());
                 this.Text = "Oswal MRA - Home";
@@ -120,14 +124,15 @@ namespace OswalMRA.Layout {
             {
                 openChildForm(new frmWorklog());
                 this.Text = "Oswal MRA - Work Log";
-            } else if (loginDialogResult == DialogResult.Cancel)
+            }
+            else if (loginDialogResult == DialogResult.Cancel)
             {
                 openChildForm(new frmHomePage());
                 this.Text = "Oswal MRA - Home";
             }
         }
 
-            private void btnInventory_Click(object sender, EventArgs e)
+        private void btnInventory_Click(object sender, EventArgs e)
         {
             frmLoginPage frmLoginPage = new frmLoginPage();
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
@@ -135,8 +140,9 @@ namespace OswalMRA.Layout {
             {
                 openChildForm(new frmInventory());
                 this.Text = "Oswal MRA - Inventory";
-            } else if (loginDialogResult == DialogResult.Cancel)
-            { 
+            }
+            else if (loginDialogResult == DialogResult.Cancel)
+            {
                 openChildForm(new frmHomePage());
                 this.Text = "Oswal MRA - Home";
             }
@@ -150,8 +156,9 @@ namespace OswalMRA.Layout {
             {
                 openChildForm(new frmMouldManagementPage());
                 this.Text = "Oswal MRA - Mould Management";
-            } else if (loginDialogResult == DialogResult.Cancel)
-            { 
+            }
+            else if (loginDialogResult == DialogResult.Cancel)
+            {
                 openChildForm(new frmHomePage());
                 this.Text = "Oswal MRA - Home";
             }

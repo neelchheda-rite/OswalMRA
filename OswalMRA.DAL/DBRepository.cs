@@ -24,7 +24,7 @@ namespace OswalMRA.DAL
             List<LoginResponse> loginResp;
             try
             {
-                var query = "usp_ValidateLogin"; 
+                var query = "usp_ValidateLogin";
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserName", userName, DbType.String);
                 parameters.Add("@Password", password, DbType.String);
@@ -56,12 +56,12 @@ namespace OswalMRA.DAL
             List<UpdatePasswordResponse> updatePasswordResp;
             try
             {
-                    var query = "usp_UpdatePassword";
-                    var parameters = new DynamicParameters();
+                var query = "usp_UpdatePassword";
+                var parameters = new DynamicParameters();
                 parameters.Add("@UserID", UserID, DbType.Int32);
                 parameters.Add("@CurrentPassword", currentPassword, DbType.String);
-                    parameters.Add("@NewPassword", newPassword, DbType.String);
-                    parameters.Add("@UpdateStatus", dbType: DbType.String, direction: ParameterDirection.Output, size: 100);
+                parameters.Add("@NewPassword", newPassword, DbType.String);
+                parameters.Add("@UpdateStatus", dbType: DbType.String, direction: ParameterDirection.Output, size: 100);
                 using (var connection = _context.CreateConnection())
                 {
 
@@ -114,9 +114,9 @@ namespace OswalMRA.DAL
         }
 
         #region Mould
-        public async Task<List<MouldResponse>> InsertMould(string mouldCode, string mouldName, string mouldDesc, string mouldRow, string mouldCol, int mouldCreatedBy, DateTime mouldCreateTime, int valOverride)//get details based on usernaem then compare//validations        {
+        public async Task<(int validateCode, int validationFlag)> InsertMould(string mouldCode, string mouldName, string mouldDesc, int mouldRow, int mouldCol, int mouldCreatedBy, int valOverride)//get details based on usernaem then compare//validations        {
         {
-            List<MouldResponse> mouldResponses = new List<MouldResponse>();
+            int validateCode = 0 ;
             int validationFlag = 0;
 
             try
@@ -129,57 +129,16 @@ namespace OswalMRA.DAL
                 parameters.Add("@MouldRow", mouldRow);
                 parameters.Add("@MouldCol", mouldCol);
                 parameters.Add("@MouldCreatedBy", mouldCreatedBy);
-                parameters.Add("@DateCreated", mouldCreateTime);
                 parameters.Add("@valOverride", valOverride);
+                parameters.Add("@validateCode", dbType: DbType.Int32, direction: ParameterDirection.Output);
                 parameters.Add("@ValidationFlag", dbType: DbType.Int32, direction: ParameterDirection.Output);
-
-                if (int.TryParse(mouldRow, out int rowValue) && int.TryParse(mouldCol, out int colValue))
-                {
-                    parameters.Add("@MouldRow", rowValue);
-                    parameters.Add("@MouldCol", colValue);
-                }
 
                 using (var connection = _context.CreateConnection())
                 {
                     var reader = await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
 
                     validationFlag = parameters.Get<int>("@ValidationFlag");
-
-                    if (validationFlag == 0)
-                    {
-                        // Construct the MouldResponse object based on inserted data
-                        MouldResponse mouldResponse = new MouldResponse
-                        {
-                            MouldCode = mouldCode,
-                            MouldName = mouldName,
-                            MouldDescription = mouldDesc,
-                            MouldRow = mouldRow,
-                            MouldCol = mouldCol,
-                            createdBy = mouldCreatedBy,
-                            createdTime = mouldCreateTime,
-                            // Set other properties as needed
-                            insertValidationStatus = "Valid" // Or any other status
-                        };
-
-                        // Add the constructed response to the list
-                        mouldResponses.Add(mouldResponse);
-                    } else
-                    {
-                        MouldResponse mouldResponse = new MouldResponse
-                        {
-                            MouldCode = mouldCode,
-                            MouldName = mouldName,
-                            MouldDescription = mouldDesc,
-                            MouldRow = mouldRow,
-                            MouldCol = mouldCol,
-                            createdBy = mouldCreatedBy,
-                            createdTime = mouldCreateTime,
-                            // Set other properties as needed
-                            insertValidationStatus = "Invalid" // Or any other status
-                        };
-                        // Add the constructed response to the list
-                        mouldResponses.Add(mouldResponse);
-                    }
+                    validateCode = parameters.Get<int>("@validateCode");
 
                 }
 
@@ -191,7 +150,7 @@ namespace OswalMRA.DAL
                 throw;
             }
 
-            return mouldResponses;
+            return (validateCode, validationFlag);
         }
 
         public async Task<int> DeleteMould(int mouldID)//get details based on usernaem then compare//validations        {
@@ -220,5 +179,66 @@ namespace OswalMRA.DAL
             return affectedRows;
         }
         #endregion
+
+        #region Settings
+        public async Task<int> GetNumberOfRowsFromSettings()
+        {
+            {
+
+                int maxRows = 0;
+
+                try
+                {
+                    var query = "usp_GetNumberOfRows";
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@NumberOfRows", dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    using (var connection = _context.CreateConnection())
+                    {
+                        await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
+                        maxRows = parameters.Get<int>("@NumberOfRows");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions
+                    throw;
+                }
+
+                return maxRows;
+            }
+
+        }
+        public async Task<int> GetNumberOfColsFromSettings()
+        {
+            {
+
+                int maxCols = 0;
+
+                try
+                {
+                    var query = "usp_GetNumberOfCols";
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@NumberOfCols", dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    using (var connection = _context.CreateConnection())
+                    {
+                        await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
+                        maxCols = parameters.Get<int>("@NumberOfCols");
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions
+                    throw;
+                }
+
+                return maxCols;
+            }
+        }
+
+        #endregion
+        
     }
 }

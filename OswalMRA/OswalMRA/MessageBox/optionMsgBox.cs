@@ -17,7 +17,9 @@ namespace OswalMRA.MessageBox
             InitializeComponent();
             this.Text = Title;
             string message = Properties.Resources.ResourceManager.GetString(ResourceMessageKey);
+
             messageLabel.Text = message; 
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace OswalMRA.MessageBox
         {
             this.DialogResult = DialogResult.Yes;
             this.Close();
+
         }
     }
 }
