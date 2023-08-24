@@ -37,16 +37,8 @@ namespace OswalMRA
                 //}
                 frmFullLayout frmFullLayout = new frmFullLayout();
 
-                frmMouldManagementPage mouldManagementForm = new();
-
                 Application.Run(frmFullLayout);
 
-                //cod eto execute single page
-                //Application.EnableVisualStyles();
-                //Application.SetCompatibleTextRenderingDefault(false);
-
-                //Create and show your main form
-                //Application.Run(new Form1());
             }
             catch (Exception ex)
             {

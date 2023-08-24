@@ -49,4 +49,6 @@ namespace OswalMRA.COMMON.Models
             return Name;
         }
     }
+    public class StatusList : List<Status> {
+    }
 }
