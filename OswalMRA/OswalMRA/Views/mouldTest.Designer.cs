@@ -1,5 +1,5 @@
 ﻿namespace OswalMRA.Views {
-    partial class frmWorkLogPage {
+    partial class mouldTest {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,14 +28,18 @@
         {
             this.SuspendLayout();
             // 
-            // frmWorkLogPage
+            // mouldTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmWorkLogPage";
-            this.Text = "frmWorkLogPage";
+            this.ClientSize = new System.Drawing.Size(871, 605);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "mouldTest";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Oswal MRA - Mould";
             this.ResumeLayout(false);
 
         }

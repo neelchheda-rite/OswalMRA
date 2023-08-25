@@ -71,6 +71,7 @@
             this.dgvUserManagement.Location = new System.Drawing.Point(0, 84);
             this.dgvUserManagement.Margin = new System.Windows.Forms.Padding(0);
             this.dgvUserManagement.Name = "dgvUserManagement";
+            this.dgvUserManagement.RowHeadersVisible = false;
             this.dgvUserManagement.RowTemplate.Height = 25;
             this.dgvUserManagement.Size = new System.Drawing.Size(871, 477);
             this.dgvUserManagement.TabIndex = 1;

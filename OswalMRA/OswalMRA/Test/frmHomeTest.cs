@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OswalMRA.Views {
-    public partial class frmHomePage : Form {
-        public frmHomePage()
+namespace OswalMRA.Test {
+    public partial class frmHomeTest : Form {
+        public frmHomeTest()
         {
             InitializeComponent();
         }

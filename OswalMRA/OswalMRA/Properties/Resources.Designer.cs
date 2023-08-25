@@ -61,7 +61,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are You Sure You Want To Clear?.
+        ///   Looks up a localized string similar to Are you sure you want to clear?.
         /// </summary>
         internal static string clearConfirmationMessage {
             get {
@@ -70,7 +70,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are You Sure You Want To Delete?.
+        ///   Looks up a localized string similar to Are you sure you want to delete?.
         /// </summary>
         internal static string deleteConfirmationMessage {
             get {
@@ -79,7 +79,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are You Sure You Want To Edit?.
+        ///   Looks up a localized string similar to Are you sure you want to edit?.
         /// </summary>
         internal static string editConfirmationMessage {
             get {
@@ -133,6 +133,16 @@ namespace OswalMRA.Properties {
         internal static System.Drawing.Bitmap icons8_admin_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-admin-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_control_panel_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-control-panel-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -228,7 +238,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete this mould?.
+        ///   Looks up a localized string similar to Are you sure you want to delete?.
         /// </summary>
         internal static string mouldDeleteConfirmation {
             get {
@@ -237,7 +247,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Mould With this code already exists. \nTry with a different code..
+        ///   Looks up a localized string similar to Mould with this code already exists. \nTry with a different code..
         /// </summary>
         internal static string mouldDuplicateCode {
             get {
@@ -246,7 +256,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mould Inserted Successfully.
+        ///   Looks up a localized string similar to Mould inserted successfully..
         /// </summary>
         internal static string mouldInsertSuccess {
             get {
@@ -255,7 +265,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mould Restored Successfully..
+        ///   Looks up a localized string similar to Mould restored successfully..
         /// </summary>
         internal static string mouldRestoredMessage {
             get {
@@ -269,6 +279,16 @@ namespace OswalMRA.Properties {
         internal static string mouldSameRowColConfirmation {
             get {
                 return ResourceManager.GetString("mouldSameRowColConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oswal_transparent {
+            get {
+                object obj = ResourceManager.GetObject("oswal_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -293,7 +313,16 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are You Sure You Want To Upload?.
+        ///   Looks up a localized string similar to Press F1 to Toggle Sidebar.
+        /// </summary>
+        internal static string toggleSidebarMessage {
+            get {
+                return ResourceManager.GetString("toggleSidebarMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to upload?.
         /// </summary>
         internal static string uploadConfirmationMessage {
             get {

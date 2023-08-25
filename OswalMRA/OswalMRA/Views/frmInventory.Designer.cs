@@ -214,6 +214,7 @@
             this.dgvInventory.Location = new System.Drawing.Point(0, 0);
             this.dgvInventory.Margin = new System.Windows.Forms.Padding(0);
             this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.RowHeadersVisible = false;
             this.dgvInventory.RowTemplate.Height = 25;
             this.dgvInventory.Size = new System.Drawing.Size(998, 524);
             this.dgvInventory.TabIndex = 0;

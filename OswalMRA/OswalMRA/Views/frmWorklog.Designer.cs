@@ -301,6 +301,7 @@
             this.dgvWorklog.Location = new System.Drawing.Point(0, 0);
             this.dgvWorklog.Margin = new System.Windows.Forms.Padding(0);
             this.dgvWorklog.Name = "dgvWorklog";
+            this.dgvWorklog.RowHeadersVisible = false;
             this.dgvWorklog.RowTemplate.Height = 25;
             this.dgvWorklog.Size = new System.Drawing.Size(998, 464);
             this.dgvWorklog.TabIndex = 0;

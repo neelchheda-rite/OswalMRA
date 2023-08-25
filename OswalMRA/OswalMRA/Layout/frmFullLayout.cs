@@ -1,4 +1,5 @@
 ﻿using OswalMRA.MessageBox;
+using OswalMRA.Test;
 using OswalMRA.Views;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +25,7 @@ namespace OswalMRA.Layout
         public frmFullLayout()
         {
             InitializeComponent();
+            frmHomeTest frmHomeTest = new();
             statusDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             Screen currentScreen = Screen.FromControl(this);
             Rectangle screenBounds = currentScreen.Bounds;
@@ -30,9 +33,16 @@ namespace OswalMRA.Layout
             this.Height = screenBounds.Height;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Location = screenBounds.Location;
-            openChildForm(new frmHomePage());
-            this.Text = "Oswal MRA - Home";
+            openChildForm(frmHomeTest);
+            Title("Home");
         }
+
+        #region WINDOW FORM TITLE
+        private void Title(string title)
+        {
+            headerLabel.Text ="Oswal MRA - " + title;
+        }
+        #endregion
 
 
         #region CHILD FORM
@@ -57,13 +67,17 @@ namespace OswalMRA.Layout
             isSidebarExpanded = !isSidebarExpanded;
             if (isSidebarExpanded)
             {
-                baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 15); ;
-                baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 85); ;
+                baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 15); 
+                baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 85);
+                sidebarShortcutLabel.Text = Properties.Resources.toggleSidebarMessage;
             }
             else
             {
-                baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 4); ;
-                baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 96); ;
+                baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 4); 
+                baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 96);
+                sidebarShortcutLabel.Text = "&F1";
+                sidebarShortcutLabel.Font = new Font(sidebarShortcutLabel.Font, FontStyle.Bold);
+
             }
         }
         #endregion TOGGLE SIDEBAR
@@ -79,8 +93,9 @@ namespace OswalMRA.Layout
         #region SIDEBAR TABS
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmHomePage());
-            this.Text = "Oswal MRA - Home";
+            openChildForm(new frmHomeTest());
+            Title("Home");
+            
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -90,24 +105,27 @@ namespace OswalMRA.Layout
             if (loginDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmUserPage());
-                this.Text = "Oswal MRA - User Management";
+                Title("User");
+                
+               
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomePage());
-                this.Text = "Oswal MRA - Home";
+                openChildForm(new frmHomeTest());
+                Title("Home");
             }
         }
 
         private void btnPassword_Click(object sender, EventArgs e)
         {
             frmChangePasswordPage frmChangePasswordPage = new frmChangePasswordPage();
-            this.Text = "Oswal MRA - Change Password";
+            
             DialogResult changePasswordDialogResult = frmChangePasswordPage.ShowDialog();
             if (changePasswordDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmHomePage());
-                this.Text = "Oswal MRA - Home";
+                openChildForm(new frmHomeTest());
+                Title("Home");
+
             }
         }
 
@@ -123,12 +141,14 @@ namespace OswalMRA.Layout
             if (loginDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmWorklog());
-                this.Text = "Oswal MRA - Work Log";
+                Title("Work Log");
+
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomePage());
-                this.Text = "Oswal MRA - Home";
+                openChildForm(new frmHomeTest());
+                Title("Home");
+
             }
         }
 
@@ -139,12 +159,14 @@ namespace OswalMRA.Layout
             if (loginDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmInventory());
-                this.Text = "Oswal MRA - Inventory";
+                Title("Inventory");
+
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomePage());
-                this.Text = "Oswal MRA - Home";
+                openChildForm(new frmHomeTest());
+                Title("Home");
+
             }
         }
 
@@ -155,12 +177,14 @@ namespace OswalMRA.Layout
             if (loginDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmMouldPage());
-                this.Text = "Oswal MRA - Mould Management";
+                Title("Mould Management");
+
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomePage());
-                this.Text = "Oswal MRA - Home";
+                openChildForm(new frmHomeTest());
+                Title("Home");
+
             }
         }
 
@@ -178,7 +202,9 @@ namespace OswalMRA.Layout
         {
             statusDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
+
         #endregion STATUS BAR DATETIME
 
+        
     }
 }

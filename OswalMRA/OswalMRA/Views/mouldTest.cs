@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OswalMRA.Views {
-    public partial class frmWorkLogPage : Form {
-        public frmWorkLogPage()
+    public partial class mouldTest : Form {
+        public mouldTest()
         {
             InitializeComponent();
         }
