@@ -22,7 +22,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="subViews\frmMould.cs">
+    <Compile Update="subViews\frmMouldTest.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

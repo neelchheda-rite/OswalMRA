@@ -29,11 +29,15 @@ namespace OswalMRA.Views {
             dgvMould.AutoGenerateColumns = false;
 
             // Create columns
+            DataGridViewTextBoxColumn srNumberColumn = new DataGridViewTextBoxColumn();
+            srNumberColumn.DataPropertyName = "srNumber";
+            srNumberColumn.Name = "srNumber";
+            srNumberColumn.HeaderText = "Sr Number";
+
             DataGridViewTextBoxColumn mouldCodeColumn = new DataGridViewTextBoxColumn();
             mouldCodeColumn.DataPropertyName = "mouldCode";
             mouldCodeColumn.Name = "mouldCode";
             mouldCodeColumn.HeaderText = "Mould Code";
-            mouldCodeColumn.Name = "mouldCode";
 
             DataGridViewTextBoxColumn mouldNameColumn = new DataGridViewTextBoxColumn();
             mouldNameColumn.DataPropertyName = "mouldName";
@@ -41,9 +45,9 @@ namespace OswalMRA.Views {
             mouldNameColumn.HeaderText = "Mould Name";
 
             DataGridViewTextBoxColumn descriptionColumn = new DataGridViewTextBoxColumn();
-            descriptionColumn.DataPropertyName = "Description";
-            descriptionColumn.Name = "description";
-            descriptionColumn.HeaderText = "Description";
+            descriptionColumn.DataPropertyName = "mouldDescription";
+            descriptionColumn.Name = "mouldDescription";
+            descriptionColumn.HeaderText = "Mould Description";
 
             DataGridViewTextBoxColumn rowColumn = new DataGridViewTextBoxColumn();
             rowColumn.DataPropertyName = "row";
@@ -78,7 +82,7 @@ namespace OswalMRA.Views {
 
             // Add columns to DataGridView
             dgvMould.Columns.AddRange(new DataGridViewColumn[] {
-                mouldCodeColumn, mouldNameColumn, descriptionColumn,rowColumn,colColumn, editButtonColumn, deleteButtonColumn
+                srNumberColumn, mouldCodeColumn, mouldNameColumn, descriptionColumn,rowColumn,colColumn, editButtonColumn, deleteButtonColumn
             });
             dgvMould.ColumnHeadersDefaultCellStyle.Font = new Font(dgvMould.Font, FontStyle.Bold); // Make headers bold
             dgvMould.ColumnHeadersDefaultCellStyle.Font = new Font(dgvMould.Font.FontFamily, 12, FontStyle.Bold); // You can adjust font size
@@ -91,40 +95,69 @@ namespace OswalMRA.Views {
             // Populate DataGridView with dummy data
             PopulateMouldData();
         }
-        private void PopulateMouldData()
+        private async void PopulateMouldData()
         {
-            // Dummy data
-            var moulds = new List<mouldDetails>
+            _logger.Trace("frmMouldPage===>FetchMouldMaster(): Request Received to list all moulds.");
+            List<mouldDetails> mouldList = await _dapperManagement.FetchMouldMaster();
+            List<mouldDetails> moulds = new List<mouldDetails>();
+
+            int srNumber = 0;
+
+            foreach (var mould in mouldList)
             {
-                new mouldDetails { mouldCode = "M00001", mouldName = "Mould 1", description = "Desc Mould 1", row = 1, col = 1 },
-                new mouldDetails { mouldCode = "M00002", mouldName = "Mould 2", description = "Desc Mould 2", row = 2, col = 2 },
-                new mouldDetails { mouldCode = "M00003", mouldName = "Mould 3", description = "Desc Mould 3", row = 3, col = 3 }
-            };
+                srNumber++;
+                // Check conditions and add to the moulds list
+                if (mould.row >= 1 && mould.col >= 1)
+                {
+                    moulds.Add(new mouldDetails
+                    {
+                        srNumber = srNumber,
+                        mouldCode = mould.mouldCode,
+                        mouldName = mould.mouldName,
+                        mouldDescription = mould.mouldDescription,
+                        row = mould.row,
+                        col = mould.col
+                    });
+                }
+            }
 
             // Bind the data to the DataGridView
             dgvMould.DataSource = moulds;
         }
         private void btnAddMould_Click(object sender, EventArgs e)
         {
-            frmNewMould frmNewMould = new();
+            frmMould frmMould = new();
 
-            frmNewMould.StartPosition = FormStartPosition.CenterParent;
-            if (frmNewMould.ShowDialog() == DialogResult.OK)
+            if (frmMould.ShowDialog() == DialogResult.OK)
             {
-
+                PopulateMouldData();
             }
         }
 
         private async void dgvMould_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && e.ColumnIndex >=0)
             {
                 if (e.ColumnIndex == dgvMould.Columns["Edit"].Index)
                 {
                     string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
-                    msgBox msgBox = new("", "");
-                    msgBox.Show();
-                } else if (e.ColumnIndex == dgvMould.Columns["Delete"].Index)
+                    string mouldName = (string)dgvMould.Rows[e.RowIndex].Cells["mouldName"].Value;
+                    string mouldDescription = (string)dgvMould.Rows[e.RowIndex].Cells["mouldDescription"].Value;
+                    int row = (int)dgvMould.Rows[e.RowIndex].Cells["row"].Value;
+                    int column = (int)dgvMould.Rows[e.RowIndex].Cells["column"].Value;
+
+                    frmMould frmEditMould = new(mouldCode, mouldName, mouldDescription, row, column);
+
+                    frmEditMould.ShowDialog();
+
+                    if(frmEditMould.DialogResult == DialogResult.OK)
+                    {
+                        PopulateMouldData();
+                    }
+
+
+                } 
+                else if (e.ColumnIndex == dgvMould.Columns["Delete"].Index)
                 {
                     string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
 
@@ -134,17 +167,21 @@ namespace OswalMRA.Views {
 
                         if (result1 == DialogResult.Yes)
                         {
+                            _logger.Trace($"frmMouldPage===>DeleteMould(): Request Received to delete mould with MouldCode: {mouldCode}.");
                             var deleteResult1 = await _dapperManagement.DeleteMould(mouldCode);
 
                             msgBox deleteSuccessBox = new("Confirmation Message", "moulddeleteSuccess");
-                            deleteSuccessBox.Show();
+                            deleteSuccessBox.ShowDialog();
+                            if(deleteSuccessBox.DialogResult == DialogResult.OK)
+                            {
+                                PopulateMouldData();
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("Operation cancelled.");
+                            _logger.Trace($"frmMouldPage===>Delete: Request Cancelled to delete mould with MouldCode: {mouldCode}.");
                         }
                     }
-
                 }
             }
         }

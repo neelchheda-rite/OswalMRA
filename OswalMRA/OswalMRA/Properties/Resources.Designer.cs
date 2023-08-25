@@ -246,11 +246,20 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Mould With this code already exists. \nTry with a different code..
+        ///   Looks up a localized string similar to A Mould With this code already exists. Try with a different code..
         /// </summary>
         internal static string mouldDuplicateCode {
             get {
                 return ResourceManager.GetString("mouldDuplicateCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mould Updated Successfully.
+        /// </summary>
+        internal static string mouldEditSuccess {
+            get {
+                return ResourceManager.GetString("mouldEditSuccess", resourceCulture);
             }
         }
         
@@ -273,7 +282,7 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A mould already exists on Row: {selectedRow}, Column: {selectedCol}. Do you still want to proceed?.
+        ///   Looks up a localized string similar to A mould already exists on Row and Column. Do you still want to proceed?.
         /// </summary>
         internal static string mouldSameRowColConfirmation {
             get {

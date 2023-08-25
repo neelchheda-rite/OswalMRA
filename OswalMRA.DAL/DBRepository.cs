@@ -18,6 +18,7 @@ namespace OswalMRA.DAL
             _context = new DBContext();
         }
 
+        #region Login
         //login validation
         public async Task<List<LoginResponse>> Login(string userName, string password)
         {
@@ -50,6 +51,9 @@ namespace OswalMRA.DAL
             }
             return loginResp;
         }
+        #endregion
+
+        #region User
         //Update password
         public async Task<List<UpdatePasswordResponse>> UpdatePassword(int UserID, string currentPassword, string newPassword)
         {
@@ -112,6 +116,7 @@ namespace OswalMRA.DAL
             }
             return VerifyCurrentPasswordResp;
         }
+        #endregion
 
         #region Mould
         public async Task<(int validateCode, int validationFlag)> InsertMould(string mouldCode, string mouldName, string mouldDesc, int mouldRow, int mouldCol, int mouldCreatedBy, int valOverride)//get details based on usernaem then compare//validations        {
@@ -151,6 +156,40 @@ namespace OswalMRA.DAL
             }
 
             return (validateCode, validationFlag);
+        }
+
+        public async Task<int> EditMould(string mouldCode, string mouldName, string mouldDesc, int mouldRow, int mouldCol, int mouldModifyBy, int valOverride)//get details based on usernaem then compare//validations        {
+        {
+            int validationFlag = 0;
+
+            try
+            {
+                var query = "usp_UpdateMould";
+                var parameters = new DynamicParameters();
+                parameters.Add("@MouldCode", mouldCode);
+                parameters.Add("@MouldName", mouldName);
+                parameters.Add("@MouldDesc", mouldDesc);
+                parameters.Add("@MouldRow", mouldRow);
+                parameters.Add("@MouldCol", mouldCol);
+                parameters.Add("@MouldModifyBy", mouldModifyBy);
+                parameters.Add("@valOverride", valOverride);
+                parameters.Add("@ValidationFlag", dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                using (var connection = _context.CreateConnection())
+                {
+                    var reader = await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
+
+                    validationFlag = parameters.Get<int>("@ValidationFlag");
+
+                }
+
+                return validationFlag;
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                throw;
+            }
         }
 
         public async Task<int> DeleteMould(string mouldCode)//get details based on usernaem then compare//validations        {
@@ -204,9 +243,7 @@ namespace OswalMRA.DAL
         public async Task<int> GetNumberOfRowsFromSettings()
         {
             {
-
                 int maxRows = 0;
-
                 try
                 {
                     var query = "usp_GetNumberOfRows";
@@ -229,12 +266,10 @@ namespace OswalMRA.DAL
             }
 
         }
-        public async Task<int> GetNumberOfColsFromSettings()
+        public async Task<int> GetNumberOfColumnsFromSettings()
         {
             {
-
                 int maxCols = 0;
-
                 try
                 {
                     var query = "usp_GetNumberOfCols";
