@@ -25,7 +25,7 @@ namespace OswalMRA.Layout
         public frmFullLayout()
         {
             InitializeComponent();
-            frmHomeTest frmHomeTest = new();
+            frmHome frmHomeTest = new();
             statusDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             Screen currentScreen = Screen.FromControl(this);
             Rectangle screenBounds = currentScreen.Bounds;
@@ -93,7 +93,7 @@ namespace OswalMRA.Layout
         #region SIDEBAR TABS
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmHomeTest());
+            openChildForm(new frmHome());
             Title("Home");
             
         }
@@ -111,7 +111,7 @@ namespace OswalMRA.Layout
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomeTest());
+                openChildForm(new frmHome());
                 Title("Home");
             }
         }
@@ -123,7 +123,7 @@ namespace OswalMRA.Layout
             DialogResult changePasswordDialogResult = frmChangePasswordPage.ShowDialog();
             if (changePasswordDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmHomeTest());
+                openChildForm(new frmHome());
                 Title("Home");
 
             }
@@ -146,7 +146,7 @@ namespace OswalMRA.Layout
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomeTest());
+                openChildForm(new frmHome());
                 Title("Home");
 
             }
@@ -164,7 +164,7 @@ namespace OswalMRA.Layout
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomeTest());
+                openChildForm(new frmHome());
                 Title("Home");
 
             }
@@ -182,7 +182,7 @@ namespace OswalMRA.Layout
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
-                openChildForm(new frmHomeTest());
+                openChildForm(new frmHome());
                 Title("Home");
 
             }

@@ -96,7 +96,6 @@
             this.baseGrid.Name = "baseGrid";
             this.baseGrid.RowCount = 1;
             this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 732F));
             this.baseGrid.Size = new System.Drawing.Size(1370, 733);
             this.baseGrid.TabIndex = 0;
             // 
@@ -158,7 +157,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(193, 49);
-            this.btnHome.TabIndex = 0;
+            this.btnHome.TabIndex = 1;
             this.btnHome.Text = "   &Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,7 +180,7 @@
             this.btnMould.Name = "btnMould";
             this.btnMould.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnMould.Size = new System.Drawing.Size(193, 49);
-            this.btnMould.TabIndex = 1;
+            this.btnMould.TabIndex = 2;
             this.btnMould.Text = "   &Mould";
             this.btnMould.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMould.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,7 +203,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnUser.Size = new System.Drawing.Size(193, 49);
-            this.btnUser.TabIndex = 2;
+            this.btnUser.TabIndex = 3;
             this.btnUser.Text = "   &User";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,7 +226,7 @@
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnPassword.Size = new System.Drawing.Size(193, 49);
-            this.btnPassword.TabIndex = 3;
+            this.btnPassword.TabIndex = 4;
             this.btnPassword.Text = "   &Password";
             this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -250,7 +249,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnReset.Size = new System.Drawing.Size(193, 49);
-            this.btnReset.TabIndex = 4;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "   &Reset ";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -273,7 +272,7 @@
             this.btnWorkLog.Name = "btnWorkLog";
             this.btnWorkLog.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnWorkLog.Size = new System.Drawing.Size(193, 49);
-            this.btnWorkLog.TabIndex = 5;
+            this.btnWorkLog.TabIndex = 6;
             this.btnWorkLog.Text = "   &Work Log";
             this.btnWorkLog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWorkLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -296,7 +295,7 @@
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnInventory.Size = new System.Drawing.Size(193, 49);
-            this.btnInventory.TabIndex = 6;
+            this.btnInventory.TabIndex = 7;
             this.btnInventory.Text = "   &Inventory";
             this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -319,7 +318,7 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDashboard.Size = new System.Drawing.Size(193, 49);
-            this.btnDashboard.TabIndex = 7;
+            this.btnDashboard.TabIndex = 8;
             this.btnDashboard.Text = "   &Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -409,7 +408,7 @@
             this.childformPanel.Margin = new System.Windows.Forms.Padding(0);
             this.childformPanel.Name = "childformPanel";
             this.childformPanel.Size = new System.Drawing.Size(1165, 682);
-            this.childformPanel.TabIndex = 0;
+            this.childformPanel.TabIndex = 1;
             // 
             // headerPanel
             // 
