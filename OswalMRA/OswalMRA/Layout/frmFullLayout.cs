@@ -40,10 +40,9 @@ namespace OswalMRA.Layout
         #region WINDOW FORM TITLE
         private void Title(string title)
         {
-            headerLabel.Text ="Oswal MRA - " + title;
+            headerLabel.Text =title;
         }
         #endregion
-
 
         #region CHILD FORM
         private void openChildForm(Form childForm)
@@ -102,29 +101,33 @@ namespace OswalMRA.Layout
         {
             frmLoginPage frmLoginPage = new frmLoginPage();
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
-            if (loginDialogResult == DialogResult.OK)
+            if (loginDialogResult == DialogResult.Yes)
             {
                 openChildForm(new frmUserPage());
-                Title("User");
-                
+                Title("User Management");
+                frmToast frmToast = new("Log in successfull", "Success");
+                frmToast.ShowAtBottomCenter();
                
             }
-            else if (loginDialogResult == DialogResult.Cancel)
+            else if (loginDialogResult == DialogResult.No)
             {
                 openChildForm(new frmHome());
                 Title("Home");
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
             }
         }
 
         private void btnPassword_Click(object sender, EventArgs e)
         {
             frmChangePasswordPage frmChangePasswordPage = new frmChangePasswordPage();
-            
             DialogResult changePasswordDialogResult = frmChangePasswordPage.ShowDialog();
             if (changePasswordDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmHome());
                 Title("Home");
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
 
             }
         }
@@ -138,16 +141,20 @@ namespace OswalMRA.Layout
         {
             frmLoginPage frmLoginPage = new frmLoginPage();
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
-            if (loginDialogResult == DialogResult.OK)
+            if (loginDialogResult == DialogResult.Yes)
             {
                 openChildForm(new frmWorklog());
                 Title("Work Log");
+                frmToast frmToast = new("Log in successfull", "Success");
+                frmToast.ShowAtBottomCenter();
 
             }
-            else if (loginDialogResult == DialogResult.Cancel)
+            else if (loginDialogResult == DialogResult.No)
             {
                 openChildForm(new frmHome());
                 Title("Home");
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
 
             }
         }
@@ -156,16 +163,20 @@ namespace OswalMRA.Layout
         {
             frmLoginPage frmLoginPage = new frmLoginPage();
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
-            if (loginDialogResult == DialogResult.OK)
+            if (loginDialogResult == DialogResult.Yes)
             {
                 openChildForm(new frmInventory());
                 Title("Inventory");
+                frmToast frmToast = new("Log in successfull", "Success");
+                frmToast.ShowAtBottomCenter();
 
             }
-            else if (loginDialogResult == DialogResult.Cancel)
+            else if (loginDialogResult == DialogResult.No)
             {
                 openChildForm(new frmHome());
                 Title("Home");
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
 
             }
         }
@@ -174,16 +185,20 @@ namespace OswalMRA.Layout
         {
             frmLoginPage frmLoginPage = new frmLoginPage();
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
-            if (loginDialogResult == DialogResult.OK)
+            if (loginDialogResult == DialogResult.Yes)
             {
                 openChildForm(new frmMouldPage());
                 Title("Mould Management");
+                frmToast frmToast = new("Log in successfull", "Success");
+                frmToast.ShowAtBottomCenter();
 
             }
-            else if (loginDialogResult == DialogResult.Cancel)
+            else if (loginDialogResult == DialogResult.No)
             {
                 openChildForm(new frmHome());
                 Title("Home");
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
 
             }
         }
@@ -205,6 +220,5 @@ namespace OswalMRA.Layout
 
         #endregion STATUS BAR DATETIME
 
-        
     }
 }

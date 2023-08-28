@@ -1,6 +1,5 @@
 ﻿using OswalMRA.COMMON.Models;
 using OswalMRA.DAL;
-using OswalMRA.MessageBox;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,53 +13,59 @@ using System.Windows.Forms;
 namespace OswalMRA.Views {
     public partial class frmLoginPage : Form {
         private readonly IDBRepository _dapperManagement;
+
         public frmLoginPage()
         {
             InitializeComponent();
             _dapperManagement = new DBRepository();
             usernameTextBox.Focus();
-            passwordTextBox.Focus();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void closeLabel_MouseEnter(object sender, EventArgs e)
         {
-            try
-            {
-                List<LoginResponse> loginResp = await _dapperManagement.Login(usernameTextBox.Text, passwordTextBox.Text);
-                if (loginResp[0].ValidationStatus == "Validation successful.")
-                {
-                    //msgBox msgBox = new("successfully logged in", "");
-                    //DialogResult dialogResult = msgBox.ShowDialog();
-
-                    //if(msgBox.DialogResult == DialogResult.OK)
-                    //{
-                       
-                    //}
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    msgBox msgBox = new("error occured", "");
-                    msgBox.Show();
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                // Clear input fields
-                usernameTextBox.Text = string.Empty;
-                passwordTextBox.Text = string.Empty;
-            }
-            
+            closeLabel.BackColor = Color.Red;
         }
 
-        private void frmLoginPage_Load(object sender, EventArgs e)
+        private void closeLabel_MouseLeave(object sender, EventArgs e)
         {
+            closeLabel.BackColor = Color.FromArgb(41,128,185);
+        }
 
+        private void closeLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmLoginPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+
+            } else if (e.KeyCode == Keys.Enter)
+            {
+                this.Close();   
+            }
+        }
+
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
+            List<LoginResponse> loginResp = await _dapperManagement.Login(usernameTextBox.Text, passwordTextBox.Text);
+            if (loginResp[0].ValidationStatus == "Validation successful.")
+            {
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            } else
+            {
+                this.DialogResult = DialogResult.No;
+                this.Close();
+            }
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.No;
+            this.Close();
         }
     }
 }

@@ -150,6 +150,16 @@ namespace OswalMRA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_error_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-error-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_grip_lines_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-grip-lines-20", resourceCulture);
@@ -213,6 +223,16 @@ namespace OswalMRA.Properties {
         internal static System.Drawing.Bitmap icons8_reset_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-reset-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_success_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-success-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

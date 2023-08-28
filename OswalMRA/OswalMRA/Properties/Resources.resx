@@ -148,6 +148,9 @@
   <data name="icons8-log-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-log-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="toggleSidebarMessage" xml:space="preserve">
+    <value>Press F1 to Toggle Sidebar</value>
+  </data>
   <data name="mouldDeleteConfirmation" xml:space="preserve">
     <value>Are you sure you want to delete?</value>
   </data>
@@ -190,8 +193,14 @@
   <data name="uploadConfirmationMessage" xml:space="preserve">
     <value>Are you sure you want to upload?</value>
   </data>
+  <data name="icons8-success-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-success-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eyeoff-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eyeoff-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oswal_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oswal_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,10 +208,7 @@
   <data name="mouldRestoredMessage" xml:space="preserve">
     <value>Mould restored successfully.</value>
   </data>
-  <data name="oswal_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oswal_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toggleSidebarMessage" xml:space="preserve">
-    <value>Press F1 to Toggle Sidebar</value>
+  <data name="icons8-error-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-error-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

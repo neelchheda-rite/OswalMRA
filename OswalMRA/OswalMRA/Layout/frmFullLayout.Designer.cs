@@ -457,20 +457,22 @@
             this.statusGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.statusGrid.Controls.Add(this.statusDate, 1, 0);
             this.statusGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusGrid.Location = new System.Drawing.Point(3, 736);
+            this.statusGrid.Location = new System.Drawing.Point(0, 733);
+            this.statusGrid.Margin = new System.Windows.Forms.Padding(0);
             this.statusGrid.Name = "statusGrid";
             this.statusGrid.RowCount = 1;
             this.statusGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.statusGrid.Size = new System.Drawing.Size(1364, 10);
+            this.statusGrid.Size = new System.Drawing.Size(1370, 16);
             this.statusGrid.TabIndex = 1;
             // 
             // statusDate
             // 
             this.statusDate.AutoSize = true;
             this.statusDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusDate.Location = new System.Drawing.Point(1094, 0);
+            this.statusDate.Location = new System.Drawing.Point(1096, 0);
+            this.statusDate.Margin = new System.Windows.Forms.Padding(0);
             this.statusDate.Name = "statusDate";
-            this.statusDate.Size = new System.Drawing.Size(267, 10);
+            this.statusDate.Size = new System.Drawing.Size(274, 16);
             this.statusDate.TabIndex = 0;
             this.statusDate.Text = "Indian Standard Time";
             this.statusDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

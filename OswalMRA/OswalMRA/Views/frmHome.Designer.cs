@@ -303,6 +303,7 @@
             this.btnRestore.TabIndex = 5;
             this.btnRestore.Text = "Restore";
             this.btnRestore.UseVisualStyleBackColor = false;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // btnStore
             // 
@@ -318,6 +319,7 @@
             this.btnStore.TabIndex = 6;
             this.btnStore.Text = "Store";
             this.btnStore.UseVisualStyleBackColor = false;
+            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
             // 
             // frmHome
             // 
@@ -329,6 +331,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmHome";
@@ -336,7 +339,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.frmHome_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmHome_KeyDown);
             this.outerBaseGrid.ResumeLayout(false);
             this.baseGrid.ResumeLayout(false);
             this.firstGrid.ResumeLayout(false);
