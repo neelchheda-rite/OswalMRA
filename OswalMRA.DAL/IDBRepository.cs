@@ -19,6 +19,7 @@ namespace OswalMRA.DAL {
         Task<List<UserResponse>> InsertUser(string UserName, int RoleID, bool IsActive);
 
         Task<List<UserResponse>> GetUsers();
+        Task<UserResponse> GetUserByID(int userID);
 
         //Role
         Task<List<Role>> GetRoles();

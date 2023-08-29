@@ -90,27 +90,25 @@ namespace OswalMRA
         {
             if (e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == dgvUserManagement.Columns["Delete"].Index)
+                if (e.ColumnIndex == dgvUserManagement.Columns["Edit"].Index)
                 {
-                    // Show confirmation dialog for Delete using optionMsgBox
-                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "deleteConfirmationMessage");
-                    if (confirmationBox.ShowDialog() == DialogResult.Yes)
-                    {
-                        // Delete user logic
-                        int userIDToDelete = (int)dgvUserManagement.Rows[e.RowIndex].Cells["UserID"].Value;
-                        // Call delete method or logic here
+                    int userIDToEdit = (int)dgvUserManagement.Rows[e.RowIndex].Cells["UserID"].Value;
 
+                    // Retrieve user data by ID
+                    UserResponse userData = await _dapperManagement.GetUserByID(userIDToEdit);
+
+                    // Open the addNewUser form for editing
+                    addNewUser editForm = new addNewUser();
+                    editForm.SetUserData(userData); // Set user data in the form
+                    editForm.ShowDialog();
+
+                    // Refresh user data in the DataGridView after editing
+                    if (editForm.DialogResult == DialogResult.OK)
+                    {
                         LoadUserData();
                     }
                 }
-                else if (e.ColumnIndex == dgvUserManagement.Columns["Edit"].Index)
-                {
-                    // Edit user logic
-                    int userIDToEdit = (int)dgvUserManagement.Rows[e.RowIndex].Cells["UserID"].Value;
-                    // Call edit method or logic here
-
-                    LoadUserData();
-                }
+                // ...
             }
         }
 

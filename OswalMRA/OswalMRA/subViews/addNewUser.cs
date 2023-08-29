@@ -17,7 +17,14 @@ namespace OswalMRA
             _dapperManagement = new DBRepository();
             InitializeComponent();
             cmbRole.Items.AddRange(new string[] { "Worker", "Supervisor" });
-            cmbRole.SelectedIndex = 0;
+            cmbRole.SelectedIndex = 0;     
+        }
+        public void SetUserData(UserResponse userData)
+        {
+            txtBoxName.Text = userData.UserName;
+            // Set other form controls based on userData
+            roleID = (byte)userData.RoleID; // Explicit cast to byte
+            checkBoxIsActive.Checked = userData.IsActive;
         }
 
         private void checkBoxIsActive_CheckedChanged(object sender, EventArgs e)
@@ -46,13 +53,13 @@ namespace OswalMRA
         {
             try
             {
-                string userName = txtBoxName.Text;
+                string UserName = txtBoxName.Text;
                 int selectedRoleIndex = cmbRole.SelectedIndex;
-                byte roleID = (byte)(selectedRoleIndex == 0 ? 3 : 1);
-                bool isActive = checkBoxIsActive.Checked;
+                byte RoleID = (byte)(selectedRoleIndex == 0 ? 3 : 1);
+                bool IsActive = checkBoxIsActive.Checked;
 
                 // Call the InsertUser method
-                await _dapperManagement.InsertUser(userName, roleID, isActive);
+                await _dapperManagement.InsertUser(UserName, RoleID, IsActive);
 
                 msgBox msgBox = new msgBox("User has been created successfully.", "Success");
                 msgBox.ShowDialog();

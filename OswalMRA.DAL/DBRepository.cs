@@ -219,9 +219,21 @@ namespace OswalMRA.DAL
                     await connection.ExecuteAsync(query, parameters, commandType: CommandType.StoredProcedure);
 
                     // If needed, retrieve the output UserID value
-                    long userID = parameters.Get<long>("@UserID");
-                    userResp.Add(new UserResponse { UserID = (int)userID });
+                    object userIDObj = parameters.Get<object>("@UserID");
+
+                    if (userIDObj != null && userIDObj != DBNull.Value)
+                    {
+                        int userID = Convert.ToInt32(userIDObj); // Convert to int here
+                        userResp.Add(new UserResponse { UserID = userID });
+                    }
+                    else
+                    {
+                        // Handle the case where UserID is DBNull or not set
+                        // You might want to log this or handle it differently
+                        userResp.Add(new UserResponse { Error = "UserID not returned from the stored procedure." });
+                    }
                 }
+                return userResp;
             }
             catch (Exception ex)
             {
@@ -229,9 +241,8 @@ namespace OswalMRA.DAL
                 throw;
             }
 
-            return userResp;
+            
         }
-
 
         public async Task<List<UserResponse>> GetUsers()
         {
@@ -254,6 +265,32 @@ namespace OswalMRA.DAL
                 throw;
             }
         }
+
+        public async Task<UserResponse> GetUserByID(int userID)
+        {
+            try
+            {
+                UserResponse user;
+
+                var query = "usp_GetUserByID";
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserID", userID);
+
+                using (var connection = _context.CreateConnection())
+                {
+                    var reader = await connection.QueryMultipleAsync(query, parameters, null, null, CommandType.StoredProcedure);
+                    user = reader.Read<UserResponse>().FirstOrDefault();
+                }
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                throw;
+            }
+        }
+
         #endregion
         #region Role
         public async Task<List<Role>> GetRoles()
