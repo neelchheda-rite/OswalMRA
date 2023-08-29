@@ -15,6 +15,13 @@ namespace OswalMRA {
             InitializeComponent();
             titleLabel.Text = Title;
         }
+        public singleMsgBox(string Title, string MessageKey,string OK,string Cancel)
+        {
+            InitializeComponent();
+            titleLabel.Text = Title;
+            btnYes.Text = OK;
+            btnNo.Text = Cancel;    
+        }
 
         private void singleMsgBox_KeyDown(object sender, KeyEventArgs e)
         {

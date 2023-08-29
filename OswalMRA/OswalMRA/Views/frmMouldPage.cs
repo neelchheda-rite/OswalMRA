@@ -1,13 +1,4 @@
 ﻿using OswalMRA.COMMON.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace OswalMRA.Views {
     public partial class frmMouldPage : Form {
@@ -15,11 +6,12 @@ namespace OswalMRA.Views {
         {
             InitializeComponent();
             InitializeDataGridView();
-            dataTable.ReadOnly = true;
+            dataTableMould.ReadOnly = true;
+
         }
         private void InitializeDataGridView()
         {
-            dataTable.AutoGenerateColumns = false;
+            dataTableMould.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn code = new()
             {
                 DataPropertyName = "code",
@@ -47,6 +39,8 @@ namespace OswalMRA.Views {
                 Name = "column",
                 HeaderText = "Column"
             };
+            column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            
 
             DataGridViewTextBoxColumn row = new()
             {
@@ -54,31 +48,44 @@ namespace OswalMRA.Views {
                 Name = "row",
                 HeaderText = "Row"
             };
+            row.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             DataGridViewButtonColumn edit = new()
             {
                 HeaderText = "Action",
                 Text = "Edit",
                 Name = "edit",
+                DataPropertyName="Edit"
             };
             edit.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             edit.DefaultCellStyle.Padding = new Padding(2,2,2,2);
             edit.UseColumnTextForButtonValue = true;
             edit.Width = 75;
-
+            edit.FlatStyle = FlatStyle.Flat;
+            edit.CellTemplate.Style.ForeColor = Color.FromArgb(105, 190, 40);
+            edit.CellTemplate.Style.SelectionForeColor = Color.FromArgb(105, 190, 40);
+            edit.CellTemplate.Style.SelectionBackColor = edit.CellTemplate.Style.BackColor;
+            edit.ToolTipText = "";
+            
             DataGridViewButtonColumn delete = new()
             {
                 HeaderText = "Action",
                 Text = "Delete",
                 Name = "delete",
+                DataPropertyName = "Delete"
             };
             delete.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             delete.DefaultCellStyle.Padding = new Padding(0);
             delete.UseColumnTextForButtonValue = true;
             delete.Width = 75;
+            delete.FlatStyle = FlatStyle.Flat;
+            delete.CellTemplate.Style.ForeColor = Color.FromArgb(229,79,63);
+            delete.CellTemplate.Style.SelectionForeColor = Color.FromArgb(229, 79, 63);
+            delete.CellTemplate.Style.SelectionBackColor = delete.CellTemplate.Style.BackColor;
+            delete.ToolTipText = "";
 
-            dataTable.Columns.AddRange(new DataGridViewColumn[]{code,name,description,column,row,edit,delete});
-
+            dataTableMould.Columns.AddRange(new DataGridViewColumn[]{code,name,description,column,row,edit,delete});
+            dataTableMould.DefaultCellStyle.ForeColor = SystemColors.ControlText;
             PopulateMouldData();
         }
         private void PopulateMouldData()
@@ -119,7 +126,37 @@ namespace OswalMRA.Views {
                 new mouldDataSource { code = "M00002", name = "Mould 2", description = "Desc Mould 2", row = 2, column = 2 },
                 new mouldDataSource { code = "M00003", name = "Mould 3", description = "Desc Mould 3", row = 3, column = 3 }
             };
-            dataTable.DataSource = moulds;
+            dataTableMould.DataSource = moulds;
+        }
+
+        private void dataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dataTableMould.Columns["Delete"].Index)
+                {
+
+                    frmToast frmToast = new("Deleted successfully", "Error");
+                    frmToast.ShowAtBottomCenter();
+                }
+                else if (e.ColumnIndex == dataTableMould.Columns["Edit"].Index)
+                {
+
+                    frmToast frmToast = new("Edited successfully", "Success");
+                    frmToast.ShowAtBottomCenter();
+                }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            singleMsgBox singleMsgBox = new("Add New Mould", "", "Add", "Cancel");
+            DialogResult dialogResult = singleMsgBox.ShowDialog();
+            if (dialogResult == DialogResult.Yes)
+            {
+                frmToast frmToast = new("Mould added successfully", "Success");
+                frmToast.ShowAtBottomCenter();
+            }
         }
     }
 }

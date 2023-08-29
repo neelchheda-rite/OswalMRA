@@ -32,12 +32,12 @@
             this.baseOuterGrid = new System.Windows.Forms.TableLayoutPanel();
             this.upperButtonGrid = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dataTable = new System.Windows.Forms.DataGridView();
+            this.dataTableMould = new System.Windows.Forms.DataGridView();
             this.bottomButtonGrid = new System.Windows.Forms.TableLayoutPanel();
             this.btnUpload = new System.Windows.Forms.Button();
             this.baseOuterGrid.SuspendLayout();
             this.upperButtonGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableMould)).BeginInit();
             this.bottomButtonGrid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.baseOuterGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86F));
             this.baseOuterGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.baseOuterGrid.Controls.Add(this.upperButtonGrid, 1, 1);
-            this.baseOuterGrid.Controls.Add(this.dataTable, 1, 3);
+            this.baseOuterGrid.Controls.Add(this.dataTableMould, 1, 3);
             this.baseOuterGrid.Controls.Add(this.bottomButtonGrid, 1, 5);
             this.baseOuterGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.baseOuterGrid.Location = new System.Drawing.Point(0, 0);
@@ -87,7 +87,7 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(599, 0);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
@@ -96,61 +96,64 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataTable
+            // dataTableMould
             // 
-            this.dataTable.AllowUserToAddRows = false;
-            this.dataTable.AllowUserToDeleteRows = false;
-            this.dataTable.AllowUserToResizeColumns = false;
-            this.dataTable.AllowUserToResizeRows = false;
+            this.dataTableMould.AllowUserToAddRows = false;
+            this.dataTableMould.AllowUserToDeleteRows = false;
+            this.dataTableMould.AllowUserToResizeColumns = false;
+            this.dataTableMould.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataTableMould.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataTableMould.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataTable.BackgroundColor = System.Drawing.Color.White;
-            this.dataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataTableMould.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataTableMould.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataTableMould.BackgroundColor = System.Drawing.Color.White;
+            this.dataTableMould.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataTableMould.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataTableMould.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataTable.ColumnHeadersHeight = 50;
-            this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataTableMould.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataTableMould.ColumnHeadersHeight = 50;
+            this.dataTableMould.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTable.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataTable.EnableHeadersVisualStyles = false;
-            this.dataTable.Location = new System.Drawing.Point(60, 96);
-            this.dataTable.Margin = new System.Windows.Forms.Padding(0);
-            this.dataTable.Name = "dataTable";
-            this.dataTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataTable.RowHeadersVisible = false;
-            this.dataTable.RowHeadersWidth = 45;
-            this.dataTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataTable.RowTemplate.Height = 28;
-            this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataTable.Size = new System.Drawing.Size(749, 411);
-            this.dataTable.TabIndex = 1;
+            this.dataTableMould.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataTableMould.EnableHeadersVisualStyles = false;
+            this.dataTableMould.Location = new System.Drawing.Point(60, 96);
+            this.dataTableMould.Margin = new System.Windows.Forms.Padding(0);
+            this.dataTableMould.Name = "dataTableMould";
+            this.dataTableMould.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataTableMould.RowHeadersVisible = false;
+            this.dataTableMould.RowHeadersWidth = 45;
+            this.dataTableMould.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataTableMould.RowTemplate.Height = 28;
+            this.dataTableMould.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataTableMould.Size = new System.Drawing.Size(749, 411);
+            this.dataTableMould.TabIndex = 1;
+            this.dataTableMould.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellContentClick);
             // 
             // bottomButtonGrid
             // 
@@ -175,7 +178,7 @@
             this.btnUpload.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUpload.FlatAppearance.BorderSize = 0;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.Location = new System.Drawing.Point(599, 0);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(0);
@@ -202,7 +205,7 @@
             this.Text = "Mould Management";
             this.baseOuterGrid.ResumeLayout(false);
             this.upperButtonGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableMould)).EndInit();
             this.bottomButtonGrid.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -213,7 +216,7 @@
         private TableLayoutPanel baseOuterGrid;
         private TableLayoutPanel upperButtonGrid;
         private Button btnAdd;
-        private DataGridView dataTable;
+        private DataGridView dataTableMould;
         private TableLayoutPanel bottomButtonGrid;
         private Button btnUpload;
     }

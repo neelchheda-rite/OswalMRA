@@ -1,20 +1,8 @@
-﻿using OswalMRA.MessageBox;
-using OswalMRA.Test;
+﻿using OswalMRA.Test;
 using OswalMRA.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
-namespace OswalMRA.Layout
-{
+namespace OswalMRA.Layout {
     public partial class frmFullLayout : Form
     {
 
@@ -25,7 +13,8 @@ namespace OswalMRA.Layout
         public frmFullLayout()
         {
             InitializeComponent();
-            frmHome frmHomeTest = new();
+            frmHomePage frmHomeTest = new();
+            activeTab(btnHome);
             statusDate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             Screen currentScreen = Screen.FromControl(this);
             Rectangle screenBounds = currentScreen.Bounds;
@@ -92,7 +81,7 @@ namespace OswalMRA.Layout
         #region SIDEBAR TABS
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmHome());
+            openChildForm(new frmHomePage());
             Title("Home");
             
         }
@@ -105,14 +94,16 @@ namespace OswalMRA.Layout
             {
                 openChildForm(new frmUserPage());
                 Title("User Management");
-                frmToast frmToast = new("Log in successfull", "Success");
+                activeTab(btnUser);
+                frmToast frmToast = new("Log in successful", "Success");
                 frmToast.ShowAtBottomCenter();
                
             }
             else if (loginDialogResult == DialogResult.No)
             {
-                openChildForm(new frmHome());
+                openChildForm(new frmHomePage());
                 Title("Home");
+                activeTab(btnHome);
                 frmToast frmToast = new("Log in failed", "Error");
                 frmToast.ShowAtBottomCenter();
             }
@@ -122,11 +113,14 @@ namespace OswalMRA.Layout
         {
             frmChangePasswordPage frmChangePasswordPage = new frmChangePasswordPage();
             DialogResult changePasswordDialogResult = frmChangePasswordPage.ShowDialog();
+            activeTab(btnPassword);
+            Title("Change Password");
             if (changePasswordDialogResult == DialogResult.OK)
             {
-                openChildForm(new frmHome());
+                openChildForm(new frmHomePage());
                 Title("Home");
-                frmToast frmToast = new("Log in failed", "Error");
+                activeTab(btnHome);
+                frmToast frmToast = new("Password changed successfully", "Success");
                 frmToast.ShowAtBottomCenter();
 
             }
@@ -134,7 +128,24 @@ namespace OswalMRA.Layout
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            frmLoginPage frmLoginPage = new frmLoginPage();
+            DialogResult loginDialogResult = frmLoginPage.ShowDialog();
+            if (loginDialogResult == DialogResult.Yes)
+            {
+                openChildForm(new frmResetPage());
+                Title("Reset PLC");
+                activeTab(btnReset);
+                frmToast frmToast = new("Log in successful", "Success");
+                frmToast.ShowAtBottomCenter();
 
+            } else if (loginDialogResult == DialogResult.No)
+            {
+                openChildForm(new frmHomePage());
+                Title("Home");
+                activeTab(btnHome);
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
+            }
         }
 
         private void btnWorkLog_Click(object sender, EventArgs e)
@@ -143,16 +154,18 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.Yes)
             {
-                openChildForm(new frmWorklog());
+                openChildForm(new frmWorklogPage());
                 Title("Work Log");
-                frmToast frmToast = new("Log in successfull", "Success");
+                activeTab(btnWorkLog);
+                frmToast frmToast = new("Log in successful", "Success");
                 frmToast.ShowAtBottomCenter();
 
             }
             else if (loginDialogResult == DialogResult.No)
             {
-                openChildForm(new frmHome());
+                openChildForm(new frmHomePage());
                 Title("Home");
+                activeTab(btnHome);
                 frmToast frmToast = new("Log in failed", "Error");
                 frmToast.ShowAtBottomCenter();
 
@@ -165,16 +178,18 @@ namespace OswalMRA.Layout
             DialogResult loginDialogResult = frmLoginPage.ShowDialog();
             if (loginDialogResult == DialogResult.Yes)
             {
-                openChildForm(new frmInventory());
+                openChildForm(new frmInventoryPage());
                 Title("Inventory");
-                frmToast frmToast = new("Log in successfull", "Success");
+                activeTab(btnInventory);
+                frmToast frmToast = new("Log in successful", "Success");
                 frmToast.ShowAtBottomCenter();
 
             }
             else if (loginDialogResult == DialogResult.No)
             {
-                openChildForm(new frmHome());
+                openChildForm(new frmHomePage());
                 Title("Home");
+                activeTab(btnHome);
                 frmToast frmToast = new("Log in failed", "Error");
                 frmToast.ShowAtBottomCenter();
 
@@ -189,14 +204,39 @@ namespace OswalMRA.Layout
             {
                 openChildForm(new frmMouldPage());
                 Title("Mould Management");
-                frmToast frmToast = new("Log in successfull", "Success");
+                activeTab(btnMould);
+                frmToast frmToast = new("Log in successful", "Success");
                 frmToast.ShowAtBottomCenter();
 
             }
             else if (loginDialogResult == DialogResult.No)
             {
-                openChildForm(new frmHome());
+                openChildForm(new frmHomePage());
                 Title("Home");
+                activeTab(btnHome);
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
+
+            }
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            frmLoginPage frmLoginPage = new frmLoginPage();
+            DialogResult loginDialogResult = frmLoginPage.ShowDialog();
+            if (loginDialogResult == DialogResult.Yes)
+            {
+                openChildForm(new frmDashboardPage());
+                Title("Dashboard");
+                activeTab(btnDashboard);
+                frmToast frmToast = new("Log in successful", "Success");
+                frmToast.ShowAtBottomCenter();
+
+            } else if (loginDialogResult == DialogResult.No)
+            {
+                openChildForm(new frmHomePage());
+                Title("Home");
+                activeTab(btnHome);
                 frmToast frmToast = new("Log in failed", "Error");
                 frmToast.ShowAtBottomCenter();
 
@@ -220,5 +260,21 @@ namespace OswalMRA.Layout
 
         #endregion STATUS BAR DATETIME
 
+        #region ACTIVE TAB BACK COLOR
+        private void activeTab(Button button)
+        {
+            btnHome.BackColor = Color.FromArgb(41,128,185);
+            btnUser.BackColor = Color.FromArgb(41, 128, 185);
+            btnMould.BackColor = Color.FromArgb(41, 128, 185);
+            btnWorkLog.BackColor = Color.FromArgb(41, 128, 185);
+            btnPassword.BackColor = Color.FromArgb(41, 128, 185);
+            btnInventory.BackColor = Color.FromArgb(41, 128, 185);
+            btnReset.BackColor = Color.FromArgb(41, 128, 185);
+            btnDashboard.BackColor = Color.FromArgb(41, 128, 185);
+            button.BackColor = Color.FromArgb(49, 153, 222);
+        }
+        #endregion ACTIVE TAB BACK COLOR
+
+        
     }
 }

@@ -18,7 +18,6 @@ namespace OswalMRA.Views {
         {
             InitializeComponent();
             _dapperManagement = new DBRepository();
-            usernameTextBox.Focus();
         }
 
         private void closeLabel_MouseEnter(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace OswalMRA.Views {
             this.Close();
         }
 
-        private void frmLoginPage_KeyDown(object sender, KeyEventArgs e)
+        private async void frmLoginPage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -44,7 +43,16 @@ namespace OswalMRA.Views {
 
             } else if (e.KeyCode == Keys.Enter)
             {
-                this.Close();   
+                List<LoginResponse> loginResp = await _dapperManagement.Login(usernameTextBox.Text, passwordTextBox.Text);
+                if (loginResp[0].ValidationStatus == "Validation successful.")
+                {
+                    this.DialogResult = DialogResult.Yes;
+                    this.Close();
+                } else
+                {
+                    this.DialogResult = DialogResult.No;
+                    this.Close();
+                }
             }
         }
 
@@ -66,6 +74,11 @@ namespace OswalMRA.Views {
         {
             this.DialogResult = DialogResult.No;
             this.Close();
+        }
+
+        private void frmLoginPage_Shown(object sender, EventArgs e)
+        {
+            usernameTextBox.Focus();
         }
     }
 }

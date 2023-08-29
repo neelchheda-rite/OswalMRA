@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OswalMRA.Views {
-    public partial class userTest : Form {
-        public userTest()
+    public partial class frmDashboardPage : Form {
+        public frmDashboardPage()
         {
             InitializeComponent();
         }

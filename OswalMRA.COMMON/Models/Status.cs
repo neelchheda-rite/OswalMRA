@@ -40,10 +40,6 @@ namespace OswalMRA.COMMON.Models
             }
         }
 
-        /// <summary>
-        /// Now used to return the Name.
-        /// </summary>
-        /// <returns></returns>
         public override string ToString()
         {
             return Name;

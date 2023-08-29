@@ -1,9 +1,13 @@
 ﻿namespace OswalMRA.Test {
-    public partial class frmHome : Form {
+    public partial class frmHomePage : Form {
             
-        public frmHome()
+        public frmHomePage()
         {
             InitializeComponent();
+            descriptionLabel.Text = "Established in 1970, Oswal Engineering Corporation offers manufacturing systems and technical guidance for cable industries  all over the world.The Company regularly exports plants to Asian, African and Middle East countries.";
+            emailLabel.Text = "Email: info@oswalengineering.com";
+            phoneLabel.Text = "Phone: +912240114568";
+            addressLabel.Text = "Address: 9, Ark Industrial Estate, Makwana Rd Marol, Andheri East, Mumbai - 400059, Maharashtra, India.";
         }
 
         private void btnRestore_Click(object sender, EventArgs e)

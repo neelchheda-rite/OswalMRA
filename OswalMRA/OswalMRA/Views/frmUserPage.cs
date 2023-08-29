@@ -1,140 +1,160 @@
-﻿using OswalMRA.MessageBox;
-using OswalMRA.Properties;
-using System.Data.Common;
-using System.Numerics;
-using System.Text.RegularExpressions;
+﻿using OswalMRA.COMMON.Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace OswalMRA
-{
-
-    public partial class frmUserPage : Form
-    {
-
-
+namespace OswalMRA.Views {
+    public partial class frmUserPage : Form {
         public frmUserPage()
         {
             InitializeComponent();
-            dgvUserManagement.ReadOnly = true;
-            dgvUserManagement.DefaultCellStyle.ForeColor = Color.Black;
             InitializeDataGridView();
+            dataTableUser.ReadOnly = true;
         }
         private void InitializeDataGridView()
         {
-            dgvUserManagement.AutoGenerateColumns = false;
-
-            // Create columns
-            DataGridViewTextBoxColumn userIDColumn = new DataGridViewTextBoxColumn();
-            userIDColumn.DataPropertyName = "UserID";
-            userIDColumn.HeaderText = "UserID";
-
-            DataGridViewTextBoxColumn userNameColumn = new DataGridViewTextBoxColumn();
-            userNameColumn.DataPropertyName = "UserName";
-            userNameColumn.HeaderText = "Username";
-
-            DataGridViewTextBoxColumn roleColumn = new DataGridViewTextBoxColumn();
-            roleColumn.DataPropertyName = "Role";
-            roleColumn.HeaderText = "Role";
-
-            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
-            editButtonColumn.HeaderText = "Edit";
-            editButtonColumn.Text = "Edit";
-            editButtonColumn.FillWeight = 50;
-            editButtonColumn.Name = "Edit";
-            editButtonColumn.UseColumnTextForButtonValue = true;
-            editButtonColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Center-align button
-            editButtonColumn.UseColumnTextForButtonValue = true;
-            editButtonColumn.DefaultCellStyle.Padding = new Padding(0); // Reset padding
-            editButtonColumn.Width = 50; // Set button width           
-
-            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
-            deleteButtonColumn.HeaderText = "Delete";
-            deleteButtonColumn.Text = "Delete";
-            deleteButtonColumn.Name = "Delete";
-            deleteButtonColumn.FillWeight = 50;
-            deleteButtonColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Center-align button
-            deleteButtonColumn.UseColumnTextForButtonValue = true;
-            deleteButtonColumn.DefaultCellStyle.Padding = new Padding(0); // Reset padding
-            deleteButtonColumn.Width = 50; // Set button width  
-
-            // Add columns to DataGridView
-            dgvUserManagement.Columns.AddRange(new DataGridViewColumn[] {
-                userIDColumn, userNameColumn, roleColumn, editButtonColumn, deleteButtonColumn
-            });
-            dgvUserManagement.ColumnHeadersDefaultCellStyle.Font = new Font(dgvUserManagement.Font, FontStyle.Bold); // Make headers bold
-            dgvUserManagement.ColumnHeadersDefaultCellStyle.Font = new Font(dgvUserManagement.Font.FontFamily, 12, FontStyle.Bold); // You can adjust font size
-
-            foreach (DataGridViewColumn column in dgvUserManagement.Columns)
+            dataTableUser.AutoGenerateColumns = false;
+            DataGridViewTextBoxColumn id = new()
             {
-                column.SortMode = DataGridViewColumnSortMode.Automatic;
-            }
-            dgvUserManagement.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Align text to middle
+                DataPropertyName = "id",
+                Name = "id",
+                HeaderText = "ID"
+            };
 
-            // Populate DataGridView with dummy data
-            PopulateUserData();
+            DataGridViewTextBoxColumn name = new()
+            {
+                DataPropertyName = "name",
+                Name = "name",
+                HeaderText = "Name"
+            };
+
+            DataGridViewTextBoxColumn role = new()
+            {
+                DataPropertyName = "role",
+                Name = "role",
+                HeaderText = "Role"
+            };
+
+            
+
+            DataGridViewButtonColumn edit = new()
+            {
+                HeaderText = "Action",
+                Text = "Edit",
+                Name = "edit",
+                DataPropertyName = "Edit"
+            };
+            edit.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            edit.DefaultCellStyle.Padding = new Padding(2, 2, 2, 2);
+            edit.UseColumnTextForButtonValue = true;
+            edit.Width = 75;
+            edit.FlatStyle = FlatStyle.Flat;
+            edit.CellTemplate.Style.ForeColor = Color.FromArgb(105, 190, 40);
+            edit.CellTemplate.Style.SelectionForeColor = Color.FromArgb(105, 190, 40);
+            edit.CellTemplate.Style.SelectionBackColor = edit.CellTemplate.Style.BackColor;
+            edit.ToolTipText = "";
+
+            DataGridViewButtonColumn delete = new()
+            {
+                HeaderText = "Action",
+                Text = "Delete",
+                Name = "delete",
+                DataPropertyName = "Delete"
+            };
+            delete.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            delete.DefaultCellStyle.Padding = new Padding(0);
+            delete.UseColumnTextForButtonValue = true;
+            delete.Width = 75;
+            delete.FlatStyle = FlatStyle.Flat;
+            delete.CellTemplate.Style.ForeColor = Color.FromArgb(229, 79, 63);
+            delete.CellTemplate.Style.SelectionForeColor = Color.FromArgb(229, 79, 63);
+            delete.CellTemplate.Style.SelectionBackColor = delete.CellTemplate.Style.BackColor;
+            delete.ToolTipText = "";
+
+            dataTableUser.Columns.AddRange(new DataGridViewColumn[] {id, name, role, edit, delete });
+            dataTableUser.DefaultCellStyle.ForeColor = SystemColors.ControlText;
+            PopulateMouldData();
         }
-        private void PopulateUserData()
+        private void PopulateMouldData()
         {
-            // Dummy data
             var users = new List<User>
-         {
-        new User { UserID = 1, UserName = "user1", Role = "Admin" },
-        new User { UserID = 2, UserName = "user2", Role = "Supervisor" },
-        new User { UserID = 3, UserName = "user3", Role = "Worker" }
-          };
-
-            // Bind the data to the DataGridView
-            dgvUserManagement.DataSource = users;
+            {
+                new User { ID = 1, Name= "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1, Name = "user1", Role = "Admin" },
+                new User { ID = 2, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 3, Name = "user3", Role = "Worker" },
+            };
+            dataTableUser.DataSource = users;
         }
 
-
-        private void dgvUserManagement_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataTableUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == dgvUserManagement.Columns["Delete"].Index)
+                if (e.ColumnIndex == dataTableUser.Columns["Delete"].Index)
                 {
-                    // Show confirmation dialog for Delete using optionMsgBox
-                    optionMsgBox confirmationBox = new optionMsgBox("Delete Confirmation", "deleteConfirmationMessage");
-                    if (confirmationBox.ShowDialog() == DialogResult.Yes)
-                    {
-                        // Perform the delete action
-                    }
+
+                    frmToast frmToast = new("Deleted successfully", "Error");
+                    frmToast.ShowAtBottomCenter();
+                } else if (e.ColumnIndex == dataTableUser.Columns["Edit"].Index)
+                {
+
+                    frmToast frmToast = new("Edited successfully", "Success");
+                    frmToast.ShowAtBottomCenter();
                 }
             }
         }
 
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-            addNewUser addMouldForm = new addNewUser();
-            if (addMouldForm.ShowDialog() == DialogResult.OK)
+            singleMsgBox singleMsgBox = new("Add New User", "", "Add", "Cancel");
+            DialogResult dialogResult = singleMsgBox.ShowDialog();
+            if (dialogResult == DialogResult.Yes)
             {
-
+                frmToast frmToast = new("User added successfully", "Success");
+                frmToast.ShowAtBottomCenter();
             }
         }
-
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            // Retrieve the clear confirmation message from the resource file
-            string clearConfirmationMessage = Properties.Resources.ResourceManager.GetString("ClearMessageConfirmation");
-
-            // Show confirmation dialog for Clear using optionMsgBox
-            optionMsgBox confirmationBox = new optionMsgBox("Clear Confirmation", "clearConfirmationMessage");
-            if (confirmationBox.ShowDialog() == DialogResult.Yes)
-            {
-                // Perform the clear action
-                // Your code to clear data goes here
-            }
-        }
-    }
-    public class User
-    {
-        public int UserID { get; set; }
-        public string UserName { get; set; }
-        public string Role { get; set; }
     }
 }

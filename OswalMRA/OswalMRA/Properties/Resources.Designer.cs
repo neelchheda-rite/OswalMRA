@@ -333,6 +333,28 @@ namespace OswalMRA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_world_map_globe_world_map_flat_earth_asia_miscellaneous_blue_world {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-world-map-globe-world-map-flat-earth-asia-miscellaneous-blue-worl" +
+                        "d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_world_map_globe_world_map_flat_earth_asia_miscellaneous_blue_world_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-world-map-globe-world-map-flat-earth-asia-miscellaneous-blue-worl" +
+                        "d-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press F1 to Toggle Sidebar.
         /// </summary>
         internal static string toggleSidebarMessage {
