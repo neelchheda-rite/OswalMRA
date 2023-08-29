@@ -1,20 +1,10 @@
 ﻿using NLog;
-using NLog.Config;
-using NLog.Targets;
 using OswalMRA.COMMON.Models;
 using OswalMRA.DAL;
 using OswalMRA.MessageBox;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace OswalMRA.Views {
+namespace OswalMRA.Views
+{
     public partial class frmChangePasswordPage : Form {
         private readonly IDBRepository _dapperManagement;
         private static Logger logger = LogManager.GetCurrentClassLogger();

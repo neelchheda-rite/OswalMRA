@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using Dapper;
+using Microsoft.Data.SqlClient;
 using OswalMRA.COMMON.Models;
 
 namespace OswalMRA.DAL
 {
     public class DBRepository : IDBRepository
     {
+        private readonly string _connectionString;
         readonly DBContext _context;
 
         public DBRepository()
@@ -25,17 +27,19 @@ namespace OswalMRA.DAL
                 parameters.Add("@UserName", userName, DbType.String);
                 parameters.Add("@Password", password, DbType.String);
                 parameters.Add("@ValidationStatus", dbType: DbType.String, direction: ParameterDirection.Output, size: 100);
+                parameters.Add("@UserRoleID", dbType: DbType.Byte, direction: ParameterDirection.Output, size: 100);
 
                 using (var connection = _context.CreateConnection())
                 {
                     await connection.ExecuteAsync(query, parameters, commandType: CommandType.StoredProcedure);
 
-                    // Retrieve the output value
+                    // Retrieve the output values
                     string validationStatus = parameters.Get<string>("@ValidationStatus");
+                    byte userRoleID = parameters.Get<byte>("@UserRoleID");
 
                     loginResp = new List<LoginResponse>
             {
-                new LoginResponse { ValidationStatus = validationStatus }
+                new LoginResponse { ValidationStatus = validationStatus, UserRoleID = userRoleID }
             };
                 }
             }
@@ -108,6 +112,25 @@ namespace OswalMRA.DAL
             }
             return VerifyCurrentPasswordResp;
         }
+
+        public async Task<(string validationStatus, byte userRoleID)> ValidateLogin(string userName, string password)
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserName", userName);
+                parameters.Add("@Password", password);
+                parameters.Add("@ValidationStatus", dbType: DbType.String, size: 100, direction: ParameterDirection.Output);
+                parameters.Add("@UserRoleID", dbType: DbType.Byte, direction: ParameterDirection.Output);
+
+                await connection.ExecuteAsync("usp_ValidateLogin", parameters, null, null, CommandType.StoredProcedure);
+
+                string validationStatus = parameters.Get<string>("@ValidationStatus");
+                byte userRoleID = parameters.Get<byte>("@UserRoleID");
+
+                return (validationStatus, userRoleID);
+            }
+        }
         #endregion
 
         #region Mould
@@ -178,101 +201,46 @@ namespace OswalMRA.DAL
         #endregion
 
         #region User
-        public async Task<bool> CreateUser(User user)
+        public async Task InsertUser(string UserName, int RoleID, bool IsActive)
         {
             try
             {
-                var query = "usp_CreateUser"; // Modify the stored procedure name
+                var query = "usp_InsertUser";
                 var parameters = new DynamicParameters();
-                parameters.Add("@UserName", user.UserName, DbType.String);
-                parameters.Add("@Password", user.Password, DbType.String);
-                parameters.Add("@RoleId", user.RoleID, DbType.Int32);
-                parameters.Add("@MobileNumber", user.MobileNumber, DbType.String);
-                parameters.Add("@Email", user.Email, DbType.String);
-                parameters.Add("@Active", user.Active, DbType.Boolean);
-                parameters.Add("@UserID", dbType: DbType.Int32, direction: ParameterDirection.Output);
+                parameters.Add("@UserName", UserName);
+                parameters.Add("@RoleID", RoleID);
+                parameters.Add("@IsActive", IsActive);
+                parameters.Add("@UserID", dbType: DbType.Int64, direction: ParameterDirection.Output);
 
                 using (var connection = _context.CreateConnection())
                 {
-                    await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
-
-                    user.UserID = parameters.Get<int>("@UserID"); 
-                    return true; 
+                    await connection.ExecuteAsync(query, parameters, commandType: CommandType.StoredProcedure);
                 }
             }
             catch (Exception ex)
             {
+                // Handle exceptions
                 throw;
             }
         }
 
-
-        public async Task<bool> UpdateUser(User user)
+        public async Task<List<User>> GetUsers()
         {
             try
             {
-                var query = "usp_UpdateUser"; 
-                var parameters = new DynamicParameters();
-                parameters.Add("@UserID", user.UserID, DbType.Int32);
-                parameters.Add("@UserName", user.UserName, DbType.String);
-                parameters.Add("@RoleId", user.RoleID, DbType.Int32); 
-                parameters.Add("@MobileNumber", user.MobileNumber, DbType.String);
-                parameters.Add("@Email", user.Email, DbType.String);
-                parameters.Add("@Active", user.Active, DbType.Boolean);
-
+                var query = "SELECT UserID, UserName, Role FROM Users";
                 using (var connection = _context.CreateConnection())
                 {
-                    await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
-
-                    return true; 
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-
-        public async Task<bool> DeleteUser(int userID)
-        {
-            try
-            {
-                var query = "usp_DeleteUser"; 
-                var parameters = new DynamicParameters();
-                parameters.Add("@UserID", userID, DbType.Int32);
-
-                using (var connection = _context.CreateConnection())
-                {
-                    await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
-
-                    return true; 
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-
-
-        public async Task<IEnumerable<User>> GetUsers()
-        {
-            try
-            {
-                var query = "usp_GetUsers"; 
-
-                using (var connection = _context.CreateConnection())
-                {
-                    var users = await connection.QueryAsync<User>(query, null, null, null, CommandType.StoredProcedure);
+                    List<User> users = (await connection.QueryAsync<User>(query)).AsList();
                     return users;
                 }
             }
             catch (Exception ex)
             {
+                // Handle exceptions
                 throw;
             }
         }
-
         #endregion
         #region Role
         public async Task<List<Role>> GetRoles()

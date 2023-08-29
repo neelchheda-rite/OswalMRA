@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            PresentationControls.CheckBoxProperties checkBoxProperties6 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties1 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties2 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties3 = new PresentationControls.CheckBoxProperties();
             PresentationControls.CheckBoxProperties checkBoxProperties4 = new PresentationControls.CheckBoxProperties();
+            PresentationControls.CheckBoxProperties checkBoxProperties5 = new PresentationControls.CheckBoxProperties();
             tlpHeader = new TableLayoutPanel();
             pnlHeader = new Panel();
             tlpBtn = new TableLayoutPanel();
@@ -213,8 +213,8 @@
             // 
             // checkBoxComboBox5
             // 
-            checkBoxProperties6.ForeColor = SystemColors.ControlText;
-            checkBoxComboBox5.CheckBoxProperties = checkBoxProperties6;
+            checkBoxProperties1.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox5.CheckBoxProperties = checkBoxProperties1;
             checkBoxComboBox5.DisplayMemberSingleItem = "";
             checkBoxComboBox5.Dock = DockStyle.Fill;
             checkBoxComboBox5.FormattingEnabled = true;
@@ -226,8 +226,8 @@
             // 
             // checkBoxComboBox2
             // 
-            checkBoxProperties1.ForeColor = SystemColors.ControlText;
-            checkBoxComboBox2.CheckBoxProperties = checkBoxProperties1;
+            checkBoxProperties2.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox2.CheckBoxProperties = checkBoxProperties2;
             checkBoxComboBox2.DisplayMemberSingleItem = "";
             checkBoxComboBox2.Dock = DockStyle.Fill;
             checkBoxComboBox2.FormattingEnabled = true;
@@ -239,8 +239,8 @@
             // 
             // checkBoxComboBox3
             // 
-            checkBoxProperties2.ForeColor = SystemColors.ControlText;
-            checkBoxComboBox3.CheckBoxProperties = checkBoxProperties2;
+            checkBoxProperties3.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox3.CheckBoxProperties = checkBoxProperties3;
             checkBoxComboBox3.DisplayMemberSingleItem = "";
             checkBoxComboBox3.Dock = DockStyle.Fill;
             checkBoxComboBox3.FormattingEnabled = true;
@@ -252,8 +252,8 @@
             // 
             // checkBoxComboBox1
             // 
-            checkBoxProperties3.ForeColor = SystemColors.ControlText;
-            checkBoxComboBox1.CheckBoxProperties = checkBoxProperties3;
+            checkBoxProperties4.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox1.CheckBoxProperties = checkBoxProperties4;
             checkBoxComboBox1.DisplayMemberSingleItem = "";
             checkBoxComboBox1.Dock = DockStyle.Fill;
             checkBoxComboBox1.FormattingEnabled = true;
@@ -265,8 +265,8 @@
             // 
             // checkBoxComboBox4
             // 
-            checkBoxProperties4.ForeColor = SystemColors.ControlText;
-            checkBoxComboBox4.CheckBoxProperties = checkBoxProperties4;
+            checkBoxProperties5.ForeColor = SystemColors.ControlText;
+            checkBoxComboBox4.CheckBoxProperties = checkBoxProperties5;
             checkBoxComboBox4.DisplayMemberSingleItem = "";
             checkBoxComboBox4.Dock = DockStyle.Fill;
             checkBoxComboBox4.FormattingEnabled = true;

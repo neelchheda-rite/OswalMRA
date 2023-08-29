@@ -136,6 +136,6 @@ namespace OswalMRA
             checkBoxComboBox5.DataBindings.DefaultDataSourceUpdateMode
                     = DataSourceUpdateMode.OnPropertyChanged;
         }
-        
+
     }
 }

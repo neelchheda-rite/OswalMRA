@@ -10,5 +10,6 @@ namespace OswalMRA.COMMON.Models {
         public string Password { get; set; }
         public bool Active { get; set; }
         public string ValidationStatus { get; set; }
+        public byte UserRoleID { get; set; } 
     }
 }

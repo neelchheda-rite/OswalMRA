@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj": {}
+    "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\OswalMRA.DAL.csproj": {}
   },
   "projects": {
-    "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
+    "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
+        "projectUniqueName": "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
         "projectName": "OswalMRA.COMMON",
-        "projectPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
-        "packagesPath": "C:\\Users\\Durgesh Gupta\\.nuget\\packages\\",
-        "outputPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\obj\\",
+        "projectPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
+        "packagesPath": "C:\\Users\\Neel\\.nuget\\packages\\",
+        "outputPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Durgesh Gupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Neel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,26 +61,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj": {
+    "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\OswalMRA.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+        "projectUniqueName": "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
         "projectName": "OswalMRA.DAL",
-        "projectPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
-        "packagesPath": "C:\\Users\\Durgesh Gupta\\.nuget\\packages\\",
-        "outputPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.DAL\\obj\\",
+        "projectPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+        "packagesPath": "C:\\Users\\Neel\\.nuget\\packages\\",
+        "outputPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Durgesh Gupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Neel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,15 +86,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
-                "projectPath": "E:\\Neel\\Oswal\\oswal_git\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj"
+              "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
+                "projectPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj"
               }
             }
           }
@@ -150,7 +144,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
