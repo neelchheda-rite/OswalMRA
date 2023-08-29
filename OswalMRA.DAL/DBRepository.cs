@@ -201,8 +201,10 @@ namespace OswalMRA.DAL
         #endregion
 
         #region User
-        public async Task InsertUser(string UserName, int RoleID, bool IsActive)
+        public async Task<List<UserResponse>> InsertUser(string UserName, int RoleID, bool IsActive)
         {
+            List<UserResponse> userResp = new List<UserResponse>();
+
             try
             {
                 var query = "usp_InsertUser";
@@ -215,6 +217,10 @@ namespace OswalMRA.DAL
                 using (var connection = _context.CreateConnection())
                 {
                     await connection.ExecuteAsync(query, parameters, commandType: CommandType.StoredProcedure);
+
+                    // If needed, retrieve the output UserID value
+                    long userID = parameters.Get<long>("@UserID");
+                    userResp.Add(new UserResponse { UserID = (int)userID });
                 }
             }
             catch (Exception ex)
@@ -222,18 +228,25 @@ namespace OswalMRA.DAL
                 // Handle exceptions
                 throw;
             }
+
+            return userResp;
         }
 
-        public async Task<List<User>> GetUsers()
+
+        public async Task<List<UserResponse>> GetUsers()
         {
             try
             {
-                var query = "SELECT UserID, UserName, Role FROM Users";
+                List<UserResponse> users;
+                var query = "usp_GetUsers";
+
                 using (var connection = _context.CreateConnection())
                 {
-                    List<User> users = (await connection.QueryAsync<User>(query)).AsList();
-                    return users;
+                    var reader = await connection.QueryMultipleAsync(query, null, null, null, CommandType.StoredProcedure);
+                    users = reader.Read<UserResponse>().ToList();
                 }
+
+                return users;
             }
             catch (Exception ex)
             {

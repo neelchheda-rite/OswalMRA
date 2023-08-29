@@ -9,28 +9,15 @@ namespace OswalMRA
     public partial class addNewUser : Form
     {
         private bool isActive;
-
         private byte roleID = 3;
-
         private readonly IDBRepository _dapperManagement;
+
         public addNewUser()
         {
             _dapperManagement = new DBRepository();
             InitializeComponent();
             cmbRole.Items.AddRange(new string[] { "Worker", "Supervisor" });
             cmbRole.SelectedIndex = 0;
-        }
-
-
-
-        private void txtBoxBarcode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxName_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void checkBoxIsActive_CheckedChanged(object sender, EventArgs e)
@@ -54,7 +41,6 @@ namespace OswalMRA
                 }
             }
         }
-
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
@@ -80,8 +66,9 @@ namespace OswalMRA
             catch (Exception ex)
             {
                 // Handle exceptions
+                msgBox msgBox = new msgBox("An error occurred while creating the user.", "Error");
+                msgBox.ShowDialog();
             }
-            this.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -89,7 +76,6 @@ namespace OswalMRA
             txtBoxName.Clear();
             cmbRole.SelectedIndex = 0;
             checkBoxIsActive.Checked = false;
-
         }
     }
 }

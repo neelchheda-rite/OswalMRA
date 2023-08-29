@@ -16,9 +16,9 @@ namespace OswalMRA.DAL {
         public Task<int> GetNumberOfColsFromSettings();
 
         //User section 
-        Task InsertUser(string UserName, int RoleID, bool IsActive);
+        Task<List<UserResponse>> InsertUser(string UserName, int RoleID, bool IsActive);
 
-        Task<List<User>> GetUsers();
+        Task<List<UserResponse>> GetUsers();
 
         //Role
         Task<List<Role>> GetRoles();

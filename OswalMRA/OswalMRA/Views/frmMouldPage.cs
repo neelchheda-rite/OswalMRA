@@ -124,67 +124,67 @@ namespace OswalMRA.Views
 
         //    // Bind the data to the DataGridView
         //    dgvMould.DataSource = moulds;
-        //}
+        }
         //private void btnAddMould_Click(object sender, EventArgs e)
         //{
-        //    frmMould frmMould = new();
+            //frmMould frmMould = new();
 
-        //    if (frmMould.ShowDialog() == DialogResult.OK)
-        //    {
-        //        PopulateMouldData();
-        //    }
+            //if (frmMould.ShowDialog() == DialogResult.OK)
+            //{
+            //    PopulateMouldData();
+            //}
         //}
 
         //private async void dgvMould_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{
-        //    if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-        //    {
-        //        if (e.ColumnIndex == dgvMould.Columns["Edit"].Index)
-        //        {
-        //            string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
-        //            string mouldName = (string)dgvMould.Rows[e.RowIndex].Cells["mouldName"].Value;
-        //            string mouldDescription = (string)dgvMould.Rows[e.RowIndex].Cells["mouldDescription"].Value;
-        //            int row = (int)dgvMould.Rows[e.RowIndex].Cells["row"].Value;
-        //            int column = (int)dgvMould.Rows[e.RowIndex].Cells["column"].Value;
+            //if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            //{
+            //    if (e.ColumnIndex == dgvMould.Columns["Edit"].Index)
+            //    {
+            //        string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
+            //        string mouldName = (string)dgvMould.Rows[e.RowIndex].Cells["mouldName"].Value;
+            //        string mouldDescription = (string)dgvMould.Rows[e.RowIndex].Cells["mouldDescription"].Value;
+            //        int row = (int)dgvMould.Rows[e.RowIndex].Cells["row"].Value;
+            //        int column = (int)dgvMould.Rows[e.RowIndex].Cells["column"].Value;
 
-        //            frmMould frmEditMould = new(mouldCode, mouldName, mouldDescription, row, column);
+            //        frmMould frmEditMould = new(mouldCode, mouldName, mouldDescription, row, column);
 
-        //            frmEditMould.ShowDialog();
+            //        frmEditMould.ShowDialog();
 
-        //            if (frmEditMould.DialogResult == DialogResult.OK)
-        //            {
-        //                PopulateMouldData();
-        //            }
+            //        if (frmEditMould.DialogResult == DialogResult.OK)
+            //        {
+            //            PopulateMouldData();
+            //        }
 
 
-        //        }
-        //        else if (e.ColumnIndex == dgvMould.Columns["Delete"].Index)
-        //        {
-        //            string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
+            //    }
+            //    else if (e.ColumnIndex == dgvMould.Columns["Delete"].Index)
+            //    {
+            //        string mouldCode = (string)dgvMould.Rows[e.RowIndex].Cells["mouldCode"].Value;
 
-        //            using (var optionBox = new optionMsgBox("Confirmation for delete", "mouldDeleteConfirmation"))
-        //            {
-        //                var result1 = optionBox.ShowDialog();
+            //        using (var optionBox = new optionMsgBox("Confirmation for delete", "mouldDeleteConfirmation"))
+            //        {
+            //            var result1 = optionBox.ShowDialog();
 
-        //                if (result1 == DialogResult.Yes)
-        //                {
-        //                    _logger.Trace($"frmMouldPage===>DeleteMould(): Request Received to delete mould with MouldCode: {mouldCode}.");
-        //                    var deleteResult1 = await _dapperManagement.DeleteMould(mouldCode);
+            //            if (result1 == DialogResult.Yes)
+            //            {
+            //                _logger.Trace($"frmMouldPage===>DeleteMould(): Request Received to delete mould with MouldCode: {mouldCode}.");
+            //                var deleteResult1 = await _dapperManagement.DeleteMould(mouldCode);
 
-        //                    msgBox deleteSuccessBox = new("Confirmation Message", "moulddeleteSuccess");
-        //                    deleteSuccessBox.ShowDialog();
-        //                    if (deleteSuccessBox.DialogResult == DialogResult.OK)
-        //                    {
-        //                        PopulateMouldData();
-        //                    }
-        //                }
-        //                else
-        //                {
-        //                    _logger.Trace($"frmMouldPage===>Delete: Request Cancelled to delete mould with MouldCode: {mouldCode}.");
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-    }
-}
+            //                msgBox deleteSuccessBox = new("Confirmation Message", "moulddeleteSuccess");
+            //                deleteSuccessBox.ShowDialog();
+            //                if (deleteSuccessBox.DialogResult == DialogResult.OK)
+            //                {
+            //                    PopulateMouldData();
+            //                }
+            //            }
+            //            else
+            //            {
+            //                _logger.Trace($"frmMouldPage===>Delete: Request Cancelled to delete mould with MouldCode: {mouldCode}.");
+            //            }
+            //        }
+            //    }
+            //}
+        }
+//    }
+//}

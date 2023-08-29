@@ -22,7 +22,7 @@ namespace OswalMRA.Views
                 if (loginResp[0].ValidationStatus == "Validation successful.")
                 {
                     byte userRoleID = loginResp[0].UserRoleID;
-                    if (userRoleID == 1 || userRoleID == 2) // Admin or Worker/Supervisor roles
+                    if (userRoleID == 1 || userRoleID == 2)
                     {
                         msgBox msgBox = new("successfully logged in", "");
                         DialogResult dialogResult = msgBox.ShowDialog();

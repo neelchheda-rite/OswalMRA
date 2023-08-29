@@ -251,7 +251,7 @@
             txtBoxBarcode.Name = "txtBoxBarcode";
             txtBoxBarcode.Size = new Size(149, 25);
             txtBoxBarcode.TabIndex = 4;
-            txtBoxBarcode.TextChanged += txtBoxBarcode_TextChanged;
+            //txtBoxBarcode.TextChanged += txtBoxBarcode_TextChanged;
             // 
             // txtBoxName
             // 
@@ -261,7 +261,7 @@
             txtBoxName.Name = "txtBoxName";
             txtBoxName.Size = new Size(166, 25);
             txtBoxName.TabIndex = 5;
-            txtBoxName.TextChanged += txtBoxName_TextChanged;
+            //txtBoxName.TextChanged += txtBoxName_TextChanged;
             // 
             // cmbRole
             // 
