@@ -83,7 +83,8 @@ namespace OswalMRA.Layout {
         {
             openChildForm(new frmHomePage());
             Title("Home");
-            
+            activeTab(btnHome);
+
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -111,18 +112,24 @@ namespace OswalMRA.Layout {
 
         private void btnPassword_Click(object sender, EventArgs e)
         {
-            frmChangePasswordPage frmChangePasswordPage = new frmChangePasswordPage();
-            DialogResult changePasswordDialogResult = frmChangePasswordPage.ShowDialog();
-            activeTab(btnPassword);
+
             Title("Change Password");
-            if (changePasswordDialogResult == DialogResult.OK)
+            frmChangePassword changePasswordTest = new();
+            DialogResult changePasswordDialogResult = changePasswordTest.ShowDialog();
+            activeTab(btnPassword);
+            if (changePasswordDialogResult == DialogResult.Yes)
             {
                 openChildForm(new frmHomePage());
                 Title("Home");
                 activeTab(btnHome);
                 frmToast frmToast = new("Password changed successfully", "Success");
                 frmToast.ShowAtBottomCenter();
-
+            }
+            else if(changePasswordDialogResult == DialogResult.No)
+            {
+                openChildForm(new frmHomePage());
+                Title("Home");
+                activeTab(btnHome);
             }
         }
 

@@ -1,41 +1,33 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-using OswalMRA.MessageBox;
-
-namespace OswalMRA
-{
-    public partial class addNewUser : Form
-    {
+namespace OswalMRA.subViews {
+    public partial class addNewUser : Form {
         public addNewUser()
         {
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void closeLabel_MouseEnter(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Worker");
-            comboBox1.Items.Add("Supervisor");
-            comboBox1.Items.Add("Admin");
+            closeLabel.BackColor = Color.Red;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void closeLabel_MouseLeave(object sender, EventArgs e)
         {
-            {
-                // Retrieve the clear confirmation message from the resource file
-                string clearConfirmationMessage = Properties.Resources.ResourceManager.GetString("ClearMessageConfirmation");
-
-                // Show confirmation dialog for Clear using optionMsgBox
-                optionMsgBox confirmationBox = new optionMsgBox("Clear Confirmation", "clearConfirmationMessage");
-                if (confirmationBox.ShowDialog() == DialogResult.Yes)
-                {
-                    // Perform the clear action
-                    // Your code to clear data goes here
-                }
-            }
+            closeLabel.BackColor = Color.FromArgb(41,128,185);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void closeLabel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.No;
             this.Close();
         }
     }

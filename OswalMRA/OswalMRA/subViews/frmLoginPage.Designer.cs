@@ -68,7 +68,7 @@
             this.outerBaseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.outerBaseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.outerBaseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.outerBaseGrid.Size = new System.Drawing.Size(464, 314);
+            this.outerBaseGrid.Size = new System.Drawing.Size(442, 292);
             this.outerBaseGrid.TabIndex = 0;
             // 
             // baseGrid
@@ -78,14 +78,14 @@
             this.baseGrid.Controls.Add(this.usernameGrid, 0, 0);
             this.baseGrid.Controls.Add(this.passwordGrid, 0, 1);
             this.baseGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseGrid.Location = new System.Drawing.Point(0, 34);
+            this.baseGrid.Location = new System.Drawing.Point(0, 32);
             this.baseGrid.Margin = new System.Windows.Forms.Padding(0);
             this.baseGrid.Name = "baseGrid";
             this.baseGrid.RowCount = 3;
             this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.baseGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.baseGrid.Size = new System.Drawing.Size(464, 219);
+            this.baseGrid.Size = new System.Drawing.Size(442, 204);
             this.baseGrid.TabIndex = 2;
             // 
             // usernameGrid
@@ -103,10 +103,10 @@
             this.usernameGrid.Margin = new System.Windows.Forms.Padding(0);
             this.usernameGrid.Name = "usernameGrid";
             this.usernameGrid.RowCount = 3;
-            this.usernameGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
-            this.usernameGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24F));
-            this.usernameGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
-            this.usernameGrid.Size = new System.Drawing.Size(464, 87);
+            this.usernameGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.usernameGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.usernameGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.usernameGrid.Size = new System.Drawing.Size(442, 81);
             this.usernameGrid.TabIndex = 0;
             // 
             // usernameTextBox
@@ -116,10 +116,10 @@
             this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.usernameTextBox.Location = new System.Drawing.Point(189, 33);
+            this.usernameTextBox.Location = new System.Drawing.Point(180, 28);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(250, 29);
+            this.usernameTextBox.Size = new System.Drawing.Size(238, 29);
             this.usernameTextBox.TabIndex = 0;
             // 
             // usernameLabel
@@ -129,9 +129,9 @@
             this.usernameLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usernameLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.usernameLabel.Location = new System.Drawing.Point(49, 33);
+            this.usernameLabel.Location = new System.Drawing.Point(47, 28);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(110, 20);
+            this.usernameLabel.Size = new System.Drawing.Size(104, 24);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "Username";
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,14 +147,14 @@
             this.passwordGrid.Controls.Add(this.passwordTextBox, 3, 1);
             this.passwordGrid.Controls.Add(this.passwordLabel, 1, 1);
             this.passwordGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordGrid.Location = new System.Drawing.Point(0, 87);
+            this.passwordGrid.Location = new System.Drawing.Point(0, 81);
             this.passwordGrid.Margin = new System.Windows.Forms.Padding(0);
             this.passwordGrid.Name = "passwordGrid";
             this.passwordGrid.RowCount = 3;
-            this.passwordGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
-            this.passwordGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24F));
-            this.passwordGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
-            this.passwordGrid.Size = new System.Drawing.Size(464, 87);
+            this.passwordGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.passwordGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.passwordGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.passwordGrid.Size = new System.Drawing.Size(442, 81);
             this.passwordGrid.TabIndex = 1;
             // 
             // passwordTextBox
@@ -164,11 +164,11 @@
             this.passwordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.passwordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.passwordTextBox.Location = new System.Drawing.Point(189, 33);
+            this.passwordTextBox.Location = new System.Drawing.Point(180, 28);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';
-            this.passwordTextBox.Size = new System.Drawing.Size(250, 29);
+            this.passwordTextBox.Size = new System.Drawing.Size(238, 29);
             this.passwordTextBox.TabIndex = 0;
             // 
             // passwordLabel
@@ -177,9 +177,9 @@
             this.passwordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passwordLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.passwordLabel.Location = new System.Drawing.Point(49, 33);
+            this.passwordLabel.Location = new System.Drawing.Point(47, 28);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(110, 20);
+            this.passwordLabel.Size = new System.Drawing.Size(104, 24);
             this.passwordLabel.TabIndex = 0;
             this.passwordLabel.Text = "Password";
             this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +192,7 @@
             this.titlePanel.Location = new System.Drawing.Point(0, 0);
             this.titlePanel.Margin = new System.Windows.Forms.Padding(0);
             this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(464, 34);
+            this.titlePanel.Size = new System.Drawing.Size(442, 32);
             this.titlePanel.TabIndex = 0;
             // 
             // titleGrid
@@ -208,7 +208,7 @@
             this.titleGrid.Name = "titleGrid";
             this.titleGrid.RowCount = 1;
             this.titleGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.titleGrid.Size = new System.Drawing.Size(464, 34);
+            this.titleGrid.Size = new System.Drawing.Size(442, 32);
             this.titleGrid.TabIndex = 0;
             // 
             // titleLabel
@@ -220,7 +220,7 @@
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(58, 34);
+            this.titleLabel.Size = new System.Drawing.Size(58, 32);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "   Login";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,10 +231,10 @@
             this.closeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.closeLabel.Font = new System.Drawing.Font("Castellar", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.closeLabel.ForeColor = System.Drawing.Color.White;
-            this.closeLabel.Location = new System.Drawing.Point(431, 0);
+            this.closeLabel.Location = new System.Drawing.Point(411, 0);
             this.closeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.closeLabel.Name = "closeLabel";
-            this.closeLabel.Size = new System.Drawing.Size(33, 34);
+            this.closeLabel.Size = new System.Drawing.Size(31, 32);
             this.closeLabel.TabIndex = 0;
             this.closeLabel.Text = "X";
             this.closeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,12 +253,12 @@
             this.buttonGrid.Controls.Add(this.btnForgotPassword, 3, 0);
             this.buttonGrid.Controls.Add(this.btnLogin, 1, 0);
             this.buttonGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonGrid.Location = new System.Drawing.Point(0, 253);
+            this.buttonGrid.Location = new System.Drawing.Point(0, 236);
             this.buttonGrid.Margin = new System.Windows.Forms.Padding(0);
             this.buttonGrid.Name = "buttonGrid";
             this.buttonGrid.RowCount = 1;
             this.buttonGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.buttonGrid.Size = new System.Drawing.Size(464, 40);
+            this.buttonGrid.Size = new System.Drawing.Size(442, 37);
             this.buttonGrid.TabIndex = 0;
             // 
             // btnForgotPassword
@@ -268,10 +268,10 @@
             this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForgotPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnForgotPassword.Location = new System.Drawing.Point(263, 0);
+            this.btnForgotPassword.Location = new System.Drawing.Point(250, 0);
             this.btnForgotPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(153, 40);
+            this.btnForgotPassword.Size = new System.Drawing.Size(145, 37);
             this.btnForgotPassword.TabIndex = 1;
             this.btnForgotPassword.Text = "Forgot password?";
             this.btnForgotPassword.UseVisualStyleBackColor = true;
@@ -285,10 +285,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(46, 0);
+            this.btnLogin.Location = new System.Drawing.Point(44, 0);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(153, 40);
+            this.btnLogin.Size = new System.Drawing.Size(145, 37);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 314);
+            this.ClientSize = new System.Drawing.Size(442, 292);
             this.ControlBox = false;
             this.Controls.Add(this.outerBaseGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -307,7 +307,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            
             this.Shown += new System.EventHandler(this.frmLoginPage_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLoginPage_KeyDown);
             this.outerBaseGrid.ResumeLayout(false);

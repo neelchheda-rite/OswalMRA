@@ -1,4 +1,5 @@
 ﻿using OswalMRA.COMMON.Models;
+using OswalMRA.subViews;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,14 @@ namespace OswalMRA.Views {
                 Name = "id",
                 HeaderText = "ID"
             };
+            id.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            DataGridViewTextBoxColumn ExternalID = new()
+            {
+                DataPropertyName = "ExternalID",
+                Name = "ExternalID",
+                HeaderText = "External ID"
+            };
+            ExternalID.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             DataGridViewTextBoxColumn name = new()
             {
@@ -77,7 +86,7 @@ namespace OswalMRA.Views {
             delete.CellTemplate.Style.SelectionBackColor = delete.CellTemplate.Style.BackColor;
             delete.ToolTipText = "";
 
-            dataTableUser.Columns.AddRange(new DataGridViewColumn[] {id, name, role, edit, delete });
+            dataTableUser.Columns.AddRange(new DataGridViewColumn[] {id, ExternalID,name, role, edit, delete });
             dataTableUser.DefaultCellStyle.ForeColor = SystemColors.ControlText;
             PopulateMouldData();
         }
@@ -85,45 +94,45 @@ namespace OswalMRA.Views {
         {
             var users = new List<User>
             {
-                new User { ID = 1, Name= "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 1, Name = "user1", Role = "Admin" },
-                new User { ID = 2, Name = "user2", Role = "Supervisor" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
-                new User { ID = 3, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name= "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 1,ExternalID=1, Name = "user1", Role = "Admin" },
+                new User { ID = 2,ExternalID=1, Name = "user2", Role = "Supervisor" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
+                new User { ID = 3,ExternalID=1, Name = "user3", Role = "Worker" },
             };
             dataTableUser.DataSource = users;
         }
@@ -148,8 +157,8 @@ namespace OswalMRA.Views {
 
         private void button1_Click(object sender, EventArgs e)
         {
-            singleMsgBox singleMsgBox = new("Add New User", "", "Add", "Cancel");
-            DialogResult dialogResult = singleMsgBox.ShowDialog();
+            addNewUser addNewUser = new();
+            DialogResult dialogResult = addNewUser.ShowDialog();
             if (dialogResult == DialogResult.Yes)
             {
                 frmToast frmToast = new("User added successfully", "Success");

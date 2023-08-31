@@ -10,13 +10,13 @@
             addressLabel.Text = "Address: 9, Ark Industrial Estate, Makwana Rd Marol, Andheri East, Mumbai - 400059, Maharashtra, India.";
         }
 
-        private void btnRestore_Click(object sender, EventArgs e)
+        private void btnRetrieve_Click(object sender, EventArgs e)
         {
-            singleMsgBox singleMsgBox = new singleMsgBox("Confirm Restore","");
+            singleMsgBox singleMsgBox = new singleMsgBox("Confirm Retrieve","");
             DialogResult dialogResult = singleMsgBox.ShowDialog();
             if(dialogResult == DialogResult.Yes)
             {
-                frmToast frmToast = new("Restored successfully","Success");
+                frmToast frmToast = new("Retrieved successfully", "Success");
                 clearData();
                 frmToast.ShowAtBottomCenter();
             }
@@ -40,14 +40,13 @@
         {
              if (e.KeyCode == Keys.Enter)
              {
-                btnRestore.PerformClick();
+                btnRetrieve.PerformClick();
              } 
         }
 
         private void clearData()
         {
-            columnTextBox.Text = "";
-            rowTextBox.Text = "";
+            
             mouldCodeTextbox.Text = "";
             operatorIdTextBox.Text = "";
         }

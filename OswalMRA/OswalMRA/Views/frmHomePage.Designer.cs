@@ -28,22 +28,19 @@
         {
             this.outerBaseGrid = new System.Windows.Forms.TableLayoutPanel();
             this.infoPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.baseTitle = new System.Windows.Forms.Label();
+            this.infoPanelGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.infoPicture = new System.Windows.Forms.PictureBox();
+            this.infoTextGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.infoTextTitle = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.contactUsLabel = new System.Windows.Forms.TableLayoutPanel();
+            this.contactUsGrid = new System.Windows.Forms.TableLayoutPanel();
             this.emailLabel = new System.Windows.Forms.Label();
             this.phoneLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.baseGrid = new System.Windows.Forms.TableLayoutPanel();
             this.firstGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.columnLabel = new System.Windows.Forms.Label();
-            this.rowLabel = new System.Windows.Forms.Label();
-            this.columnTextBox = new System.Windows.Forms.TextBox();
-            this.rowTextBox = new System.Windows.Forms.TextBox();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.secondGrid = new System.Windows.Forms.TableLayoutPanel();
             this.mouldCodeLabel = new System.Windows.Forms.Label();
             this.mouldCodeTextbox = new System.Windows.Forms.TextBox();
@@ -51,15 +48,15 @@
             this.operatorIdLabel = new System.Windows.Forms.Label();
             this.operatorIdTextBox = new System.Windows.Forms.TextBox();
             this.fourthGrid = new System.Windows.Forms.TableLayoutPanel();
-            this.btnRestore = new System.Windows.Forms.Button();
+            this.btnRetrieve = new System.Windows.Forms.Button();
             this.btnStore = new System.Windows.Forms.Button();
             this.outerBaseGrid.SuspendLayout();
             this.infoPanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.infoPanelGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoPicture)).BeginInit();
+            this.infoTextGrid.SuspendLayout();
+            this.contactUsLabel.SuspendLayout();
+            this.contactUsGrid.SuspendLayout();
             this.baseGrid.SuspendLayout();
             this.firstGrid.SuspendLayout();
             this.secondGrid.SuspendLayout();
@@ -86,7 +83,7 @@
             // infoPanel
             // 
             this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
-            this.infoPanel.Controls.Add(this.tableLayoutPanel1);
+            this.infoPanel.Controls.Add(this.infoPanelGrid);
             this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoPanel.Location = new System.Drawing.Point(0, 423);
             this.infoPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -94,72 +91,72 @@
             this.infoPanel.Size = new System.Drawing.Size(871, 182);
             this.infoPanel.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // infoPanelGrid
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(871, 182);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.infoPanelGrid.ColumnCount = 5;
+            this.infoPanelGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.infoPanelGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.infoPanelGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.infoPanelGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63F));
+            this.infoPanelGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.infoPanelGrid.Controls.Add(this.infoPicture, 1, 1);
+            this.infoPanelGrid.Controls.Add(this.infoTextGrid, 3, 1);
+            this.infoPanelGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPanelGrid.Location = new System.Drawing.Point(0, 0);
+            this.infoPanelGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.infoPanelGrid.Name = "infoPanelGrid";
+            this.infoPanelGrid.RowCount = 3;
+            this.infoPanelGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.infoPanelGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.infoPanelGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.infoPanelGrid.Size = new System.Drawing.Size(871, 182);
+            this.infoPanelGrid.TabIndex = 0;
             // 
-            // pictureBox1
+            // infoPicture
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::OswalMRA.Properties.Resources.png_transparent_world_map_globe_world_map_flat_earth_asia_miscellaneous_blue_world_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.infoPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPicture.Image = global::OswalMRA.Properties.Resources.png_transparent_world_map_globe_world_map_flat_earth_asia_miscellaneous_blue_world_removebg_preview;
+            this.infoPicture.Location = new System.Drawing.Point(26, 27);
+            this.infoPicture.Margin = new System.Windows.Forms.Padding(0);
+            this.infoPicture.Name = "infoPicture";
+            this.infoPicture.Size = new System.Drawing.Size(261, 145);
+            this.infoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.infoPicture.TabIndex = 0;
+            this.infoPicture.TabStop = false;
             // 
-            // tableLayoutPanel2
+            // infoTextGrid
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.baseTitle, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.descriptionLabel, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(304, 27);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(548, 145);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.infoTextGrid.ColumnCount = 1;
+            this.infoTextGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.infoTextGrid.Controls.Add(this.infoTextTitle, 0, 0);
+            this.infoTextGrid.Controls.Add(this.descriptionLabel, 0, 1);
+            this.infoTextGrid.Controls.Add(this.contactUsLabel, 0, 2);
+            this.infoTextGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoTextGrid.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.infoTextGrid.Location = new System.Drawing.Point(304, 27);
+            this.infoTextGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.infoTextGrid.Name = "infoTextGrid";
+            this.infoTextGrid.RowCount = 3;
+            this.infoTextGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.infoTextGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.infoTextGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.infoTextGrid.Size = new System.Drawing.Size(548, 145);
+            this.infoTextGrid.TabIndex = 1;
             // 
-            // baseTitle
+            // infoTextTitle
             // 
-            this.baseTitle.AutoSize = true;
-            this.baseTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.baseTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.baseTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.baseTitle.Location = new System.Drawing.Point(0, 0);
-            this.baseTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.baseTitle.Name = "baseTitle";
-            this.baseTitle.Size = new System.Drawing.Size(548, 36);
-            this.baseTitle.TabIndex = 0;
-            this.baseTitle.Text = "Oswal Engineering Corporation";
-            this.baseTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.infoTextTitle.AutoSize = true;
+            this.infoTextTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoTextTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.infoTextTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.infoTextTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.infoTextTitle.Location = new System.Drawing.Point(0, 0);
+            this.infoTextTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.infoTextTitle.Name = "infoTextTitle";
+            this.infoTextTitle.Size = new System.Drawing.Size(548, 36);
+            this.infoTextTitle.TabIndex = 0;
+            this.infoTextTitle.Text = "Oswal Engineering Corporation";
+            this.infoTextTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // descriptionLabel
             // 
@@ -175,38 +172,38 @@
             this.descriptionLabel.TabIndex = 1;
             this.descriptionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tableLayoutPanel3
+            // contactUsLabel
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.addressLabel, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 94);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(548, 51);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.contactUsLabel.ColumnCount = 1;
+            this.contactUsLabel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.contactUsLabel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.contactUsLabel.Controls.Add(this.contactUsGrid, 0, 0);
+            this.contactUsLabel.Controls.Add(this.addressLabel, 0, 1);
+            this.contactUsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contactUsLabel.Location = new System.Drawing.Point(0, 94);
+            this.contactUsLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.contactUsLabel.Name = "contactUsLabel";
+            this.contactUsLabel.RowCount = 2;
+            this.contactUsLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.contactUsLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.contactUsLabel.Size = new System.Drawing.Size(548, 51);
+            this.contactUsLabel.TabIndex = 2;
             // 
-            // tableLayoutPanel4
+            // contactUsGrid
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.emailLabel, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.phoneLabel, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(548, 25);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.contactUsGrid.ColumnCount = 2;
+            this.contactUsGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.contactUsGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.contactUsGrid.Controls.Add(this.emailLabel, 0, 0);
+            this.contactUsGrid.Controls.Add(this.phoneLabel, 1, 0);
+            this.contactUsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contactUsGrid.Location = new System.Drawing.Point(0, 0);
+            this.contactUsGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.contactUsGrid.Name = "contactUsGrid";
+            this.contactUsGrid.RowCount = 1;
+            this.contactUsGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.contactUsGrid.Size = new System.Drawing.Size(548, 25);
+            this.contactUsGrid.TabIndex = 0;
             // 
             // emailLabel
             // 
@@ -275,81 +272,39 @@
             // 
             // firstGrid
             // 
-            this.firstGrid.ColumnCount = 6;
+            this.firstGrid.ColumnCount = 3;
             this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.firstGrid.Controls.Add(this.columnLabel, 1, 0);
-            this.firstGrid.Controls.Add(this.rowLabel, 4, 0);
-            this.firstGrid.Controls.Add(this.columnTextBox, 1, 2);
-            this.firstGrid.Controls.Add(this.rowTextBox, 4, 2);
+            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.firstGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.firstGrid.Controls.Add(this.welcomeLabel, 1, 0);
             this.firstGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.firstGrid.Location = new System.Drawing.Point(0, 0);
             this.firstGrid.Margin = new System.Windows.Forms.Padding(0);
             this.firstGrid.Name = "firstGrid";
-            this.firstGrid.RowCount = 3;
-            this.firstGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.firstGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.firstGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.firstGrid.RowCount = 1;
+            this.firstGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.firstGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.firstGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.firstGrid.Size = new System.Drawing.Size(871, 105);
             this.firstGrid.TabIndex = 0;
             // 
-            // columnLabel
+            // welcomeLabel
             // 
-            this.columnLabel.AutoSize = true;
-            this.columnLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.columnLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.columnLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.columnLabel.Location = new System.Drawing.Point(217, 0);
-            this.columnLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.columnLabel.Name = "columnLabel";
-            this.columnLabel.Size = new System.Drawing.Size(130, 47);
-            this.columnLabel.TabIndex = 0;
-            this.columnLabel.Text = "Column";
-            this.columnLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // rowLabel
-            // 
-            this.rowLabel.AutoSize = true;
-            this.rowLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rowLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rowLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rowLabel.Location = new System.Drawing.Point(521, 0);
-            this.rowLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.rowLabel.Name = "rowLabel";
-            this.rowLabel.Size = new System.Drawing.Size(130, 47);
-            this.rowLabel.TabIndex = 0;
-            this.rowLabel.Text = "Row";
-            this.rowLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // columnTextBox
-            // 
-            this.columnTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.columnTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.columnTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.columnTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.columnTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.columnTextBox.Location = new System.Drawing.Point(217, 57);
-            this.columnTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.columnTextBox.Name = "columnTextBox";
-            this.columnTextBox.Size = new System.Drawing.Size(130, 71);
-            this.columnTextBox.TabIndex = 1;
-            // 
-            // rowTextBox
-            // 
-            this.rowTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.rowTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rowTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rowTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rowTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.rowTextBox.Location = new System.Drawing.Point(521, 57);
-            this.rowTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.rowTextBox.Name = "rowTextBox";
-            this.rowTextBox.Size = new System.Drawing.Size(130, 71);
-            this.rowTextBox.TabIndex = 2;
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.welcomeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 56F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.welcomeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.welcomeLabel.Location = new System.Drawing.Point(217, 0);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(435, 105);
+            this.welcomeLabel.TabIndex = 0;
+            this.welcomeLabel.Text = "Welcome!";
+            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // secondGrid
             // 
@@ -452,7 +407,7 @@
             this.fourthGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.fourthGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.fourthGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.fourthGrid.Controls.Add(this.btnRestore, 1, 1);
+            this.fourthGrid.Controls.Add(this.btnRetrieve, 1, 1);
             this.fourthGrid.Controls.Add(this.btnStore, 3, 1);
             this.fourthGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fourthGrid.Location = new System.Drawing.Point(0, 315);
@@ -465,21 +420,21 @@
             this.fourthGrid.Size = new System.Drawing.Size(871, 108);
             this.fourthGrid.TabIndex = 3;
             // 
-            // btnRestore
+            // btnRetrieve
             // 
-            this.btnRestore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnRestore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestore.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRestore.ForeColor = System.Drawing.Color.White;
-            this.btnRestore.Location = new System.Drawing.Point(217, 48);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(174, 48);
-            this.btnRestore.TabIndex = 5;
-            this.btnRestore.Text = "Restore";
-            this.btnRestore.UseVisualStyleBackColor = false;
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
+            this.btnRetrieve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnRetrieve.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRetrieve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetrieve.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRetrieve.ForeColor = System.Drawing.Color.White;
+            this.btnRetrieve.Location = new System.Drawing.Point(217, 48);
+            this.btnRetrieve.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRetrieve.Name = "btnRetrieve";
+            this.btnRetrieve.Size = new System.Drawing.Size(174, 48);
+            this.btnRetrieve.TabIndex = 5;
+            this.btnRetrieve.Text = "Retrieve";
+            this.btnRetrieve.UseVisualStyleBackColor = false;
+            this.btnRetrieve.Click += new System.EventHandler(this.btnRetrieve_Click);
             // 
             // btnStore
             // 
@@ -518,14 +473,14 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmHome_KeyDown);
             this.outerBaseGrid.ResumeLayout(false);
             this.infoPanel.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            this.infoPanelGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.infoPicture)).EndInit();
+            this.infoTextGrid.ResumeLayout(false);
+            this.infoTextGrid.PerformLayout();
+            this.contactUsLabel.ResumeLayout(false);
+            this.contactUsLabel.PerformLayout();
+            this.contactUsGrid.ResumeLayout(false);
+            this.contactUsGrid.PerformLayout();
             this.baseGrid.ResumeLayout(false);
             this.firstGrid.ResumeLayout(false);
             this.firstGrid.PerformLayout();
@@ -543,31 +498,28 @@
         private TableLayoutPanel outerBaseGrid;
         private Panel infoPanel;
         private TableLayoutPanel baseGrid;
-        private Label columnLabel;
         private Panel panel1;
         private Panel panel2;
-        private TableLayoutPanel firstGrid;
-        private Label rowLabel;
         private TableLayoutPanel secondGrid;
-        private TextBox columnTextBox;
-        private TextBox rowTextBox;
         private Label mouldCodeLabel;
         private TextBox mouldCodeTextbox;
         private TableLayoutPanel thirdGrid;
         private Label operatorIdLabel;
         private TextBox operatorIdTextBox;
         private TableLayoutPanel fourthGrid;
-        private Button btnRestore;
+        private Button btnRetrieve;
         private Button btnStore;
-        private TableLayoutPanel tableLayoutPanel1;
-        private PictureBox pictureBox1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private Label baseTitle;
+        private TableLayoutPanel infoPanelGrid;
+        private PictureBox infoPicture;
+        private TableLayoutPanel infoTextGrid;
+        private Label infoTextTitle;
         private Label descriptionLabel;
-        private TableLayoutPanel tableLayoutPanel3;
-        private TableLayoutPanel tableLayoutPanel4;
+        private TableLayoutPanel contactUsLabel;
+        private TableLayoutPanel contactUsGrid;
         private Label emailLabel;
         private Label phoneLabel;
         private Label addressLabel;
+        private TableLayoutPanel firstGrid;
+        private Label welcomeLabel;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using OswalMRA.COMMON.Models;
+using OswalMRA.subViews;
 
 namespace OswalMRA.Views {
     public partial class frmMouldPage : Form {
@@ -150,9 +151,9 @@ namespace OswalMRA.Views {
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            singleMsgBox singleMsgBox = new("Add New Mould", "", "Add", "Cancel");
-            DialogResult dialogResult = singleMsgBox.ShowDialog();
-            if (dialogResult == DialogResult.Yes)
+            addNewMould addMouldTest = new();
+            DialogResult mouldDIalogResult = addMouldTest.ShowDialog();
+            if (mouldDIalogResult == DialogResult.Yes)
             {
                 frmToast frmToast = new("Mould added successfully", "Success");
                 frmToast.ShowAtBottomCenter();
