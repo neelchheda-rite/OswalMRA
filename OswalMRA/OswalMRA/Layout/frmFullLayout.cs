@@ -34,6 +34,15 @@ namespace OswalMRA.Layout
             this.Text = "Oswal MRA - Home";
         }
 
+<<<<<<< Updated upstream
+=======
+        #region WINDOW FORM TITLE
+        private void Title(string title)
+        {
+            headerLabel.Text = title;
+        }
+        #endregion
+>>>>>>> Stashed changes
 
         #region CHILD FORM
         private void openChildForm(Form childForm)
@@ -57,6 +66,7 @@ namespace OswalMRA.Layout
             isSidebarExpanded = !isSidebarExpanded;
             if (isSidebarExpanded)
             {
+<<<<<<< Updated upstream
                 baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 15); ;
                 baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 85); ;
             }
@@ -64,6 +74,19 @@ namespace OswalMRA.Layout
             {
                 baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 4); ;
                 baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 96); ;
+=======
+                baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 15);
+                baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 85);
+                sidebarShortcutLabel.Text = Properties.Resources.toggleSidebarMessage;
+            }
+            else
+            {
+                baseGrid.ColumnStyles[0] = new ColumnStyle(SizeType.Percent, 4);
+                baseGrid.ColumnStyles[1] = new ColumnStyle(SizeType.Percent, 96);
+                sidebarShortcutLabel.Text = "&F1";
+                sidebarShortcutLabel.Font = new Font(sidebarShortcutLabel.Font, FontStyle.Bold);
+
+>>>>>>> Stashed changes
             }
         }
         #endregion TOGGLE SIDEBAR
@@ -90,7 +113,15 @@ namespace OswalMRA.Layout
             if (loginDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmUserPage());
+<<<<<<< Updated upstream
                 this.Text = "Oswal MRA - User Management";
+=======
+                Title("User Management");
+                activeTab(btnUser);
+                frmToast frmToast = new("Log in successful", "Success");
+                frmToast.ShowAtBottomCenter();
+
+>>>>>>> Stashed changes
             }
             else if (loginDialogResult == DialogResult.Cancel)
             {
@@ -107,13 +138,38 @@ namespace OswalMRA.Layout
             if (changePasswordDialogResult == DialogResult.OK)
             {
                 openChildForm(new frmHomePage());
+<<<<<<< Updated upstream
                 this.Text = "Oswal MRA - Home";
+=======
+                Title("Home");
+                activeTab(btnHome);
+                frmToast frmToast = new("Password changed successfully", "Success");
+                frmToast.ShowAtBottomCenter();
+            }
+            else if (changePasswordDialogResult == DialogResult.No)
+            {
+                openChildForm(new frmHomePage());
+                Title("Home");
+                activeTab(btnHome);
+>>>>>>> Stashed changes
             }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
 
+<<<<<<< Updated upstream
+=======
+            }
+            else if (loginDialogResult == DialogResult.No)
+            {
+                openChildForm(new frmHomePage());
+                Title("Home");
+                activeTab(btnHome);
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
+            }
+>>>>>>> Stashed changes
         }
 
         private void btnWorkLog_Click(object sender, EventArgs e)
@@ -160,7 +216,39 @@ namespace OswalMRA.Layout
             else if (loginDialogResult == DialogResult.Cancel)
             {
                 openChildForm(new frmHomePage());
+<<<<<<< Updated upstream
                 this.Text = "Oswal MRA - Home";
+=======
+                Title("Home");
+                activeTab(btnHome);
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
+
+            }
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            frmLoginPage frmLoginPage = new frmLoginPage();
+            DialogResult loginDialogResult = frmLoginPage.ShowDialog();
+            if (loginDialogResult == DialogResult.Yes)
+            {
+                openChildForm(new frmDashboardPage());
+                Title("Dashboard");
+                activeTab(btnDashboard);
+                frmToast frmToast = new("Log in successful", "Success");
+                frmToast.ShowAtBottomCenter();
+
+            }
+            else if (loginDialogResult == DialogResult.No)
+            {
+                openChildForm(new frmHomePage());
+                Title("Home");
+                activeTab(btnHome);
+                frmToast frmToast = new("Log in failed", "Error");
+                frmToast.ShowAtBottomCenter();
+
+>>>>>>> Stashed changes
             }
         }
 
@@ -180,5 +268,24 @@ namespace OswalMRA.Layout
         }
         #endregion STATUS BAR DATETIME
 
+<<<<<<< Updated upstream
+=======
+        #region ACTIVE TAB BACK COLOR
+        private void activeTab(Button button)
+        {
+            btnHome.BackColor = Color.FromArgb(41, 128, 185);
+            btnUser.BackColor = Color.FromArgb(41, 128, 185);
+            btnMould.BackColor = Color.FromArgb(41, 128, 185);
+            btnWorkLog.BackColor = Color.FromArgb(41, 128, 185);
+            btnPassword.BackColor = Color.FromArgb(41, 128, 185);
+            btnInventory.BackColor = Color.FromArgb(41, 128, 185);
+            btnReset.BackColor = Color.FromArgb(41, 128, 185);
+            btnDashboard.BackColor = Color.FromArgb(41, 128, 185);
+            button.BackColor = Color.FromArgb(49, 153, 222);
+        }
+        #endregion ACTIVE TAB BACK COLOR
+
+
+>>>>>>> Stashed changes
     }
 }

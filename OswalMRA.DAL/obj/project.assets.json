@@ -2224,12 +2224,17 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\Neel\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+=======
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
       "projectName": "OswalMRA.DAL",
       "projectPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
@@ -2241,6 +2246,16 @@
       ],
       "configFilePaths": [
         "C:\\Users\\Neel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "D:\\OSWALMRA_NEW_UI\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+      "projectName": "OswalMRA.DAL",
+      "projectPath": "D:\\OSWALMRA_NEW_UI\\OswalMRA.DAL\\OswalMRA.DAL.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\OSWALMRA_NEW_UI\\OswalMRA.DAL\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2254,8 +2269,13 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+<<<<<<< Updated upstream
             "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
               "projectPath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj"
+=======
+            "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
+              "projectPath": "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj"
+>>>>>>> Stashed changes
             }
           }
         }

@@ -58,6 +58,7 @@ E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
 E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
 E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
 E:\Neel\Oswal\oswal_git\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
+<<<<<<< Updated upstream
 D:\Armanjeet\oswal_mra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.deps.json
 D:\Armanjeet\oswal_mra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.dll
 D:\Armanjeet\oswal_mra\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.pdb
@@ -73,3 +74,20 @@ D:\Armanjeet\oswal_mra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
 D:\Armanjeet\oswal_mra\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
 D:\Armanjeet\oswal_mra\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
 D:\Armanjeet\oswal_mra\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
+=======
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.deps.json
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.dll
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.DAL.pdb
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.dll
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\bin\Debug\net6.0-windows\OswalMRA.COMMON.pdb
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.AssemblyReference.cache
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfoInputs.cache
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.AssemblyInfo.cs
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CoreCompileInputs.cache
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.csproj.CopyComplete
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.dll
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\refint\OswalMRA.DAL.dll
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\OswalMRA.DAL.pdb
+D:\OSWALMRA_NEW_UI\OswalMRA.DAL\obj\Debug\net6.0-windows\ref\OswalMRA.DAL.dll
+>>>>>>> Stashed changes

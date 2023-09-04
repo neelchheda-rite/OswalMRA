@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "wykfx4P7jZqfWCiXFje292v5V8yVDY9eQM6pv+I6WYw8YrDN4S/9BraDkaUw/aPmbcdhpTGFPZEX9Tyoxnaaiw==",
   "success": true,
   "projectFilePath": "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
+=======
+  "dgSpecHash": "RAxbmiEodILCKvkUydxku9V6qJ2fi6Tsx5PP6us+CA0ybpppXPiaz+Y/HLjUcOdnESDyNT5hA6eI4VUOxormVA==",
+  "success": true,
+  "projectFilePath": "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -15,7 +15,11 @@ namespace OswalMRA.DAL
         {
             _context = new DBContext();
         }
+<<<<<<< Updated upstream
         #region Validation
+=======
+        #region validation
+>>>>>>> Stashed changes
         //login validation
         public async Task<List<LoginResponse>> Login(string userName, string password)
         {
@@ -112,6 +116,7 @@ namespace OswalMRA.DAL
             }
             return VerifyCurrentPasswordResp;
         }
+        #endregion
 
         public async Task<(string validationStatus, byte userRoleID)> ValidateLogin(string userName, string password)
         {
@@ -201,6 +206,7 @@ namespace OswalMRA.DAL
         #endregion
 
         #region User
+<<<<<<< Updated upstream
         public async Task<List<UserResponse>> InsertUser(string UserName, int RoleID, bool IsActive)
         {
             List<UserResponse> userResp = new List<UserResponse>();
@@ -234,6 +240,30 @@ namespace OswalMRA.DAL
                     }
                 }
                 return userResp;
+=======
+        public async Task<int> InsertUser(string UserName, int RoleID,string ExternalID)
+        {
+
+            try
+            {
+                int userResp = 0;
+              
+                var query = "usp_InsertUser";
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserName", UserName, DbType.String);
+                parameters.Add("@ExternalID", ExternalID, DbType.String);
+                parameters.Add("@RoleID", RoleID, DbType.Int32);
+                //parameters.Add("@Active", Active, DbType.Boolean);
+                parameters.Add("@UserID", dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                using (var connection = _context.CreateConnection())
+                {
+                    userResp = await connection.ExecuteAsync(query, parameters, commandType: CommandType.StoredProcedure);
+
+                }
+                return userResp;
+             
+>>>>>>> Stashed changes
             }
             catch (Exception ex)
             {
@@ -241,7 +271,10 @@ namespace OswalMRA.DAL
                 throw;
             }
 
+<<<<<<< Updated upstream
             
+=======
+>>>>>>> Stashed changes
         }
 
         public async Task<List<UserResponse>> GetUsers()
@@ -290,6 +323,7 @@ namespace OswalMRA.DAL
                 throw;
             }
         }
+<<<<<<< Updated upstream
 
         #endregion
         #region Role
@@ -303,6 +337,31 @@ namespace OswalMRA.DAL
                 {
                     IEnumerable<Role> roles = await connection.QueryAsync<Role>(query, commandType: CommandType.StoredProcedure);
                     return roles.ToList(); 
+=======
+        public async Task<List<UpdateUserResponse>> UpdateUser(string UserName, int RoleID, string ExternalID)
+        {
+            List<UpdateUserResponse> updateUserResp;
+
+            try
+            {
+                var query = "usp_UpdateUser";
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserName", UserName, DbType.String);
+                parameters.Add("@RoleID", RoleID, DbType.Int32);
+                //parameters.Add("@Active", IsActive, DbType.Boolean);
+                parameters.Add("@UserID", dbType: DbType.Int64, direction: ParameterDirection.Output, size: 100);
+
+                using (var connection = _context.CreateConnection())
+                {
+                    await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
+
+                    updateUserResp = new List<UpdateUserResponse>
+            {
+                new UpdateUserResponse { UpdateStatus = "Updated successfully." }
+            };
+
+                    return updateUserResp;
+>>>>>>> Stashed changes
                 }
             }
             catch (Exception ex)
@@ -310,6 +369,51 @@ namespace OswalMRA.DAL
                 throw;
             }
         }
+<<<<<<< Updated upstream
+=======
+
+
+        public async Task<List<DeleteUserResponse>> DeleteUser(int UserID)
+        {
+            List<DeleteUserResponse> deleteUserResponseList;
+
+            try
+            {
+                var query = "usp_DeleteUser";
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserID", UserID);
+                parameters.Add("@DeleteStatus", dbType: DbType.String, direction: ParameterDirection.Output, size: 100);
+
+                using (var connection = _context.CreateConnection())
+                {
+                    await connection.ExecuteAsync(query, parameters, null, null, CommandType.StoredProcedure);
+
+                    // Retrieve the result from the output parameter
+                    string deleteStatus = parameters.Get<string>("@DeleteStatus");
+
+                    // Create the response object and add it to the list
+                    DeleteUserResponse deleteUserResponse = new DeleteUserResponse
+                    {
+                        DeleteStatus = deleteStatus
+                    };
+
+                    deleteUserResponseList = new List<DeleteUserResponse>
+                {
+                    deleteUserResponse
+                };
+
+                    return deleteUserResponseList;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                throw;
+            }
+        }
+
+
+>>>>>>> Stashed changes
         #endregion
 
         #region Settings

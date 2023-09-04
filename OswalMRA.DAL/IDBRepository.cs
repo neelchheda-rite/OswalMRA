@@ -3,6 +3,7 @@
 namespace OswalMRA.DAL {
     public interface IDBRepository
     {
+<<<<<<< Updated upstream
         //validation section
         public Task<List<LoginResponse>> Login(string userName, string password);
         public Task<List<UpdatePasswordResponse>> UpdatePassword(int UserID, string currentPassword, string newPassword);
@@ -10,10 +11,18 @@ namespace OswalMRA.DAL {
         Task<(string validationStatus, byte userRoleID)> ValidateLogin(string userName, string password);
 
         //mould section
+=======
+        //Validation
+        public Task<List<LoginResponse>> Login(string userName, string password);
+        public Task<List<UpdatePasswordResponse>> UpdatePassword(int UserID, string currentPassword, string newPassword);
+        public Task<List<VerifyCurrentPasswordResponse>> VerifyCurrentPassword(string UserName, string Password);
+        //mould
+>>>>>>> Stashed changes
         public Task<(int validateCode, int validationFlag)> InsertMould(string mouldCode, string mouldName, string mouldDesc, int mouldRow, int mouldCol, int mouldCreatedBy, int valOverride);
         public Task<int> DeleteMould(int mouldID);
         public Task<int> GetNumberOfRowsFromSettings();
         public Task<int> GetNumberOfColsFromSettings();
+<<<<<<< Updated upstream
 
         //User section 
         Task<List<UserResponse>> InsertUser(string UserName, int RoleID, bool IsActive);
@@ -23,6 +32,14 @@ namespace OswalMRA.DAL {
 
         //Role
         Task<List<Role>> GetRoles();
+=======
+        //users
+        public Task<int> InsertUser(string UserName, int RoleID, string ExternalID);
+        Task<List<UpdateUserResponse>> UpdateUser(string UserName, int RoleID, string ExternalID);
+        public Task<List<UserResponse>> GetUsers();
+        public Task<UserResponse> GetUserByID(int userID);
+        Task<List<DeleteUserResponse>> DeleteUser(int UserID);
+>>>>>>> Stashed changes
     }
 
 }

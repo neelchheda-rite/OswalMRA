@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "D:\\Armanjeet\\oswal_mra\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {}
   },
   "projects": {
@@ -18,6 +19,22 @@
         ],
         "configFilePaths": [
           "C:\\Users\\Neel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {}
+  },
+  "projects": {
+    "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
+        "projectName": "OswalMRA.COMMON",
+        "projectPath": "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\OswalMRA.COMMON.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\OSWALMRA_NEW_UI\\OswalMRA.COMMON\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
